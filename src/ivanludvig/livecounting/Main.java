@@ -89,9 +89,9 @@ public class Main {
 	}
 	
 	public void read() {
-		//main.pairs.read();
-		//main.favourite.read();
-		//main.hoe.read();
+		main.pairs.read();
+		main.favourite.read();
+		main.hoe.read();
 	}
 	
 	public void update() {
