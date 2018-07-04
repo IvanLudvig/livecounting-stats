@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
-import java.util.TimeZone;
 
 import ivanludvig.livecounting.Main;
 import ivanludvig.livecounting.Message;
@@ -36,7 +35,6 @@ public class HoE {
 		five = new int[1800];
 		ten = new int[1800];
 		sdf =  new SimpleDateFormat("dd/MM/yyyy");
-		sdf.setTimeZone(TimeZone.getTimeZone("GMT-4"));
 	}
 	
 	public void update() {
@@ -59,6 +57,34 @@ public class HoE {
 					counts = new int[1800];
 					date = dateof(message);
 					counts[main.users.indexOf(message.author)]+=1;
+					//System.out.println(date);
+				}
+
+			}
+		}
+	}
+	
+	public void lastupdate() {
+		for(Message message : main.messages) {
+			if(message.ok == 0) {
+				if(dateof(message).equals(date)) {
+					counts[main.users.indexOf(message.author)]+=1;
+				}else {
+					for(int i = 0; i<counts.length; i++) {
+						if(counts[i]>=3000) {
+							three[i]+=1;
+							if(counts[i]>=5000) {
+								five[i]+=1;
+								if(counts[i]>=10000) {
+									ten[i]+=1;
+								}
+							}
+						}
+					}
+					counts = new int[1800];
+					date = dateof(message);
+					counts[main.users.indexOf(message.author)]+=1;
+					break;
 					//System.out.println(date);
 				}
 
@@ -185,7 +211,7 @@ public class HoE {
 	}
 
 	public String dateof(Message message) {
-		Date date = new Date(Long.valueOf(message.date)*1000);
+		Date date = new Date((Long.valueOf(message.date)-14400)*1000);
 		return sdf.format(date);
 	}
 	

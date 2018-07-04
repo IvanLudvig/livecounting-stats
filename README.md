@@ -14,9 +14,10 @@ The json files need to be uploaded to /res and /res/lastChatFile.txt needs to be
 I rewrote the program to simplify it, but it turned out not to be so easy. 
 
 Main.java calls the main functions. 
+
 The read() function reads the files from /output and fills the arrays/stats in the HoE, FavouriteCounter and Pairs class. 
 
-Then, the program calls getJson() and reads the files in /res. After each file it updates the stats and clears the messages ArrayList to ensure the program won't crash due to huge data. It continues to read the files until it reaches the latstcount (stored in /res/lastcount.txt).
+Then, the program calls getJson() and reads the files from /res. After each file it updates the stats and clears the messages ArrayList to ensure the program won't crash due to huge data. It continues reading files until it reaches the last count (stored in /res/lastcount.txt).
 
-Finally, the write() is called and all the stats are saved in files.
+Finally, write() is called and all the stats are saved in files.
 

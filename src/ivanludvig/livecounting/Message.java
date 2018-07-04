@@ -28,9 +28,8 @@ public class Message {
 		if(stricken.equals("true")) {
 			ok = 1;
 		}
-		date = data.getAsJsonObject().getAsJsonPrimitive("created").toString();
+		date = data.getAsJsonObject().getAsJsonPrimitive("created_utc").toString();
 		if(ok == 0) {
-			date = data.getAsJsonObject().getAsJsonPrimitive("created").toString();
 			if(date.contains(".")) {
 				date = date.substring(0, date.length()-2);
 			}

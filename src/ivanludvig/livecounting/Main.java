@@ -26,13 +26,14 @@ public class Main {
 	FavouriteCounter favourite;
 	HoE hoe;
 	int latestcount = 0;
+	String lastdate = "0";
 	
 	public static void main(String args[]) throws IOException {
 		main = new Main();
 		main.pairs = new Pairs(main);
 		main.favourite = new FavouriteCounter(main);
 		main.hoe = new HoE(main);
-		main.read();
+		//main.read();
 		main.getJson();
 		System.out.println("Saving...");
 		main.write();
@@ -43,12 +44,10 @@ public class Main {
 	public void getJson() throws IOException {
 		BufferedReader br = null;
 		try {
-			br = new BufferedReader(new FileReader("res/lastChatFile.txt"));
-			int last = Integer.parseInt(br.readLine());
-			br.close();
-			br = new BufferedReader(new FileReader("res/lastcount.txt"));
-			int lastcount = Integer.parseInt(br.readLine());
-			br.close();
+			int last = readLastChatFile(br);
+			int lastcount = readLastCount(br);
+			lastdate = readLastDate(br);
+			
 			JsonParser parser = new JsonParser();
 			for(int i = 0; i <= last; i++) {
 				if((last-i)!=82 && (last-i)!=83 && (last-i)!=84) {
@@ -66,12 +65,28 @@ public class Main {
 						check = new Message(main, array.get(n).getAsJsonObject());
 					}
 					if(check.ok==0) {
-						if(check.count<=lastcount+1) {
+						if(check.count<=lastcount+1 
+								&& (!lastdate.equals(main.hoe.dateof(check)))) {
 							break;
+						}
+						else if(lastdate.equals(main.hoe.dateof(check))){
+							main.hoe.lastupdate();
+							if(i!=last) {
+								br = new BufferedReader(new FileReader("res/chat"+Integer.toString(last-i)+".json"));
+								System.out.println("reading res/chat"+(last-i)+".json...");
+								JsonArray lastarray = (JsonArray) parser.parse(br).getAsJsonArray();
+								System.out.println("messages in file: "+lastarray.size());
+								for(int j = 0; j < lastarray.size(); j++) {
+									main.messages.add(new Message(main, lastarray.get(j).getAsJsonObject()));
+								}
+								main.hoe.lastupdate();
+								break;
+							}
 						}
 						if(i==0) {
 					    	System.out.println("latest count: "+check.count);
 					    	latestcount = check.count;
+					    	lastdate = main.hoe.dateof(check);
 						}
 					}
 					update();
@@ -80,10 +95,38 @@ public class Main {
 	    	BufferedWriter writer = new BufferedWriter(new FileWriter("res/lastcount.txt"));
 	    	writer.write(Integer.toString(latestcount));
 	    	writer.close();
+	    	main.saveLastDate(writer);
 
 		} finally {
 			br.close();
 		}
+	}
+	
+	public String readLastDate(BufferedReader br) throws NumberFormatException, IOException {
+		br = new BufferedReader(new FileReader("res/lastDate.txt"));
+		String lastDate = br.readLine();
+		br.close();
+		return lastDate;
+	}
+	
+	public int readLastChatFile(BufferedReader br) throws NumberFormatException, IOException {
+		br = new BufferedReader(new FileReader("res/lastChatFile.txt"));
+		int last = Integer.parseInt(br.readLine());
+		br.close();
+		return last;
+	}
+	
+	public int readLastCount(BufferedReader br) throws NumberFormatException, IOException {
+		br = new BufferedReader(new FileReader("res/lastcount.txt"));
+		int lastcount = Integer.parseInt(br.readLine());
+		br.close();
+		return lastcount;
+	}
+	
+	public void saveLastDate(BufferedWriter writer) throws IOException {
+    	writer = new BufferedWriter(new FileWriter("res/lastDate.txt"));
+    	writer.write(lastdate);
+    	writer.close();
 	}
 	
 	public void read() {
