@@ -33,7 +33,7 @@ public class Main {
 		main.pairs = new Pairs(main);
 		main.favourite = new FavouriteCounter(main);
 		main.hoe = new HoE(main);
-		//main.read();
+		main.read();
 		main.getJson();
 		System.out.println("Saving...");
 		main.write();
