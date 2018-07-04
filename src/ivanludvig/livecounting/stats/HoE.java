@@ -57,25 +57,24 @@ public class HoE {
 					counts = new int[1800];
 					date = dateof(message);
 					counts[main.users.indexOf(message.author)]+=1;
-					//System.out.println(date);
 				}
-
 			}
 		}
 	}
 	
 	public void lastupdate() {
+		int[] lastcounts = new int[1800];
 		for(Message message : main.messages) {
 			if(message.ok == 0) {
 				if(dateof(message).equals(date)) {
-					counts[main.users.indexOf(message.author)]+=1;
+					lastcounts[main.users.indexOf(message.author)]+=1;
 				}else {
 					for(int i = 0; i<counts.length; i++) {
-						if(counts[i]>=3000) {
+						if(lastcounts[i]<3000 && lastcounts[i]+counts[i]>=3000) {
 							three[i]+=1;
-							if(counts[i]>=5000) {
+							if(lastcounts[i]<5000 && lastcounts[i]+counts[i]>=5000) {
 								five[i]+=1;
-								if(counts[i]>=10000) {
+								if(lastcounts[i]<10000 && lastcounts[i]+counts[i]>=10000) {
 									ten[i]+=1;
 								}
 							}
@@ -85,9 +84,7 @@ public class HoE {
 					date = dateof(message);
 					counts[main.users.indexOf(message.author)]+=1;
 					break;
-					//System.out.println(date);
 				}
-
 			}
 		}
 	}
