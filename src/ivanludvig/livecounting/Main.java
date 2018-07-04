@@ -27,6 +27,7 @@ public class Main {
 	Pairs pairs;
 	FavouriteCounter favourite;
 	HoE hoe;
+	int latestcount = 0;
 	
 	public static void main(String args[]) throws IOException {
 		main = new Main();
@@ -38,13 +39,13 @@ public class Main {
 		System.out.println("Saving...");
 		main.write();
 		System.out.println("Done!");
+		System.out.print("  Updated up to "+main.latestcount);
 	}
 	
 	public void getJson() throws IOException {
 		BufferedReader br = null;
-		int latestcount = 0;
 		try {
-			br = new BufferedReader(new FileReader("res/last.txt"));
+			br = new BufferedReader(new FileReader("res/lastChatFile.txt"));
 			int last = Integer.parseInt(br.readLine());
 			br.close();
 			br = new BufferedReader(new FileReader("res/lastcount.txt"));
@@ -62,6 +63,10 @@ public class Main {
 					}
 					int n=0;
 					Message check = new Message(main, array.get(n).getAsJsonObject());
+					while(check.ok==1) {
+						n++;
+						check = new Message(main, array.get(n).getAsJsonObject());
+					}
 					if(check.ok==0) {
 						if(check.count<=lastcount+1) {
 							break;
@@ -69,11 +74,6 @@ public class Main {
 						if(i==0) {
 					    	System.out.println("latest count: "+check.count);
 					    	latestcount = check.count;
-						}
-					}else {
-						while(check.ok==1) {
-							n++;
-							check = new Message(main, array.get(n).getAsJsonObject());
 						}
 					}
 					update();

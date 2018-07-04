@@ -34,9 +34,7 @@ public class Pairs {
 	public void write() {
 		for(int i = 0; i<main.users.size(); i++) {
 			for(int j = 0; j<main.users.size(); j++) {
-				if(counts[i][j]>=1000) {
-					addLine(new Line(main.users.get(i),main.users.get(j), counts[i][j]));
-				}
+				addLine(new Line(main.users.get(i),main.users.get(j), counts[i][j]));
 			}
 		}
 		Collections.sort(lines, Comparator.comparingInt(Line -> Line.count));
@@ -56,14 +54,14 @@ public class Pairs {
 	public void addLine(Line line) {
 		int exists = 0;
 		for(Line l : lines) {
-			if((l.user.equals(line.user) && l.user2.equals(line.user2))
-					||(l.user.equals(line.user2) && l.user2.equals(line.user))) {
+			if(((l.user.equals(line.user)) && (l.user2.equals(line.user2)))
+					||((l.user.equals(line.user2)) && (l.user2.equals(line.user)))) {
 				l.count+=line.count;
 				exists = 1;
 				break;
 			}
 		}
-		if(exists == 0) {
+		if(exists == 0 && line.count>=1000) {
 			lines.add(line);
 		}
 	}

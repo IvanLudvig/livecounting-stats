@@ -26,6 +26,7 @@ public class HoE {
 	int ten[];
 	SimpleDateFormat sdf;
 	Main main;
+	String date = "0";
 	
 
 	public HoE(Main main) {
@@ -39,7 +40,6 @@ public class HoE {
 	}
 	
 	public void update() {
-		String date = "0";
 		for(Message message : main.messages) {
 			if(message.ok == 0) {
 				if(dateof(message).equals(date)) {
@@ -56,7 +56,7 @@ public class HoE {
 							}
 						}
 					}
-					counts = new int[main.users.size()];
+					counts = new int[1800];
 					date = dateof(message);
 					counts[main.users.indexOf(message.author)]+=1;
 					//System.out.println(date);

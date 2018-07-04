@@ -41,9 +41,7 @@ public class FavouriteCounter {
 					num = counts[i][j];
 				}
 			}
-			if(num>=5) {
-				addLine(new Line(main.users.get(i),main.users.get(k), num));
-			}
+			addLine(new Line(main.users.get(i),main.users.get(k), num));
 		}
 		Collections.sort(lines, Comparator.comparingInt(Line -> Line.count));
 		Collections.reverse(lines);
@@ -68,7 +66,7 @@ public class FavouriteCounter {
 				break;
 			}
 		}
-		if(exists == 0) {
+		if(exists == 0 && line.count>5) {
 			lines.add(line);
 		}
 	}
