@@ -5,7 +5,7 @@ public class Line {
 	public String user;
 	public String user2;
 	public int count;
-	int counts[] = new int[25];
+	int counts[] = new int[26];
 	
 	public Line(String user, int count) {
 		this.user = user;
@@ -47,7 +47,7 @@ public class Line {
 			}
 		}else if(y==27) {
 			this.user=line.substring(u[0]+1, u[1]-1).trim();
-			for(int i = 1; i<25; i++) {
+			for(int i = 1; i<26; i++) {
 				this.counts[i]=Integer.parseInt(line.substring(u[i]+2, u[i+1]-1).trim());
 			}
 		}
@@ -69,7 +69,11 @@ public class Line {
 			for(int j = 0; j<(10-Integer.toString(counts[i]).length()); j++) {
 				string+=" ";
 			}
-			string+=" |";
+			if(i!=24) {
+				string+=" |";
+			}else {
+				string+="|";
+			}
 		}
 		return string;
 	}

@@ -26,7 +26,7 @@ public class Hours {
 
 	public Hours(Main main) {
 		this.main = main;
-		counts = new int[1800][25];
+		counts = new int[1800][26];
 		sdf =  new SimpleDateFormat("HH");
 	}
 	
@@ -34,7 +34,7 @@ public class Hours {
 		for(Message message : main.messages) {
 			if(message.ok == 0) {
 				counts[main.users.indexOf(message.author)][0]+=1;
-				counts[main.users.indexOf(message.author)][hourof(message)]+=1;
+				counts[main.users.indexOf(message.author)][hourof(message)+1]+=1;
 			}
 		}
 	}
