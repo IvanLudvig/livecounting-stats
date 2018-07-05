@@ -6,13 +6,14 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+
 import com.google.gson.JsonArray;
 import com.google.gson.JsonParser;
-import ivanludvig.livecounting.stats.Counts;
+
 import ivanludvig.livecounting.stats.FavouriteCounter;
 import ivanludvig.livecounting.stats.HoE;
+import ivanludvig.livecounting.stats.Hours;
 import ivanludvig.livecounting.stats.Pairs;
-import ivanludvig.livecounting.stats.SixSixSix;
 
 
 public class Main {
@@ -20,11 +21,10 @@ public class Main {
 	static Main main;
 	public ArrayList<Message> messages = new ArrayList<Message>();
 	public ArrayList<String> users = new ArrayList<String>();
-	Counts counts;
-	SixSixSix six;
 	Pairs pairs;
 	FavouriteCounter favourite;
 	HoE hoe;
+	Hours hours;
 	int latestcount = 0;
 	String lastdate = "0";
 	
@@ -33,6 +33,7 @@ public class Main {
 		main.pairs = new Pairs(main);
 		main.favourite = new FavouriteCounter(main);
 		main.hoe = new HoE(main);
+		main.hours = new Hours(main);
 		main.read();
 		main.getJson();
 		System.out.println("Saving...");
@@ -133,18 +134,21 @@ public class Main {
 		main.pairs.read();
 		main.favourite.read();
 		main.hoe.read();
+		main.hours.read();
 	}
 	
 	public void update() {
 		main.favourite.update();
 		main.pairs.update();
 		main.hoe.update();
+		main.hours.update();
 		messages = new ArrayList<Message>();
 	}
 	public void write() {
 		main.hoe.write();
 		main.favourite.write();
 		main.pairs.write();
+		main.hours.write();
 	}
 	
 

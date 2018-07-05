@@ -1,6 +1,6 @@
 # Liveconting stats
 
-The favourite counter, pairs, Hall of 3k, Hall of 5k(HoE) and Hall of 10k (HoS). The stats used to be made with C++ and Javascript earlier but I rewrote them in Java. 
+The favourite counter, pairs, Hall of 3k, Hall of 5k(HoE), Hall of 10k (HoS) and Hours of the day stats. The stats used to be made with C++ and Javascript earlier but I rewrote them in Java. 
 
 Message me if you notice any bugs.
 
@@ -15,7 +15,7 @@ I rewrote the program to simplify it, but it turned out not to be so easy.
 
 Main.java calls the main functions. 
 
-The read() function reads the files from /output and fills the arrays/stats in the HoE, FavouriteCounter and Pairs class. 
+The read() function reads the files from /output and fills the arrays/stats in the HoE, FavouriteCounter, Hours and Pairs class. 
 
 Then, the program calls getJson() and reads the files from /res. After each file it updates the stats and clears the messages ArrayList to ensure the program won't crash due to huge data. It continues reading files until it reaches the last count (stored in /res/lastcount.txt).
 
