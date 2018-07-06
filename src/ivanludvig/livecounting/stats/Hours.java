@@ -71,7 +71,10 @@ public class Hours {
 		int exists = 0;
 		for(Line l : lines) {
 			if(l.user.equals(line.user)) {
-				l.count+=line.count;
+				for(int i = 0; i<25; i++) {
+					l.counts[i]+=line.counts[i];
+				}
+
 				exists = 1;
 				break;
 			}
@@ -110,7 +113,7 @@ public class Hours {
 	}
 
 	public int hourof(Message message) {
-		Date date = new Date((Long.valueOf(message.date))*1000);
+		Date date = new Date((Long.valueOf(message.date)-3600)*1000);
 		return Integer.parseInt(sdf.format(date));
 	}
 	

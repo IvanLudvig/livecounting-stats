@@ -208,7 +208,7 @@ public class HoE {
 	}
 
 	public String dateof(Message message) {
-		Date date = new Date((Long.valueOf(message.date)-14400)*1000);
+		Date date = new Date((Long.valueOf(message.date)-3600)*1000);
 		return sdf.format(date);
 	}
 	

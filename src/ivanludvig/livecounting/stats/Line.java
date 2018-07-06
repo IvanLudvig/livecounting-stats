@@ -47,8 +47,8 @@ public class Line {
 			}
 		}else if(y==27) {
 			this.user=line.substring(u[0]+1, u[1]-1).trim();
-			for(int i = 1; i<26; i++) {
-				this.counts[i]=Integer.parseInt(line.substring(u[i]+2, u[i+1]-1).trim());
+			for(int i = 0; i<25; i++) {
+				this.counts[i]=Integer.parseInt(line.substring(u[i+1]+2, u[i+2]).trim());
 			}
 		}
 	}
