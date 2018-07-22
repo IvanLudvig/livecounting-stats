@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonParser;
 
+import ivanludvig.livecounting.stats.Bars;
 import ivanludvig.livecounting.stats.FavouriteCounter;
 import ivanludvig.livecounting.stats.HoE;
 import ivanludvig.livecounting.stats.Hours;
@@ -25,8 +26,10 @@ public class Main {
 	FavouriteCounter favourite;
 	HoE hoe;
 	Hours hours;
+	Bars bars;
 	int latestcount = 0;
 	String lastdate = "0";
+	String ld = "0";
 	
 	public static void main(String args[]) throws IOException {
 		main = new Main();
@@ -34,7 +37,9 @@ public class Main {
 		main.favourite = new FavouriteCounter(main);
 		main.hoe = new HoE(main);
 		main.hours = new Hours(main);
+		main.bars = new Bars(main);
 		main.read();
+		//main.reset();
 		main.getJson();
 		System.out.println("Saving...");
 		main.write();
@@ -72,12 +77,12 @@ public class Main {
 							break;
 						}
 						else if(lastdate.equals(main.hoe.dateof(check))){
-							if(i!=last && i!=0) {
-								br = new BufferedReader(new FileReader("res/chat"+Integer.toString(last-i)+".json"));
-								JsonArray lastarray = (JsonArray) parser.parse(br).getAsJsonArray();
-								for(int j = 0; j < lastarray.size(); j++) {
-									main.messages.add(new Message(main, lastarray.get(j).getAsJsonObject()));
-								}
+							if(i!=0) {
+								//br = new BufferedReader(new FileReader("res/chat"+Integer.toString(last-i)+".json"));
+								//JsonArray lastarray = (JsonArray) parser.parse(br).getAsJsonArray();
+								//for(int j = 0; j < lastarray.size(); j++) {
+								//	main.messages.add(new Message(main, lastarray.get(j).getAsJsonObject()));
+								//}
 								main.hoe.lastupdate();
 								break;
 							}else if(i==0) {
@@ -87,7 +92,7 @@ public class Main {
 						if(i==0) {
 					    	System.out.println("latest count: "+check.count);
 					    	main.latestcount = check.count;
-					    	lastdate = main.hoe.dateof(check);
+					    	ld = main.hoe.dateof(check);
 						}
 					}
 					update();
@@ -126,7 +131,16 @@ public class Main {
 	
 	public void saveLastDate(BufferedWriter writer) throws IOException {
     	writer = new BufferedWriter(new FileWriter("res/lastDate.txt"));
-    	writer.write(main.lastdate);
+    	writer.write(main.ld);
+    	writer.close();
+	}
+	
+	public void reset() throws IOException {
+    	BufferedWriter writer = new BufferedWriter(new FileWriter("res/lastcount.txt"));
+    	writer.write("0");
+    	writer.close();
+    	writer = new BufferedWriter(new FileWriter("res/lastDate.txt"));
+    	writer.write("0000000");
     	writer.close();
 	}
 	
@@ -135,6 +149,7 @@ public class Main {
 		main.favourite.read();
 		main.hoe.read();
 		main.hours.read();
+		main.bars.read();
 	}
 	
 	public void update() {
@@ -142,9 +157,11 @@ public class Main {
 		main.pairs.update();
 		main.hoe.update();
 		main.hours.update();
+		main.bars.update();
 		messages = new ArrayList<Message>();
 	}
 	public void write() {
+		main.bars.write();
 		main.hoe.write();
 		main.favourite.write();
 		main.pairs.write();

@@ -42,6 +42,14 @@ public class Pairs {
 	    try {
 	    	BufferedWriter writer = new BufferedWriter(new FileWriter("output/pairs.txt"));
 			for(Line line : lines) {
+				if(line.count>=100) {
+					writer.write(line.getStringFav());
+					writer.newLine();
+				}
+			}
+			writer.close();
+			writer = new BufferedWriter(new FileWriter("output/full/pairsfull.txt"));
+			for(Line line : lines) {
 				writer.write(line.getStringFav());
 				writer.newLine();
 			}
@@ -61,7 +69,7 @@ public class Pairs {
 				break;
 			}
 		}
-		if(exists == 0 && line.count>=1000) {
+		if(exists == 0 && line.count>=10) {
 			lines.add(line);
 		}
 	}
@@ -70,7 +78,7 @@ public class Pairs {
 		BufferedReader reader = null;
 
 		try {
-		    reader = new BufferedReader(new FileReader("output/pairs.txt"));
+		    reader = new BufferedReader(new FileReader("output/full/pairsfull.txt"));
 		    String line;
 		    while ((line = reader.readLine()) != null) {
 		        lines.add(new Line(line));

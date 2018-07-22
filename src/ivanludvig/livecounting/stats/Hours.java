@@ -58,6 +58,19 @@ public class Hours {
 			writer.newLine();
 			
 			for(Line line : lines) {
+				if(line.counts[0]>=100) {
+					writer.write(line.getHourString());
+					writer.newLine();
+				}
+			}
+			writer.close();
+			writer = new BufferedWriter(new FileWriter("output/full/hoursfull.txt"));
+			writer.write("| Username             | Total      | Hour 00-01 | Hour 01-02 | Hour 02-03 | Hour 03-04 | Hour 04-05 | Hour 05-06 | Hour 06-07 | Hour 07-08 | Hour 08-09 | Hour 09-10 | Hour 10-11 | Hour 11-12 | Hour 12-13 | Hour 13-14 | Hour 14-15 | Hour 15-16 | Hour 16-17 | Hour 17-18 | Hour 18-19 | Hour 19-20 | Hour 20-21 | Hour 21-22 | Hour 22-23 | Hour23-24 |"); 
+			writer.newLine();
+			writer.write("|----------------------|------------|------------|------------|------------|------------|------------|------------|------------|------------|------------|------------|------------|------------|------------|------------|------------|------------|------------|------------|------------|------------|------------|------------|------------|-----------|");
+			writer.newLine();
+			
+			for(Line line : lines) {
 				writer.write(line.getHourString());
 				writer.newLine();
 			}
@@ -80,7 +93,7 @@ public class Hours {
 			}
 		}
 		if(exists == 0) {
-			if(line.counts[0]>=100) {
+			if(line.counts[0]>=1) {
 				lines.add(line);
 			}
 		}
@@ -91,7 +104,7 @@ public class Hours {
 		BufferedReader reader = null;
 
 		try {
-		    reader = new BufferedReader(new FileReader("output/hours.txt"));
+		    reader = new BufferedReader(new FileReader("output/full/hoursfull.txt"));
 		    String line;
 		    line = reader.readLine();
 		    line = reader.readLine();

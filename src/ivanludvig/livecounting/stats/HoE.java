@@ -70,11 +70,11 @@ public class HoE {
 					lastcounts[main.users.indexOf(message.author)]+=1;
 				}else {
 					for(int i = 0; i<counts.length; i++) {
-						if(lastcounts[i]<3000 && lastcounts[i]+counts[i]>=3000) {
+						if(lastcounts[i]<3000 && (lastcounts[i]+counts[i])>=3000) {
 							three[i]+=1;
-							if(lastcounts[i]<5000 && lastcounts[i]+counts[i]>=5000) {
+							if(lastcounts[i]<5000 && (lastcounts[i]+counts[i])>=5000) {
 								five[i]+=1;
-								if(lastcounts[i]<10000 && lastcounts[i]+counts[i]>=10000) {
+								if(lastcounts[i]<10000 && (lastcounts[i]+counts[i])>=10000) {
 									ten[i]+=1;
 								}
 							}
