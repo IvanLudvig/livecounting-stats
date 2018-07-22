@@ -38,8 +38,8 @@ public class Main {
 		main.hoe = new HoE(main);
 		main.hours = new Hours(main);
 		main.bars = new Bars(main);
-		main.read();
-		//main.reset();
+		//main.read();
+		main.reset();
 		main.getJson();
 		System.out.println("Saving...");
 		main.write();
