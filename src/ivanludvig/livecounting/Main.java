@@ -14,6 +14,7 @@ import ivanludvig.livecounting.stats.Bars;
 import ivanludvig.livecounting.stats.FavouriteCounter;
 import ivanludvig.livecounting.stats.HoE;
 import ivanludvig.livecounting.stats.Hours;
+import ivanludvig.livecounting.stats.OddEven;
 import ivanludvig.livecounting.stats.Pairs;
 
 
@@ -27,6 +28,7 @@ public class Main {
 	HoE hoe;
 	Hours hours;
 	Bars bars;
+	OddEven oddeven;
 	int latestcount = 0;
 	String lastdate = "0";
 	String ld = "0";
@@ -38,6 +40,7 @@ public class Main {
 		main.hoe = new HoE(main);
 		main.hours = new Hours(main);
 		main.bars = new Bars(main);
+		main.oddeven = new OddEven(main);
 		main.read();
 		//main.reset();
 		main.getJson();
@@ -150,6 +153,7 @@ public class Main {
 		main.hoe.read();
 		main.hours.read();
 		main.bars.read();
+		main.oddeven.read();
 	}
 	
 	public void update() {
@@ -158,6 +162,7 @@ public class Main {
 		main.hoe.update();
 		main.hours.update();
 		main.bars.update();
+		main.oddeven.update();
 		messages = new ArrayList<Message>();
 	}
 	public void write() {
@@ -166,6 +171,7 @@ public class Main {
 		main.favourite.write();
 		main.pairs.write();
 		main.hours.write();
+		main.oddeven.write();
 	}
 	
 

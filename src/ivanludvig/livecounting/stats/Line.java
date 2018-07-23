@@ -5,11 +5,20 @@ public class Line {
 	public String user;
 	public String user2;
 	public int count;
+	public int odd;
+	public int even;
 	int counts[] = new int[26];
 	
 	public Line(String user, int count) {
 		this.user = user;
 		this.count = count;
+	}
+	
+	public Line(String user, int odd, int even) {
+		this.user = user;
+		this.odd = odd;
+		this.even = even;
+		this.count = this.odd + this.even;
 	}
 	
 	public Line(String user1, String user2,  int count) {
@@ -45,6 +54,11 @@ public class Line {
 				this.user2=line.substring(u[1]+5, u[2]-1);
 				this.count=Integer.parseInt(line.substring(u[2]+2, u[3]-1));
 			}
+		}else if(y==5){
+			this.user=line.substring(u[1]+5, u[2]-1);
+			this.odd=Integer.parseInt(line.substring(u[2]+2, u[3]-1));
+			this.even=Integer.parseInt(line.substring(u[2]+2, u[3]-1));
+			this.count = this.odd + this.even;
 		}else if(y==27) {
 			this.user=line.substring(u[0]+1, u[1]-1).trim();
 			for(int i = 0; i<25; i++) {
@@ -56,6 +70,14 @@ public class Line {
 
 	public String getTableString(int order) {
 		return "| "+order+" | "+"/u/"+user+" | "+count+" | ";
+	}
+	
+	public String getOEString(int order) {
+		return "| "+order+" | "+"/u/"+user+" | "+count+" | "+Math.round((double)odd/count * 100.0)+" | "
+	+Math.round((double)even/count * 100.0)+" | ";
+	}
+	public String getOEFullString(int order) {
+		return "| "+order+" | "+"/u/"+user+" | "+odd+" | "+even+" | ";
 	}
 	
 	public String getHourString() {
