@@ -6,10 +6,8 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-
 import com.google.gson.JsonArray;
 import com.google.gson.JsonParser;
-
 import ivanludvig.livecounting.stats.Bars;
 import ivanludvig.livecounting.stats.FavouriteCounter;
 import ivanludvig.livecounting.stats.HoE;
