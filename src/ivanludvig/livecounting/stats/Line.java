@@ -73,8 +73,8 @@ public class Line {
 	}
 	
 	public String getOEString(int order) {
-		return "| "+order+" | "+"/u/"+user+" | "+count+" | "+Math.round((double)odd/count * 100.0)+" | "
-	+Math.round((double)even/count * 100.0)+" | ";
+		return "| "+order+" | "+"/u/"+user+" | "+count+" | "+Math.round(((double)odd/count*100) * 100.0)/100.0+" | "
+	+Math.round(((double)even/count*100) * 100.0)/100.0+" | ";
 	}
 	public String getOEFullString(int order) {
 		return "| "+order+" | "+"/u/"+user+" | "+odd+" | "+even+" | ";
