@@ -59,6 +59,12 @@ public class Line {
 			this.odd=Integer.parseInt(line.substring(u[2]+2, u[3]-1));
 			this.even=Integer.parseInt(line.substring(u[2]+2, u[3]-1));
 			this.count = this.odd + this.even;
+		}else if(y==7){
+			this.user=line.substring(u[1]+5, u[2]-1);
+			this.counts[0]=Integer.parseInt(line.substring(u[2]+2, u[3]-1));
+			this.counts[1]=Integer.parseInt(line.substring(u[2]+2, u[3]-1));
+			this.counts[2]=Integer.parseInt(line.substring(u[3]+2, u[4]-1));
+			this.counts[3]=Integer.parseInt(line.substring(u[4]+2, u[5]-1));
 		}else if(y==27) {
 			this.user=line.substring(u[0]+1, u[1]-1).trim();
 			for(int i = 0; i<25; i++) {
@@ -78,6 +84,9 @@ public class Line {
 	}
 	public String getOEFullString(int order) {
 		return "| "+order+" | "+"/u/"+user+" | "+odd+" | "+even+" | ";
+	}
+	public String getPincusString(int order) {
+		return "| "+order+" | "+"/u/"+user+" | "+counts[0]+" | "+counts[1]+" | "+counts[2]+" | "+counts[3]+" | ";
 	}
 	
 	public String getHourString() {

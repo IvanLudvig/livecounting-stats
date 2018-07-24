@@ -6,14 +6,17 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+
 import com.google.gson.JsonArray;
 import com.google.gson.JsonParser;
+
 import ivanludvig.livecounting.stats.Bars;
 import ivanludvig.livecounting.stats.FavouriteCounter;
 import ivanludvig.livecounting.stats.HoE;
 import ivanludvig.livecounting.stats.Hours;
 import ivanludvig.livecounting.stats.OddEven;
 import ivanludvig.livecounting.stats.Pairs;
+import ivanludvig.livecounting.stats.Pincus;
 
 
 public class Main {
@@ -27,6 +30,7 @@ public class Main {
 	Hours hours;
 	Bars bars;
 	OddEven oddeven;
+	Pincus pincus;
 	int latestcount = 0;
 	String lastdate = "0";
 	String ld = "0";
@@ -39,6 +43,7 @@ public class Main {
 		main.hours = new Hours(main);
 		main.bars = new Bars(main);
 		main.oddeven = new OddEven(main);
+		main.pincus = new Pincus(main);
 		main.read();
 		//main.reset();
 		main.getJson();
@@ -152,6 +157,7 @@ public class Main {
 		main.hours.read();
 		main.bars.read();
 		main.oddeven.read();
+		main.pincus.read();
 	}
 	
 	public void update() {
@@ -161,6 +167,7 @@ public class Main {
 		main.hours.update();
 		main.bars.update();
 		main.oddeven.update();
+		main.pincus.update();
 		messages = new ArrayList<Message>();
 	}
 	public void write() {
@@ -170,6 +177,7 @@ public class Main {
 		main.pairs.write();
 		main.hours.write();
 		main.oddeven.write();
+		main.pincus.write();
 	}
 	
 
