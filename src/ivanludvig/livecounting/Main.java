@@ -11,12 +11,14 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonParser;
 
 import ivanludvig.livecounting.stats.Bars;
+import ivanludvig.livecounting.stats.DayStreak;
 import ivanludvig.livecounting.stats.FavouriteCounter;
 import ivanludvig.livecounting.stats.HoE;
 import ivanludvig.livecounting.stats.Hours;
 import ivanludvig.livecounting.stats.OddEven;
 import ivanludvig.livecounting.stats.Pairs;
 import ivanludvig.livecounting.stats.Pincus;
+import ivanludvig.livecounting.stats.TwentyK;
 
 
 public class Main {
@@ -31,6 +33,8 @@ public class Main {
 	Bars bars;
 	OddEven oddeven;
 	Pincus pincus;
+	TwentyK twentyk;
+	DayStreak daystreak;
 	int latestcount = 0;
 	String lastdate = "0";
 	String ld = "0";
@@ -44,6 +48,8 @@ public class Main {
 		main.bars = new Bars(main);
 		main.oddeven = new OddEven(main);
 		main.pincus = new Pincus(main);
+		main.twentyk = new TwentyK(main);
+		main.daystreak = new DayStreak(main);
 		main.read();
 		//main.reset();
 		main.getJson();
@@ -90,6 +96,7 @@ public class Main {
 								//	main.messages.add(new Message(main, lastarray.get(j).getAsJsonObject()));
 								//}
 								main.hoe.lastupdate();
+								main.twentyk.lastupdate();
 								break;
 							}else if(i==0) {
 								break;
@@ -152,12 +159,13 @@ public class Main {
 	
 	public void read() {
 		main.pairs.read();
-		main.favourite.read();
+		main.favourite.read();           //daystreak and favourite stats should be run using the full data
 		main.hoe.read();
 		main.hours.read();
 		main.bars.read();
 		main.oddeven.read();
 		main.pincus.read();
+		main.twentyk.read();
 	}
 	
 	public void update() {
@@ -168,6 +176,9 @@ public class Main {
 		main.bars.update();
 		main.oddeven.update();
 		main.pincus.update();
+
+		main.twentyk.update();
+		main.daystreak.update();
 		messages = new ArrayList<Message>();
 	}
 	public void write() {
@@ -178,6 +189,8 @@ public class Main {
 		main.hours.write();
 		main.oddeven.write();
 		main.pincus.write();
+		main.twentyk.write();
+		main.daystreak.write();
 	}
 	
 

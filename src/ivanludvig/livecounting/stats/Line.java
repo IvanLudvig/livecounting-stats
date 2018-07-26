@@ -4,6 +4,7 @@ public class Line {
 	
 	public String user;
 	public String user2;
+	public String date;
 	public int count;
 	public int odd;
 	public int even;
@@ -19,6 +20,12 @@ public class Line {
 		this.odd = odd;
 		this.even = even;
 		this.count = this.odd + this.even;
+	}
+	
+	public Line(String user, int count, String date) {
+		this.user = user;
+		this.date = date;
+		this.count = count;
 	}
 	
 	public Line(String user1, String user2,  int count) {
@@ -54,6 +61,9 @@ public class Line {
 				this.user2=line.substring(u[1]+5, u[2]-1);
 				this.count=Integer.parseInt(line.substring(u[2]+2, u[3]-1));
 			}
+		}else if(y==3) {
+			this.user=line.substring(u[0]+2, u[1]-1);
+			this.count=Integer.parseInt(line.substring(u[1]+2, u[2]-1));
 		}else if(y==5){
 			this.user=line.substring(u[1]+5, u[2]-1);
 			this.odd=Integer.parseInt(line.substring(u[2]+2, u[3]-1));
@@ -113,5 +123,12 @@ public class Line {
 		return "| "+"/u/"+user+" | "+"/u/"+user2+" | " + count+" | ";
 	}
 	
+	public String getDayString() {
+		return "| "+user+" | "+count+" | ";
+	}
+	
+	public String getStreakString(int order) {
+		return "| "+order+" | "+"/u/"+user+" | "+count+" | "+date+" | ";
+	}
 	
 }

@@ -26,7 +26,7 @@ public class Pincus {
 	public void update() {
 		for(Message message : main.messages) {
 			String str = Integer.toString(message.count);
-			if(message.body.contains("{ '-D")||message.body.contains("{'-D")) {
+			if(message.body.contains("{:'-D")||message.body.contains("{ :'-D")) {
 				counts[main.users.indexOf(message.author)][0]+=1;
 				counts[main.users.indexOf(message.author)][1]+=1;
 			}
