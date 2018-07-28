@@ -5,6 +5,7 @@ public class Line {
 	public String user;
 	public String user2;
 	public String date;
+	public String message;
 	public int count;
 	public int odd;
 	public int even;
@@ -26,6 +27,20 @@ public class Line {
 		this.user = user;
 		this.date = date;
 		this.count = count;
+	}
+	
+	public Line(String user, String message, String date, int count) {
+		this.user = user;
+		this.message = message;
+		this.date = date;
+		this.count = count;
+		if(this.message!=null) {
+			if(!this.message.isEmpty()) {
+				if(!this.message.contains("\n")) {
+					this.message.replace("\n", "");
+				}
+			}
+		}
 	}
 	
 	public Line(String user1, String user2,  int count) {
@@ -54,8 +69,14 @@ public class Line {
 		}
 		if(y==4) {
 			if(slash==2) {
-				this.user=line.substring(u[1]+5, u[2]-1);
-				this.count=Integer.parseInt(line.substring(u[2]+2, u[3]-1));
+				if(isInteger(line.substring(u[0]+1, u[1]-1).trim())){
+					this.user=line.substring(u[1]+5, u[2]-1);
+					this.count=Integer.parseInt(line.substring(u[2]+2, u[3]-1));
+				}else {
+					this.user=line.substring(u[0]+5, u[1]-1);
+					this.message=line.substring(u[1]+1, u[2]-1);
+					this.date=line.substring(u[2]+1, u[3]-1);
+				}
 			}else if(slash==4) {
 				this.user=line.substring(u[0]+5, u[1]-1);
 				this.user2=line.substring(u[1]+5, u[2]-1);
@@ -83,9 +104,24 @@ public class Line {
 		}
 	}
 	
+	public static boolean isInteger(String s) {
+	    try { 
+	        Integer.parseInt(s); 
+	    } catch(NumberFormatException e) { 
+	        return false; 
+	    } catch(NullPointerException e) {
+	        return false;
+	    }
+	    return true;
+	}
+	
 
 	public String getTableString(int order) {
 		return "| "+order+" | "+"/u/"+user+" | "+count+" | ";
+	}
+	
+	public String getFirstString() {
+		return "| "+"/u/"+user+" | "+message+" | "+date+" |";
 	}
 	
 	public String getOEString(int order) {

@@ -29,6 +29,9 @@ public class Message {
 			ok = 1;
 		}
 		date = data.getAsJsonObject().getAsJsonPrimitive("created_utc").toString();
+		if(body==null || date==null || author==null) {
+			ok=1;
+		}
 		if(ok == 0) {
 			if(date.contains(".")) {
 				date = date.substring(0, date.length()-2);

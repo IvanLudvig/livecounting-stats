@@ -13,6 +13,7 @@ import com.google.gson.JsonParser;
 import ivanludvig.livecounting.stats.Bars;
 import ivanludvig.livecounting.stats.DayStreak;
 import ivanludvig.livecounting.stats.FavouriteCounter;
+import ivanludvig.livecounting.stats.FirstCounts;
 import ivanludvig.livecounting.stats.HoE;
 import ivanludvig.livecounting.stats.Hours;
 import ivanludvig.livecounting.stats.OddEven;
@@ -35,6 +36,7 @@ public class Main {
 	Pincus pincus;
 	TwentyK twentyk;
 	DayStreak daystreak;
+	FirstCounts firstcounts;
 	int latestcount = 0;
 	String lastdate = "0";
 	String ld = "0";
@@ -50,6 +52,7 @@ public class Main {
 		main.pincus = new Pincus(main);
 		main.twentyk = new TwentyK(main);
 		main.daystreak = new DayStreak(main);
+		main.firstcounts = new FirstCounts(main);
 		main.read();
 		//main.reset();
 		main.getJson();
@@ -166,6 +169,8 @@ public class Main {
 		main.oddeven.read();
 		main.pincus.read();
 		main.twentyk.read();
+		main.firstcounts.read();
+		main.firstcounts.read();
 	}
 	
 	public void update() {
@@ -176,9 +181,9 @@ public class Main {
 		main.bars.update();
 		main.oddeven.update();
 		main.pincus.update();
-
 		main.twentyk.update();
 		main.daystreak.update();
+		main.firstcounts.update();
 		messages = new ArrayList<Message>();
 	}
 	public void write() {
@@ -191,6 +196,7 @@ public class Main {
 		main.pincus.write();
 		main.twentyk.write();
 		main.daystreak.write();
+		main.firstcounts.write();
 	}
 	
 
