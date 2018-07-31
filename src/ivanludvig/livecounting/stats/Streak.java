@@ -60,7 +60,7 @@ public class Streak {
 	}
 	*/
 	
-	public void update(int count, String date) throws ParseException {
+	public void update(int count, String date, int threshold) throws ParseException {
 		if(cdate.equals("0")) {
 			cdate=date;
 	    	ccount=1;
@@ -69,7 +69,7 @@ public class Streak {
 			ldate = date;
 			bldate = date;
 		}else {
-			if(count > 0 ) {
+			if(count >= threshold ) {
 				//System.out.println("date here "+date);
 				Calendar c = Calendar.getInstance();
 			    c.setTime(sdf.parse(cdate));

@@ -15,7 +15,7 @@ import java.util.Date;
 import ivanludvig.livecounting.Main;
 import ivanludvig.livecounting.Message;
 
-public class DayStreak {
+public class OneKStreak {
 	int counts[];
 	ArrayList<Line> lines = new ArrayList<Line>();
 	ArrayList<Streak> streaks = new ArrayList<Streak>();
@@ -25,7 +25,7 @@ public class DayStreak {
 	int n = 0;
 	
 
-	public DayStreak(Main main) {
+	public OneKStreak(Main main) {
 		this.main = main;
 		counts = new int[1800];
 		sdf =  new SimpleDateFormat("dd/MM/yyyy");
@@ -47,7 +47,7 @@ public class DayStreak {
 					//System.out.println(date+" e "+dateof(message)+" diff");
 					for(Streak streak : streaks) {
 						try {
-							streak.update(counts[main.users.indexOf(streak.user)], date, 1);
+							streak.update(counts[main.users.indexOf(streak.user)], date, 1000);
 						} catch (ParseException e) {
 							e.printStackTrace();
 						}
@@ -68,7 +68,7 @@ public class DayStreak {
 				}else {
 					for(Streak streak : streaks) {
 						try {
-							streak.update(counts[main.users.indexOf(message.author)], date, 1);
+							streak.update(counts[main.users.indexOf(message.author)], date, 1000);
 						} catch (ParseException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
@@ -88,14 +88,18 @@ public class DayStreak {
 		Collections.sort(lines, Comparator.comparingInt(Line -> Line.count));
 		Collections.reverse(lines);
 	    try {
-	    	BufferedWriter writer = new BufferedWriter(new FileWriter("output/daystreak.txt"));
+	    	BufferedWriter writer = new BufferedWriter(new FileWriter("output/1kstreak.txt"));
 	    	writer.write("|# |User |Streak |Last Day  ");
 			writer.newLine();
 	    	writer.write("|---|---|---|---|");
 			writer.newLine();
 			for(Line line : lines) {
-				writer.write(line.getStreakString(lines.indexOf(line)+1));
-				writer.newLine();
+				if(lines.indexOf(line)<20) {
+					writer.write(line.getStreakString(lines.indexOf(line)+1));
+					writer.newLine();
+				}else {
+					break;
+				}
 			}
 			writer.close();
 	    } catch (IOException e) {
@@ -117,7 +121,7 @@ public class DayStreak {
 			}
 		}
 		if(exists == 0) {
-			if(line.count>=10) {
+			if(line.count>=1) {
 				lines.add(line);
 			}
 		}
@@ -127,7 +131,7 @@ public class DayStreak {
 		BufferedReader reader = null;
 
 		try {
-		    reader = new BufferedReader(new FileReader("output/daystreak.txt"));
+		    reader = new BufferedReader(new FileReader("output/1kstreak.txt"));
 		    String line;
 		    line = reader.readLine();
 		    line = reader.readLine();
