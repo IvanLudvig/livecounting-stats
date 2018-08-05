@@ -20,6 +20,7 @@ import ivanludvig.livecounting.stats.OddEven;
 import ivanludvig.livecounting.stats.OneKStreak;
 import ivanludvig.livecounting.stats.Pairs;
 import ivanludvig.livecounting.stats.Pincus;
+import ivanludvig.livecounting.stats.TopStreaks;
 import ivanludvig.livecounting.stats.TwentyK;
 
 
@@ -39,6 +40,7 @@ public class Main {
 	DayStreak daystreak;
 	FirstCounts firstcounts;
 	OneKStreak onekstreak;
+	TopStreaks topstreaks;
 	int latestcount = 0;
 	String lastdate = "0";
 	String ld = "0";
@@ -56,8 +58,9 @@ public class Main {
 		main.daystreak = new DayStreak(main);
 		main.firstcounts = new FirstCounts(main);
 		main.onekstreak = new OneKStreak(main);
-		main.read();
-		//main.reset();
+		main.topstreaks=new TopStreaks(main);
+		//main.read();
+		main.reset();
 		main.getJson();
 		System.out.println("Saving...");
 		main.write();
@@ -175,6 +178,7 @@ public class Main {
 		main.firstcounts.read();
 		main.firstcounts.read();
 		main.onekstreak.read();
+		main.topstreaks.read();
 	}
 	
 	public void update() {
@@ -189,6 +193,7 @@ public class Main {
 		main.daystreak.update();
 		main.firstcounts.update();
 		main.onekstreak.update();
+		main.topstreaks.update();
 		messages = new ArrayList<Message>();
 	}
 	public void write() {
@@ -203,6 +208,7 @@ public class Main {
 		main.daystreak.write();
 		main.firstcounts.write();
 		main.onekstreak.write();
+		main.topstreaks.write();
 	}
 	
 

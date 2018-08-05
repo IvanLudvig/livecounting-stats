@@ -25,6 +25,13 @@ public class Streak {
 		this.user = user;
 	}
 	
+	public Streak(String user, int bcount, String bdate) {
+		this.bcount=bcount;
+		this.bdate=bdate;
+		sdf =  new SimpleDateFormat("dd/MM/yyyy");
+		this.user = user;
+	}
+	
 	/*
 	public void update(int count, String date) {
 		if(Integer.parseInt(this.date[n].substring(date.length()-4, date.length()))==Integer.parseInt(date.substring(date.length()-4, date.length()))) {
@@ -98,6 +105,10 @@ public class Streak {
 				ldate = date;
 			}
 		}
+	}
+	
+	public Line toLine() {
+		return new Line(user, bcount, bdate);
 	}
 	
 	public Line getBest() {
