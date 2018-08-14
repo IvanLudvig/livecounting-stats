@@ -22,6 +22,8 @@ import ivanludvig.livecounting.stats.Pairs;
 import ivanludvig.livecounting.stats.Pincus;
 import ivanludvig.livecounting.stats.TopStreaks;
 import ivanludvig.livecounting.stats.TwentyK;
+import ivanludvig.livecounting.stats.p5m.NotP5M;
+import ivanludvig.livecounting.stats.p5m.OneKDays;
 
 
 public class Main {
@@ -41,6 +43,8 @@ public class Main {
 	FirstCounts firstcounts;
 	OneKStreak onekstreak;
 	TopStreaks topstreaks;
+	OneKDays onekdays;
+	//NotP5M notp5m;
 	int latestcount = 0;
 	String lastdate = "0";
 	String ld = "0";
@@ -59,6 +63,8 @@ public class Main {
 		main.firstcounts = new FirstCounts(main);
 		main.onekstreak = new OneKStreak(main);
 		main.topstreaks=new TopStreaks(main);
+		//main.notp5m=new NotP5M(main);
+		main.onekdays=new OneKDays(main);
 		//main.read();
 		main.reset();
 		main.getJson();
@@ -182,6 +188,7 @@ public class Main {
 	}
 	
 	public void update() {
+		/*
 		main.favourite.update();
 		main.pairs.update();
 		main.hoe.update();
@@ -194,9 +201,14 @@ public class Main {
 		main.firstcounts.update();
 		main.onekstreak.update();
 		main.topstreaks.update();
+		*/
+		//main.notp5m.update();
+		main.onekdays.update();
+		
 		messages = new ArrayList<Message>();
 	}
 	public void write() {
+		/*
 		main.bars.write();
 		main.hoe.write();
 		main.favourite.write();
@@ -209,6 +221,9 @@ public class Main {
 		main.firstcounts.write();
 		main.onekstreak.write();
 		main.topstreaks.write();
+		*/
+		//main.notp5m.write();
+		main.onekdays.write();
 	}
 	
 

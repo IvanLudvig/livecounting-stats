@@ -1,0 +1,22 @@
+|# |User |Streak |Last Day  
+|---|---|---|---|
+| 1 | /u/Chalupa_Dad | 17 | 18/12/2017 | 
+| 2 | /u/Chalupa_Dad | 17 | 04/01/2018 | 
+| 3 | /u/Chalupa_Dad | 13 | 30/04/2018 | 
+| 4 | /u/Chalupa_Dad | 10 | 23/01/2018 | 
+| 5 | /u/Chalupa_Dad | 10 | 08/02/2018 | 
+| 6 | /u/NobodyL0vesMe | 10 | 26/05/2018 | 
+| 7 | /u/LeinadSpoon | 9 | 11/05/2018 | 
+| 8 | /u/None | 8 | 27/02/2018 | 
+| 9 | /u/Chalupa_Dad | 8 | 25/03/2018 | 
+| 10 | /u/Chalupa_Dad | 7 | 23/04/2018 | 
+| 11 | /u/LeinadSpoon | 7 | 13/04/2018 | 
+| 12 | /u/LeinadSpoon | 7 | 29/05/2018 | 
+| 13 | /u/LeinadSpoon | 7 | 02/07/2018 | 
+| 14 | /u/Chalupa_Dad | 6 | 02/02/2018 | 
+| 15 | /u/Chalupa_Dad | 6 | 13/05/2018 | 
+| 16 | /u/Lonadont | 6 | 06/08/2018 | 
+| 17 | /u/LeinadSpoon | 6 | 02/04/2018 | 
+| 18 | /u/LeinadSpoon | 6 | 30/04/2018 | 
+| 19 | /u/LeinadSpoon | 6 | 09/07/2018 | 
+| 20 | /u/Chalupa_Dad | 5 | 18/02/2018 | 

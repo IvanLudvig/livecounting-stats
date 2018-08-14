@@ -7,7 +7,7 @@ import java.util.Calendar;
 
 public class StreakAdv{
 	
-	String user;
+	public String user;
 	ArrayList<Streak> streaks = new ArrayList<Streak>();
 	SimpleDateFormat sdf;
 	int ccount;
