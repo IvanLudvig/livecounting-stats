@@ -133,7 +133,7 @@ public class Bars {
 	}
 	
 	public int hourof(Message message) {
-		Date date = new Date((Long.valueOf(message.date)-3600)*1000);
+		Date date = new Date((Long.valueOf(message.date)-21600)*1000);
 		return Integer.parseInt(sdf.format(date));
 	}
 

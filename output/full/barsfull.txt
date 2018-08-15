@@ -1,7 +1,7 @@
 | 1 | /u/dominodan123 | 1941 | 
 | 2 | /u/artbn | 1840 | 
 | 3 | /u/TOP_20 | 1699 | 
-| 4 | /u/Smartstocks | 927 | 
+| 4 | /u/Smartstocks | 928 | 
 | 5 | /u/smarvin6689 | 909 | 
 | 6 | /u/rschaosid | 902 | 
 | 7 | /u/davidjl123 | 760 | 
@@ -12,7 +12,7 @@
 | 12 | /u/piyushsharma301 | 577 | 
 | 13 | /u/Tranquilsunrise | 489 | 
 | 14 | /u/Chalupa_Dad | 474 | 
-| 15 | /u/gordonpt8 | 447 | 
+| 15 | /u/gordonpt8 | 448 | 
 | 16 | /u/VitaminB16 | 417 | 
 | 17 | /u/o99o99 | 374 | 
 | 18 | /u/xHOCKEYx12 | 356 | 
@@ -29,7 +29,7 @@
 | 29 | /u/jandreiu | 155 | 
 | 30 | /u/SolidGoldMagikarp | 147 | 
 | 31 | /u/rideride | 132 | 
-| 32 | /u/TheNitromeFan | 101 | 
+| 32 | /u/TheNitromeFan | 100 | 
 | 33 | /u/parker_cube | 98 | 
 | 34 | /u/bluesolid | 82 | 
 | 35 | /u/TheBestNumberOfHats | 69 | 
@@ -73,9 +73,9 @@
 | 73 | /u/cro4_chromate | 13 | 
 | 74 | /u/Urbul | 12 | 
 | 75 | /u/Koraine | 11 | 
-| 76 | /u/D33rp | 10 | 
-| 77 | /u/TheGlobeIsRound | 10 | 
-| 78 | /u/ElliottB1 | 10 | 
+| 76 | /u/ElliottB1 | 11 | 
+| 77 | /u/D33rp | 10 | 
+| 78 | /u/TheGlobeIsRound | 10 | 
 | 79 | /u/UnsuccessfulAtLife | 10 | 
 | 80 | /u/DanTheStripe | 9 | 
 | 81 | /u/PM_ME_UR_PINEAPPLE | 9 | 

@@ -188,40 +188,36 @@ public class Main {
 	}
 	
 	public void update() {
-		/*
-		main.favourite.update();
-		main.pairs.update();
+		//main.favourite.update();
+		//main.pairs.update();
 		main.hoe.update();
 		main.hours.update();
-		main.bars.update();
-		main.oddeven.update();
-		main.pincus.update();
+		//main.oddeven.update();
+		//main.pincus.update();
 		main.twentyk.update();
 		main.daystreak.update();
-		main.firstcounts.update();
+		//main.firstcounts.update();
 		main.onekstreak.update();
 		main.topstreaks.update();
-		*/
 		//main.notp5m.update();
 		main.onekdays.update();
+		main.bars.update();             //bars are last
 		
 		messages = new ArrayList<Message>();
 	}
 	public void write() {
-		/*
 		main.bars.write();
 		main.hoe.write();
-		main.favourite.write();
-		main.pairs.write();
+		//main.favourite.write();
+		//main.pairs.write();
 		main.hours.write();
-		main.oddeven.write();
-		main.pincus.write();
+		//main.oddeven.write();
+		//main.pincus.write();
 		main.twentyk.write();
 		main.daystreak.write();
 		main.firstcounts.write();
 		main.onekstreak.write();
 		main.topstreaks.write();
-		*/
 		//main.notp5m.write();
 		main.onekdays.write();
 	}

@@ -112,9 +112,9 @@ public class OneKStreak {
 		for(Line l : lines) {
 			if(l.user!=null && line.user!=null) {
 				if(l.user.equals(line.user)) {
-					System.out.println(l.user+" "+line.user);
+					//System.out.println(l.user+" "+line.user);
 					l.count+=line.count;
-					System.out.println(line.user);
+					//System.out.println(line.user);
 					exists = 1;
 					break;
 				}
@@ -153,7 +153,7 @@ public class OneKStreak {
 	}
 
 	public String dateof(Message message) {
-		Date date = new Date((Long.valueOf(message.date)-3600)*1000);
+		Date date = new Date((Long.valueOf(message.date)-21600)*1000);
 		return sdf.format(date);
 	}
 	

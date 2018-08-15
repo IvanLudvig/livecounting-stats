@@ -35,7 +35,7 @@ public class StreakAdv{
 			    	cdate = date;
 			    } else {
 			    	if(ccount>=3) {
-			    		streaks.add(new Streak(user, ccount, cdate));
+			    		streaks.add(new Streak(user, ccount, ldate));
 			    	}
 					cdate=date;
 					ccount = 1;
@@ -43,7 +43,7 @@ public class StreakAdv{
 			    }
 			}else {
 		    	if(ccount>=3) {
-		    		streaks.add(new Streak(user, ccount, cdate));
+		    		streaks.add(new Streak(user, ccount, ldate));
 		    	}
 				cdate=date;
 				ccount = 1;
@@ -54,7 +54,7 @@ public class StreakAdv{
 	
 	public ArrayList<Streak> getData() {
 		if(streaks.size()>0) {
-			if(streaks.get(streaks.size()-1).bcount!=ccount && !streaks.get(streaks.size()-1).bdate.equals(ldate)) {
+			if(streaks.get(streaks.size()-1).bcount!=ccount && !streaks.get(streaks.size()-1).bldate.equals(ldate)) {
 				if(ccount>=3) {
 	    			streaks.add(new Streak(user, ccount, ldate));
 	    		}

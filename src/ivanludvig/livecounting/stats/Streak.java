@@ -25,9 +25,9 @@ public class Streak {
 		this.user = user;
 	}
 	
-	public Streak(String user, int bcount, String bdate) {
+	public Streak(String user, int bcount, String bldate) {
 		this.bcount=bcount;
-		this.bdate=bdate;
+		this.bldate=bldate;
 		sdf =  new SimpleDateFormat("dd/MM/yyyy");
 		this.user = user;
 	}
@@ -108,7 +108,7 @@ public class Streak {
 	}
 	
 	public Line toLine() {
-		return new Line(user, bcount, bdate);
+		return new Line(user, bcount, bldate);
 	}
 	
 	public Line getBest() {
@@ -117,14 +117,6 @@ public class Streak {
 			bdate = cdate;
 			bldate = ldate;
 		}
-		Calendar c = Calendar.getInstance();
-	    try {
-			c.setTime(sdf.parse(bdate));
-		} catch (ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	    c.add(Calendar.DATE, bcount);
 		return new Line(user, bcount, bldate);
 	}
 
