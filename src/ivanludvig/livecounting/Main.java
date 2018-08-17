@@ -19,10 +19,10 @@ import ivanludvig.livecounting.stats.Hours;
 import ivanludvig.livecounting.stats.OddEven;
 import ivanludvig.livecounting.stats.OneKStreak;
 import ivanludvig.livecounting.stats.Pairs;
+import ivanludvig.livecounting.stats.Pee;
 import ivanludvig.livecounting.stats.Pincus;
 import ivanludvig.livecounting.stats.TopStreaks;
 import ivanludvig.livecounting.stats.TwentyK;
-import ivanludvig.livecounting.stats.p5m.NotP5M;
 import ivanludvig.livecounting.stats.p5m.OneKDays;
 
 
@@ -44,6 +44,7 @@ public class Main {
 	OneKStreak onekstreak;
 	TopStreaks topstreaks;
 	OneKDays onekdays;
+	Pee pee;
 	//NotP5M notp5m;
 	int latestcount = 0;
 	String lastdate = "0";
@@ -65,6 +66,7 @@ public class Main {
 		main.topstreaks=new TopStreaks(main);
 		//main.notp5m=new NotP5M(main);
 		main.onekdays=new OneKDays(main);
+		main.pee = new Pee(main);
 		//main.read();
 		main.reset();
 		main.getJson();
@@ -188,38 +190,43 @@ public class Main {
 	}
 	
 	public void update() {
-		//main.favourite.update();
-		//main.pairs.update();
+		/*
+		main.favourite.update();
+		main.pairs.update();
 		main.hoe.update();
 		main.hours.update();
-		//main.oddeven.update();
-		//main.pincus.update();
+		main.oddeven.update();
+		main.pincus.update();
 		main.twentyk.update();
 		main.daystreak.update();
-		//main.firstcounts.update();
+		main.firstcounts.update();
 		main.onekstreak.update();
 		main.topstreaks.update();
-		//main.notp5m.update();
+		main.notp5m.update();
 		main.onekdays.update();
 		main.bars.update();             //bars are last
-		
+		*/
+		main.pee.update();
 		messages = new ArrayList<Message>();
 	}
 	public void write() {
+		/*
 		main.bars.write();
 		main.hoe.write();
-		//main.favourite.write();
-		//main.pairs.write();
+		main.favourite.write();
+		main.pairs.write();
 		main.hours.write();
-		//main.oddeven.write();
-		//main.pincus.write();
+		main.oddeven.write();
+		main.pincus.write();
 		main.twentyk.write();
 		main.daystreak.write();
 		main.firstcounts.write();
 		main.onekstreak.write();
 		main.topstreaks.write();
-		//main.notp5m.write();
+		main.notp5m.write();
 		main.onekdays.write();
+		*/
+		main.pee.write();
 	}
 	
 
