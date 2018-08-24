@@ -1,5 +1,5 @@
 | 1 | /u/smarvin6689 | 12 | 
-| 2 | /u/amazingpikachu_38 | 6 | 
+| 2 | /u/amazingpikachu_38 | 7 | 
 | 3 | /u/davidjl123 | 6 | 
 | 4 | /u/dominodan123 | 5 | 
 | 5 | /u/gordonpt8 | 4 | 
@@ -8,7 +8,8 @@
 | 8 | /u/LeinadSpoon | 2 | 
 | 9 | /u/Smartstocks | 1 | 
 | 10 | /u/None | 1 | 
-| 11 | /u/Kris18 | 1 | 
-| 12 | /u/Majestic_Bear | 1 | 
-| 13 | /u/noduorg | 1 | 
-| 14 | /u/TOP_20 | 1 | 
+| 11 | /u/Majestic_Bear | 1 | 
+| 12 | /u/Kris18 | 1 | 
+| 13 | /u/Lonadont | 1 | 
+| 14 | /u/noduorg | 1 | 
+| 15 | /u/TOP_20 | 1 | 

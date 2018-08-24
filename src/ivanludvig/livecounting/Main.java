@@ -16,6 +16,7 @@ import ivanludvig.livecounting.stats.FavouriteCounter;
 import ivanludvig.livecounting.stats.FirstCounts;
 import ivanludvig.livecounting.stats.HoE;
 import ivanludvig.livecounting.stats.Hours;
+import ivanludvig.livecounting.stats.KParts;
 import ivanludvig.livecounting.stats.OddEven;
 import ivanludvig.livecounting.stats.OneKStreak;
 import ivanludvig.livecounting.stats.Pairs;
@@ -45,6 +46,7 @@ public class Main {
 	TopStreaks topstreaks;
 	OneKDays onekdays;
 	Pee pee;
+	KParts kparts;
 	//NotP5M notp5m;
 	int latestcount = 0;
 	String lastdate = "0";
@@ -67,6 +69,7 @@ public class Main {
 		//main.notp5m=new NotP5M(main);
 		main.onekdays=new OneKDays(main);
 		main.pee = new Pee(main);
+		main.kparts=new KParts(main);
 		//main.read();
 		main.reset();
 		main.getJson();
@@ -190,7 +193,6 @@ public class Main {
 	}
 	
 	public void update() {
-		/*
 		main.favourite.update();
 		main.pairs.update();
 		main.hoe.update();
@@ -202,15 +204,14 @@ public class Main {
 		main.firstcounts.update();
 		main.onekstreak.update();
 		main.topstreaks.update();
-		main.notp5m.update();
+		//main.notp5m.update();
 		main.onekdays.update();
-		main.bars.update();             //bars are last
-		*/
 		main.pee.update();
+		main.kparts.update();
+		main.bars.update();             //bars are last
 		messages = new ArrayList<Message>();
 	}
 	public void write() {
-		/*
 		main.bars.write();
 		main.hoe.write();
 		main.favourite.write();
@@ -223,10 +224,10 @@ public class Main {
 		main.firstcounts.write();
 		main.onekstreak.write();
 		main.topstreaks.write();
-		main.notp5m.write();
+		//main.notp5m.write();
 		main.onekdays.write();
-		*/
 		main.pee.write();
+		main.kparts.write();
 	}
 	
 

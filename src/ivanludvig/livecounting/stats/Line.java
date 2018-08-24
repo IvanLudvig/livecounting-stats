@@ -9,11 +9,18 @@ public class Line {
 	public int count;
 	public int odd;
 	public int even;
+	public double percentage;
 	int counts[] = new int[26];
 	
 	public Line(String user, int count) {
 		this.user = user;
 		this.count = count;
+	}
+	
+	public Line(String user, double percentage) {
+		this.user = user;
+		this.percentage = percentage;
+		this.count = (int) percentage*100;
 	}
 	
 	public Line(String user, int odd, int even) {
@@ -165,6 +172,10 @@ public class Line {
 	
 	public String getStreakString(int order) {
 		return "| "+order+" | "+"/u/"+user+" | "+count+" | "+date+" | ";
+	}
+	
+	public String getKPString(int order) {
+		return "| "+order+" | "+"/u/"+user+" | "+percentage+" | ";
 	}
 	
 }
