@@ -20,7 +20,7 @@ public class Line {
 	public Line(String user, double percentage) {
 		this.user = user;
 		this.percentage = percentage;
-		this.count = (int) percentage*100;
+		this.count = (int) ((double)percentage*100);
 	}
 	
 	public Line(String user, int odd, int even) {

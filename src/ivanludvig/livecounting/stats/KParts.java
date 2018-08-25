@@ -70,8 +70,10 @@ public class KParts {
 	    	writer.write("|---|---|---");
 			writer.newLine();
 			for(Line line : lines) {
-				writer.write(line.getKPString(lines.indexOf(line)+1));
-				writer.newLine();
+				if(line.percentage>2) {
+					writer.write(line.getKPString(lines.indexOf(line)+1));
+					writer.newLine();
+				}
 			}
 			writer.close();
 	    } catch (IOException e) {

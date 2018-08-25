@@ -193,6 +193,7 @@ public class Main {
 	}
 	
 	public void update() {
+		/*
 		main.favourite.update();
 		main.pairs.update();
 		main.hoe.update();
@@ -207,11 +208,14 @@ public class Main {
 		//main.notp5m.update();
 		main.onekdays.update();
 		main.pee.update();
+		*/
 		main.kparts.update();
-		main.bars.update();             //bars are last
+		
+		//main.bars.update();             //bars are last
 		messages = new ArrayList<Message>();
 	}
 	public void write() {
+		/*
 		main.bars.write();
 		main.hoe.write();
 		main.favourite.write();
@@ -227,6 +231,7 @@ public class Main {
 		//main.notp5m.write();
 		main.onekdays.write();
 		main.pee.write();
+		*/
 		main.kparts.write();
 	}
 	
