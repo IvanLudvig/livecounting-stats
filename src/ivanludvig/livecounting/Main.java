@@ -22,6 +22,7 @@ import ivanludvig.livecounting.stats.OneKStreak;
 import ivanludvig.livecounting.stats.Pairs;
 import ivanludvig.livecounting.stats.Pee;
 import ivanludvig.livecounting.stats.Pincus;
+import ivanludvig.livecounting.stats.TenToHundredK;
 import ivanludvig.livecounting.stats.TopStreaks;
 import ivanludvig.livecounting.stats.TwentyK;
 import ivanludvig.livecounting.stats.p5m.OneKDays;
@@ -47,6 +48,7 @@ public class Main {
 	OneKDays onekdays;
 	Pee pee;
 	KParts kparts;
+	TenToHundredK tentohun;
 	//NotP5M notp5m;
 	int latestcount = 0;
 	String lastdate = "0";
@@ -70,9 +72,11 @@ public class Main {
 		main.onekdays=new OneKDays(main);
 		main.pee = new Pee(main);
 		main.kparts=new KParts(main);
+		main.tentohun=new TenToHundredK(main);
 		//main.read();
 		main.reset();
 		main.getJson();
+		//main.reversedGetJson();
 		System.out.println("Saving...");
 		main.write();
 		System.out.println("Done!");
@@ -141,6 +145,68 @@ public class Main {
 		}
 	}
 	
+	public void reversedGetJson() throws IOException {
+		BufferedReader br = null;
+		try {
+			int last = readLastChatFile(br);
+			int lastcount = readLastCount(br);
+			lastdate = readLastDate(br);
+			main.latestcount = lastcount;
+			
+			JsonParser parser = new JsonParser();
+			for(int i = 0; i <= last; i++) {
+				if(i!=82 && i!=83 && i!=84) {
+					br = new BufferedReader(new FileReader("res/chat"+Integer.toString(i)+".json"));
+					System.out.println("reading res/chat"+i+".json...");
+					JsonArray array = (JsonArray) parser.parse(br).getAsJsonArray();
+					System.out.println("messages in file: "+array.size());
+					for(int j = 0; j < array.size(); j++) {
+						main.messages.add(new Message(main, array.get(j).getAsJsonObject()));
+					}
+					int n=0;
+					Message check = new Message(main, array.get(n).getAsJsonObject());
+					while(check.ok==1) {
+						n++;
+						check = new Message(main, array.get(n).getAsJsonObject());
+					}
+					if(check.ok==0) {
+						if(check.count<=lastcount+1 
+								&& (!lastdate.equals(main.hoe.dateof(check)))) {
+							break;
+						}
+						else if(lastdate.equals(main.hoe.dateof(check))){
+							if(i!=0) {
+								//br = new BufferedReader(new FileReader("res/chat"+Integer.toString(last-i)+".json"));
+								//JsonArray lastarray = (JsonArray) parser.parse(br).getAsJsonArray();
+								//for(int j = 0; j < lastarray.size(); j++) {
+								//	main.messages.add(new Message(main, lastarray.get(j).getAsJsonObject()));
+								//}
+								main.hoe.lastupdate();
+								main.twentyk.lastupdate();
+								break;
+							}else if(i==0) {
+								break;
+							}
+						}
+						if(i==last) {
+					    	System.out.println("latest count: "+check.count);
+					    	main.latestcount = check.count;
+					    	ld = main.hoe.dateof(check);
+						}
+					}
+					reversedUpdate();
+				}
+			}
+	    	BufferedWriter writer = new BufferedWriter(new FileWriter("res/lastcount.txt"));
+	    	writer.write(Integer.toString(main.latestcount));
+	    	writer.close();
+	    	main.saveLastDate(writer);
+
+		} finally {
+			br.close();
+		}
+	}
+	
 	public String readLastDate(BufferedReader br) throws NumberFormatException, IOException {
 		br = new BufferedReader(new FileReader("res/lastDate.txt"));
 		String lastDate = br.readLine();
@@ -193,7 +259,7 @@ public class Main {
 	}
 	
 	public void update() {
-		/*
+		
 		main.favourite.update();
 		main.pairs.update();
 		main.hoe.update();
@@ -208,14 +274,19 @@ public class Main {
 		//main.notp5m.update();
 		main.onekdays.update();
 		main.pee.update();
-		*/
 		main.kparts.update();
-		
-		//main.bars.update();             //bars are last
+				
+		main.bars.update();             //bars are last
 		messages = new ArrayList<Message>();
 	}
+	
+	public void reversedUpdate(){
+		main.tentohun.update();
+		messages = new ArrayList<Message>();
+	}
+	
 	public void write() {
-		/*
+		
 		main.bars.write();
 		main.hoe.write();
 		main.favourite.write();
@@ -231,8 +302,9 @@ public class Main {
 		//main.notp5m.write();
 		main.onekdays.write();
 		main.pee.write();
-		*/
 		main.kparts.write();
+		
+		//main.tentohun.write();
 	}
 	
 

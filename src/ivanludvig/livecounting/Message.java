@@ -18,6 +18,9 @@ public class Message {
 			if(data.getAsJsonObject().get("author").isJsonPrimitive()) {
 				author = data.getAsJsonObject().getAsJsonPrimitive("author").toString();
 				author = author.substring(1, author.length()-1);
+				if(!main.users.contains(author)) {
+					main.users.add(author);
+				}
 			}else {
 				ok = 1;
 			}
@@ -54,6 +57,7 @@ public class Message {
 				break;
 			}
 		}
+		//9 DIGITS
 		if(!numstr.equals("") && numstr.length()<9) {
 			count = Integer.parseInt(numstr);
 		}else {

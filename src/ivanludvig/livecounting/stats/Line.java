@@ -23,6 +23,12 @@ public class Line {
 		this.count = (int) ((double)percentage*100);
 	}
 	
+	public Line(String user, String message) {
+		this.user = user;
+		this.message = message;
+		this.count = (int) ((double)percentage*100);
+	}
+	
 	public Line(String user, int odd, int even) {
 		this.user = user;
 		this.odd = odd;
@@ -176,6 +182,10 @@ public class Line {
 	
 	public String getKPString(int order) {
 		return "| "+order+" | "+"/u/"+user+" | "+percentage+" | ";
+	}
+	
+	public String getTTString(int order) {
+		return "| "+order+" | "+"/u/"+user+" | "+date+" | ";
 	}
 	
 }
