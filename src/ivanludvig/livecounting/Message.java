@@ -8,7 +8,8 @@ public class Message {
 	public String author;
 	public String date;
 	public String stricken = "";
-	public int count;
+	public String countstr = "";
+	public int count = -1;
 	public int ok = 0;
 	
 	public Message(Main main, JsonElement data) {
@@ -32,7 +33,7 @@ public class Message {
 			ok = 1;
 		}
 		date = data.getAsJsonObject().getAsJsonPrimitive("created_utc").toString();
-		if(body==null || date==null || author==null) {
+		if(body==null || author==null || date==null) {
 			ok=1;
 		}
 		if(ok == 0) {
@@ -51,13 +52,14 @@ public class Message {
 		for(int i = 0; i<body.length(); i++) {
 			if(Character.isDigit(body.charAt(i))) {
 				numstr+=body.charAt(i);
+				countstr+=body.charAt(i);
 			}else if(body.charAt(i)==','||body.charAt(i)=='.'||body.charAt(i)==' ') {
+				countstr+=body.charAt(i);
 				continue;
 			}else {
 				break;
 			}
 		}
-		//9 DIGITS
 		if(!numstr.equals("") && numstr.length()<9) {
 			count = Integer.parseInt(numstr);
 		}else {

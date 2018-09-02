@@ -11,6 +11,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonParser;
 
 import ivanludvig.livecounting.stats.Bars;
+import ivanludvig.livecounting.stats.CountPercent;
 import ivanludvig.livecounting.stats.DayStreak;
 import ivanludvig.livecounting.stats.FavouriteCounter;
 import ivanludvig.livecounting.stats.FirstCounts;
@@ -49,6 +50,7 @@ public class Main {
 	Pee pee;
 	KParts kparts;
 	TenToHundredK tentohun;
+	CountPercent countpercent;
 	//NotP5M notp5m;
 	int latestcount = 0;
 	String lastdate = "0";
@@ -73,6 +75,7 @@ public class Main {
 		main.pee = new Pee(main);
 		main.kparts=new KParts(main);
 		main.tentohun=new TenToHundredK(main);
+		main.countpercent=new CountPercent(main);
 		//main.read();
 		main.reset();
 		main.getJson();
@@ -170,24 +173,6 @@ public class Main {
 						check = new Message(main, array.get(n).getAsJsonObject());
 					}
 					if(check.ok==0) {
-						if(check.count<=lastcount+1 
-								&& (!lastdate.equals(main.hoe.dateof(check)))) {
-							break;
-						}
-						else if(lastdate.equals(main.hoe.dateof(check))){
-							if(i!=0) {
-								//br = new BufferedReader(new FileReader("res/chat"+Integer.toString(last-i)+".json"));
-								//JsonArray lastarray = (JsonArray) parser.parse(br).getAsJsonArray();
-								//for(int j = 0; j < lastarray.size(); j++) {
-								//	main.messages.add(new Message(main, lastarray.get(j).getAsJsonObject()));
-								//}
-								main.hoe.lastupdate();
-								main.twentyk.lastupdate();
-								break;
-							}else if(i==0) {
-								break;
-							}
-						}
 						if(i==last) {
 					    	System.out.println("latest count: "+check.count);
 					    	main.latestcount = check.count;
@@ -259,7 +244,7 @@ public class Main {
 	}
 	
 	public void update() {
-		
+		/*
 		main.favourite.update();
 		main.pairs.update();
 		main.hoe.update();
@@ -277,6 +262,8 @@ public class Main {
 		main.kparts.update();
 				
 		main.bars.update();             //bars are last
+		*/
+		main.countpercent.update();
 		messages = new ArrayList<Message>();
 	}
 	
@@ -286,7 +273,7 @@ public class Main {
 	}
 	
 	public void write() {
-		
+		/*
 		main.bars.write();
 		main.hoe.write();
 		main.favourite.write();
@@ -303,8 +290,9 @@ public class Main {
 		main.onekdays.write();
 		main.pee.write();
 		main.kparts.write();
-		
-		//main.tentohun.write();
+		main.tentohun.write();
+		*/
+		main.countpercent.write();
 	}
 	
 
