@@ -46,7 +46,7 @@ public class CountPercent {
 	
 	public void write() {
 		for(String str : main.users) {
-			if(counts[main.users.indexOf(str)]>0) {
+			if(counts[main.users.indexOf(str)]>=45000) {
 				lines.add(new Line(str,
 						Math.round(((double)counts[main.users.indexOf(str)]/(words[main.users.indexOf(str)])*100)*100.0)/100.0));
 			}
@@ -77,7 +77,7 @@ public class CountPercent {
 	public void write2() {
 		lines = new ArrayList<Line>();
 		for(String str : main.users) {
-			if(counts[main.users.indexOf(str)]>0) {
+			if(counts[main.users.indexOf(str)]>=45000) {
 				lines.add(new Line(str,
 						Math.round(((double)words[main.users.indexOf(str)]/(total[main.users.indexOf(str)]))*100.0)/100.0));
 				//System.out.println(Math.round(((double)words[main.users.indexOf(str)]/(total[main.users.indexOf(str)]))*100.0)/100.0);
@@ -109,7 +109,7 @@ public class CountPercent {
 	public void write3() {
 		lines = new ArrayList<Line>();
 		for(String str : main.users) {
-			if(counts[main.users.indexOf(str)]>0) {
+			if(counts[main.users.indexOf(str)]>=45000) {
 				lines.add(new Line(str,
 						Math.round(((double)countchars[main.users.indexOf(str)]/(chars[main.users.indexOf(str)])*100)*100.0)/100.0));
 			}
@@ -140,7 +140,7 @@ public class CountPercent {
 	public void write4() {
 		lines = new ArrayList<Line>();
 		for(String str : main.users) {
-			if(counts[main.users.indexOf(str)]>0) {
+			if(counts[main.users.indexOf(str)]>=45000) {
 				lines.add(new Line(str,
 						Math.round(((double)chars[main.users.indexOf(str)]/(total[main.users.indexOf(str)]))*100.0)/100.0));
 			}
@@ -171,7 +171,7 @@ public class CountPercent {
 	public void write5() {
 		lines = new ArrayList<Line>();
 		for(String str : main.users) {
-			if(counts[main.users.indexOf(str)]>0) {
+			if(counts[main.users.indexOf(str)]>45000) {
 				lines.add(new Line(str,
 						Math.round(((double)words[main.users.indexOf(str)]/(total[main.users.indexOf(str)]))*100.0)/100.0));
 			}
