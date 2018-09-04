@@ -1,0 +1,31 @@
+| # |Username |Words per message 
+|---|---|---
+| 1 | /u/davidjl123 | 1.11 | 
+| 2 | /u/QuestoGuy | 1.11 | 
+| 3 | /u/DemonBurritoCat | 1.15 | 
+| 4 | /u/gordonpt8 | 1.16 | 
+| 5 | /u/abplows | 1.16 | 
+| 6 | /u/amazingpikachu_38 | 1.2 | 
+| 7 | /u/noduorg | 1.21 | 
+| 8 | /u/dominodan123 | 1.23 | 
+| 9 | /u/TOP_6689 | 1.23 | 
+| 10 | /u/MrBahr12 | 1.24 | 
+| 11 | /u/rideride | 1.25 | 
+| 12 | /u/NobodyL0vesMe | 1.25 | 
+| 13 | /u/LeinadSpoon | 1.27 | 
+| 14 | /u/Smartstocks | 1.28 | 
+| 15 | /u/Lonadont | 1.3 | 
+| 16 | /u/VitaminB16 | 1.3 | 
+| 17 | /u/smarvin6689 | 1.37 | 
+| 18 | /u/parker_cube | 1.39 | 
+| 19 | /u/KingCaspianX | 1.39 | 
+| 20 | /u/piyushsharma301 | 1.4 | 
+| 21 | /u/Chalupa_Dad | 1.4 | 
+| 22 | /u/qwertylool | 1.4 | 
+| 23 | /u/Majestic_Bear | 1.41 | 
+| 24 | /u/Iamspeedy36 | 1.47 | 
+| 25 | /u/co3_carbonate | 1.67 | 
+| 26 | /u/rschaosid | 1.73 | 
+| 27 | /u/artbn | 1.84 | 
+| 28 | /u/Tranquilsunrise | 2.13 | 
+| 29 | /u/TOP_20 | 2.5 | 

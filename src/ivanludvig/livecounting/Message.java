@@ -21,7 +21,7 @@ public class Message {
 				author = author.substring(1, author.length()-1);
 				if(!main.users.contains(author)) {
 					main.users.add(author);
-				}
+				} 
 			}else {
 				ok = 1;
 			}

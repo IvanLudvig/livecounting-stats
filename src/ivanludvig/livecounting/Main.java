@@ -230,7 +230,7 @@ public class Main {
 	
 	public void read() {
 		main.pairs.read();
-		main.favourite.read();           //daystreak and favourite stats should be run using the full data
+		main.favourite.read();           //other stats should be run using the full data
 		main.hoe.read();
 		main.hours.read();
 		main.bars.read();
@@ -260,10 +260,10 @@ public class Main {
 		main.onekdays.update();
 		main.pee.update();
 		main.kparts.update();
-				
+		main.countpercent.update();
 		main.bars.update();             //bars are last
 		*/
-		main.countpercent.update();
+		
 		messages = new ArrayList<Message>();
 	}
 	
@@ -290,9 +290,9 @@ public class Main {
 		main.onekdays.write();
 		main.pee.write();
 		main.kparts.write();
-		main.tentohun.write();
-		*/
 		main.countpercent.write();
+		*/
+		//main.tentohun.write();
 	}
 	
 
