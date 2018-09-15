@@ -41,7 +41,6 @@ public class TenToHundredK {
 	public void write() {
 		for(String str : main.users) {
 			if(hundredk[main.users.indexOf(str)]!=0) {
-				System.out.println(str+" "+counts[main.users.indexOf(str)]);
 				int delta=hundredk[main.users.indexOf(str)]-tenk[main.users.indexOf(str)];
 				int days=delta/60/60/24;
 				int hours=(delta-(days*60*60*24))/60/60;

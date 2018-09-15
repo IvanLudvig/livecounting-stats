@@ -97,6 +97,7 @@ public class HoE {
 				if(five[main.users.indexOf(str)]!=0) {
 					addLine(new Line(str, five[main.users.indexOf(str)]), 5);
 					if(ten[main.users.indexOf(str)]!=0) {
+						System.out.println(main.users.indexOf(str)+" "+ ten[main.users.indexOf(str)]);
 						addLine(new Line(str, ten[main.users.indexOf(str)]), 10);
 					}
 				}

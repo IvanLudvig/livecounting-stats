@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonParser;
 
+import ivanludvig.livecounting.stats.AverageCounts;
 import ivanludvig.livecounting.stats.Bars;
 import ivanludvig.livecounting.stats.CountPercent;
 import ivanludvig.livecounting.stats.DayStreak;
@@ -51,6 +52,7 @@ public class Main {
 	KParts kparts;
 	TenToHundredK tentohun;
 	CountPercent countpercent;
+	AverageCounts averagecounts;	
 	//NotP5M notp5m;
 	int latestcount = 0;
 	String lastdate = "0";
@@ -58,6 +60,7 @@ public class Main {
 	
 	public static void main(String args[]) throws IOException {
 		main = new Main();
+		/*
 		main.pairs = new Pairs(main);
 		main.favourite = new FavouriteCounter(main);
 		main.hoe = new HoE(main);
@@ -74,12 +77,14 @@ public class Main {
 		main.onekdays=new OneKDays(main);
 		main.pee = new Pee(main);
 		main.kparts=new KParts(main);
-		main.tentohun=new TenToHundredK(main);
 		main.countpercent=new CountPercent(main);
+		*/
+		main.tentohun=new TenToHundredK(main);
+		main.averagecounts = new AverageCounts(main);
 		//main.read();
 		main.reset();
-		main.getJson();
-		//main.reversedGetJson();
+		//main.getJson();
+		main.reversedGetJson();
 		System.out.println("Saving...");
 		main.write();
 		System.out.println("Done!");
@@ -163,7 +168,7 @@ public class Main {
 					System.out.println("reading res/chat"+i+".json...");
 					JsonArray array = (JsonArray) parser.parse(br).getAsJsonArray();
 					System.out.println("messages in file: "+array.size());
-					for(int j = 0; j < array.size(); j++) {
+					for(int j = array.size()-1; j >= 0 ; j--) {
 						main.messages.add(new Message(main, array.get(j).getAsJsonObject()));
 					}
 					int n=0;
@@ -176,7 +181,7 @@ public class Main {
 						if(i==last) {
 					    	System.out.println("latest count: "+check.count);
 					    	main.latestcount = check.count;
-					    	ld = main.hoe.dateof(check);
+					    	//ld = main.hoe.dateof(check);
 						}
 					}
 					reversedUpdate();
@@ -185,7 +190,7 @@ public class Main {
 	    	BufferedWriter writer = new BufferedWriter(new FileWriter("res/lastcount.txt"));
 	    	writer.write(Integer.toString(main.latestcount));
 	    	writer.close();
-	    	main.saveLastDate(writer);
+	    	//main.saveLastDate(writer);
 
 		} finally {
 			br.close();
@@ -269,14 +274,15 @@ public class Main {
 	
 	public void reversedUpdate(){
 		main.tentohun.update();
+		main.averagecounts.update();
 		messages = new ArrayList<Message>();
 	}
 	
 	public void write() {
 		/*
 		main.bars.write();
-		main.hoe.write();
 		main.favourite.write();
+		main.hoe.write();
 		main.pairs.write();
 		main.hours.write();
 		main.oddeven.write();
@@ -292,7 +298,8 @@ public class Main {
 		main.kparts.write();
 		main.countpercent.write();
 		*/
-		//main.tentohun.write();
+		main.averagecounts.write();
+		main.tentohun.write();
 	}
 	
 
