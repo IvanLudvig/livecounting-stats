@@ -60,7 +60,6 @@ public class Main {
 	
 	public static void main(String args[]) throws IOException {
 		main = new Main();
-		/*
 		main.pairs = new Pairs(main);
 		main.favourite = new FavouriteCounter(main);
 		main.hoe = new HoE(main);
@@ -78,13 +77,12 @@ public class Main {
 		main.pee = new Pee(main);
 		main.kparts=new KParts(main);
 		main.countpercent=new CountPercent(main);
-		*/
 		main.tentohun=new TenToHundredK(main);
 		main.averagecounts = new AverageCounts(main);
 		//main.read();
 		main.reset();
-		//main.getJson();
-		main.reversedGetJson();
+		main.getJson();
+		//main.reversedGetJson();
 		System.out.println("Saving...");
 		main.write();
 		System.out.println("Done!");
@@ -100,6 +98,7 @@ public class Main {
 			main.latestcount = lastcount;
 			
 			JsonParser parser = new JsonParser();
+			
 			for(int i = 0; i <= last; i++) {
 				if((last-i)!=82 && (last-i)!=83 && (last-i)!=84) {
 					br = new BufferedReader(new FileReader("res/chat"+Integer.toString(last-i)+".json"));
@@ -249,7 +248,7 @@ public class Main {
 	}
 	
 	public void update() {
-		/*
+
 		main.favourite.update();
 		main.pairs.update();
 		main.hoe.update();
@@ -259,6 +258,8 @@ public class Main {
 		main.twentyk.update();
 		main.daystreak.update();
 		main.firstcounts.update();
+
+		/*
 		main.onekstreak.update();
 		main.topstreaks.update();
 		//main.notp5m.update();
@@ -267,7 +268,8 @@ public class Main {
 		main.kparts.update();
 		main.countpercent.update();
 		main.bars.update();             //bars are last
-		*/
+				*/
+
 		
 		messages = new ArrayList<Message>();
 	}
@@ -279,8 +281,7 @@ public class Main {
 	}
 	
 	public void write() {
-		/*
-		main.bars.write();
+
 		main.favourite.write();
 		main.hoe.write();
 		main.pairs.write();
@@ -290,6 +291,8 @@ public class Main {
 		main.twentyk.write();
 		main.daystreak.write();
 		main.firstcounts.write();
+
+		/*
 		main.onekstreak.write();
 		main.topstreaks.write();
 		//main.notp5m.write();
@@ -297,9 +300,12 @@ public class Main {
 		main.pee.write();
 		main.kparts.write();
 		main.countpercent.write();
+		main.bars.write();
 		*/
-		main.averagecounts.write();
-		main.tentohun.write();
+		
+		//main.averagecounts.write();
+		//main.tentohun.write();
+
 	}
 	
 
