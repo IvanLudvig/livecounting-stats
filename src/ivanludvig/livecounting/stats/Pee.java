@@ -20,7 +20,7 @@ public class Pee {
 
 	public Pee(Main main) {
 		this.main = main;
-		counts = new int[1800];
+		counts = new int[main.n];
 	}
 	
 	public void update() {

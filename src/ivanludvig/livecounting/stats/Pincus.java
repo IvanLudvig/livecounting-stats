@@ -20,7 +20,7 @@ public class Pincus {
 
 	public Pincus(Main main) {
 		this.main = main;
-		counts = new int[1800][4];
+		counts = new int[main.n][4];
 	}
 	
 	public void update() {

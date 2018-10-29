@@ -28,8 +28,8 @@ public class TwentyK {
 
 	public TwentyK(Main main) {
 		this.main = main;
-		counts = new int[1800];
-		dates = new String[3600];
+		counts = new int[main.n];
+		dates = new String[main.n];
 		sdf =  new SimpleDateFormat("dd/MM/yyyy");
 	}
 	

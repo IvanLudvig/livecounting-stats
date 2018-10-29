@@ -26,7 +26,7 @@ public class Bars {
 
 	public Bars(Main main) {
 		this.main = main;
-		counts = new int[1800];
+		counts = new int[main.n];
 		sdf =  new SimpleDateFormat("HH");
 		try {
 			lasthour = readLastHour();

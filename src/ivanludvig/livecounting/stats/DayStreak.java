@@ -27,7 +27,7 @@ public class DayStreak {
 
 	public DayStreak(Main main) {
 		this.main = main;
-		counts = new int[1800];
+		counts = new int[main.n];
 		sdf =  new SimpleDateFormat("dd/MM/yyyy");
 	}
 	
@@ -53,7 +53,7 @@ public class DayStreak {
 						}
 					}
 					date = dateof(message);
-					counts = new int[1800];
+					counts = new int[main.n];
 					counts[main.users.indexOf(message.author)]+=1;
 				}
 			}

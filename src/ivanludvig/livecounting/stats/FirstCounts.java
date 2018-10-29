@@ -26,9 +26,9 @@ public class FirstCounts {
 
 	public FirstCounts(Main main) {
 		this.main = main;
-		counts = new int[1800];
-		messages = new String[1800];
-		date = new String[1800];
+		counts = new int[main.n];
+		messages = new String[main.n];
+		date = new String[main.n];
 		sdf =  new SimpleDateFormat("dd/MM/yyyy");
 	}
 	

@@ -22,7 +22,7 @@ public class KParts {
 
 	public KParts(Main main) {
 		this.main = main;
-		counts = new int[2800][20000];
+		counts = new int[main.n][11000];
 		//all = new int[2800];
 		//part = new int[2800];
 		//percentage = new double[2800];

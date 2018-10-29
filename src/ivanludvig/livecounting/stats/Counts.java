@@ -18,7 +18,7 @@ public class Counts {
 
 	public Counts(Main main) {
 		this.main = main;
-		counts = new int[800];
+		counts = new int[main.n];
 	}
 	
 	public void update() {

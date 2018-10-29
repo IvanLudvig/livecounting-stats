@@ -30,10 +30,10 @@ public class HoE {
 
 	public HoE(Main main) {
 		this.main = main;
-		counts = new int[1800];
-		three = new int[1800];
-		five = new int[1800];
-		ten = new int[1800];
+		counts = new int[main.n];
+		three = new int[main.n];
+		five = new int[main.n];
+		ten = new int[main.n];
 		sdf =  new SimpleDateFormat("dd/MM/yyyy");
 	}
 	
@@ -54,7 +54,7 @@ public class HoE {
 							}
 						}
 					}
-					counts = new int[1800];
+					counts = new int[main.n];
 					date = dateof(message);
 					counts[main.users.indexOf(message.author)]+=1;
 				}
@@ -63,7 +63,7 @@ public class HoE {
 	}
 	
 	public void lastupdate() {
-		int[] lastcounts = new int[1800];
+		int[] lastcounts = new int[main.n];
 		for(Message message : main.messages) {
 			if(message.ok == 0) {
 				if(dateof(message).equals(date)) {

@@ -22,8 +22,8 @@ public class OddEven {
 	
 	public OddEven(Main main) {
 		this.main = main;
-		odd = new int[1800];
-		even = new int[1800];
+		odd = new int[main.n];
+		even = new int[main.n];
 	}
 	
 	public void update() {

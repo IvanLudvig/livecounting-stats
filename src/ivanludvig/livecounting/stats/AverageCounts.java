@@ -21,9 +21,9 @@ public class AverageCounts {
 
 	public AverageCounts(Main main) {
 		this.main = main;
-		counts = new int[2800];
-		first = new int[2800];
-		onek = new int[2800];
+		counts = new int[main.n];
+		first = new int[main.n];
+		onek = new int[main.n];
 	}
 	
 	public void update() {

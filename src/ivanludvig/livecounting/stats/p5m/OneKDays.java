@@ -74,7 +74,7 @@ public class OneKDays {
 						}
 					}
 					date = dateof(message);
-					counts = new int[1800];
+					counts = new int[main.n];
 					counts[main.users.indexOf(message.author)]+=1;
 				}
 			}

@@ -18,7 +18,7 @@ public class SixSixSix {
 
 	public SixSixSix(Main main) {
 		this.main = main;
-		counts = new int[800];
+		counts = new int[main.n];
 	}
 	
 	public void update() {

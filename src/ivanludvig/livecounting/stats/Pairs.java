@@ -19,7 +19,7 @@ public class Pairs {
 
 	public Pairs(Main main) {
 		this.main = main;
-		counts = new int[1800][1800];
+		counts = new int[main.n][main.n];
 	}
 
 	public void update() {

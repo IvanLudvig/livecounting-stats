@@ -20,9 +20,9 @@ public class TenToHundredK {
 
 	public TenToHundredK(Main main) {
 		this.main = main;
-		counts = new int[2800];
-		tenk = new int[2800];
-		hundredk = new int[2800];
+		counts = new int[main.n];
+		tenk = new int[main.n];
+		hundredk = new int[main.n];
 	}
 	
 	public void update() {

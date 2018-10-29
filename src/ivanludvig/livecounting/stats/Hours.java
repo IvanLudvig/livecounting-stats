@@ -26,7 +26,7 @@ public class Hours {
 
 	public Hours(Main main) {
 		this.main = main;
-		counts = new int[1800][26];
+		counts = new int[main.n][26];
 		sdf =  new SimpleDateFormat("HH");
 	}
 	

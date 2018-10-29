@@ -21,11 +21,11 @@ public class CountPercent {
 
 	public CountPercent(Main main) {
 		this.main = main;
-		counts = new int[2800];
-		words = new int[2800];
-		total = new int[2800];
-		chars = new int[2800];
-		countchars = new int[2800];
+		counts = new int[main.n];
+		words = new int[main.n];
+		total = new int[main.n];
+		chars = new int[main.n];
+		countchars = new int[main.n];
 	}
 	
 	public void update() {
