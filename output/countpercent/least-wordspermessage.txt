@@ -1,10 +1,10 @@
 | # |Username |Words per message 
 |---|---|---
-| 1 | /u/ItzTaken | 1.11 | 
-| 2 | /u/davidjl123 | 1.11 | 
-| 3 | /u/MaybeNotWrong | 1.11 | 
+| 1 | /u/MaybeNotWrong | 1.11 | 
+| 2 | /u/ItzTaken | 1.11 | 
+| 3 | /u/davidjl123 | 1.11 | 
 | 4 | /u/QuestoGuy | 1.11 | 
-| 5 | /u/treje | 1.12 | 
+| 5 | /u/treje | 1.13 | 
 | 6 | /u/DemonBurritoCat | 1.15 | 
 | 7 | /u/gordonpt8 | 1.16 | 
 | 8 | /u/abplows | 1.17 | 
@@ -13,12 +13,12 @@
 | 11 | /u/TOP_6689 | 1.21 | 
 | 12 | /u/dominodan123 | 1.23 | 
 | 13 | /u/MrBahr12 | 1.25 | 
-| 14 | /u/NobodyL0vesMe | 1.27 | 
+| 14 | /u/NobodyL0vesMe | 1.28 | 
 | 15 | /u/LeinadSpoon | 1.28 | 
 | 16 | /u/Smartstocks | 1.28 | 
 | 17 | /u/rideride | 1.31 | 
 | 18 | /u/VitaminB16 | 1.32 | 
-| 19 | /u/Lonadont | 1.33 | 
+| 19 | /u/Lonadont | 1.34 | 
 | 20 | /u/smarvin6689 | 1.38 | 
 | 21 | /u/parker_cube | 1.39 | 
 | 22 | /u/KingCaspianX | 1.39 | 
@@ -31,4 +31,4 @@
 | 29 | /u/rschaosid | 1.78 | 
 | 30 | /u/artbn | 1.84 | 
 | 31 | /u/Tranquilsunrise | 2.15 | 
-| 32 | /u/TOP_20 | 2.59 | 
+| 32 | /u/TOP_20 | 2.6 | 
