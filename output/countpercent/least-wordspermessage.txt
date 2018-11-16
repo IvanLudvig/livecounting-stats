@@ -1,15 +1,15 @@
 | # |Username |Words per message 
 |---|---|---
-| 1 | /u/MaybeNotWrong | 1.11 | 
-| 2 | /u/ItzTaken | 1.11 | 
-| 3 | /u/davidjl123 | 1.11 | 
+| 1 | /u/ItzTaken | 1.1 | 
+| 2 | /u/davidjl123 | 1.11 | 
+| 3 | /u/MaybeNotWrong | 1.11 | 
 | 4 | /u/QuestoGuy | 1.11 | 
 | 5 | /u/treje | 1.13 | 
-| 6 | /u/DemonBurritoCat | 1.15 | 
-| 7 | /u/gordonpt8 | 1.16 | 
-| 8 | /u/abplows | 1.17 | 
-| 9 | /u/amazingpikachu_38 | 1.2 | 
-| 10 | /u/noduorg | 1.21 | 
+| 6 | /u/noduorg | 1.13 | 
+| 7 | /u/gordonpt8 | 1.14 | 
+| 8 | /u/DemonBurritoCat | 1.15 | 
+| 9 | /u/abplows | 1.17 | 
+| 10 | /u/amazingpikachu_38 | 1.2 | 
 | 11 | /u/TOP_6689 | 1.21 | 
 | 12 | /u/dominodan123 | 1.23 | 
 | 13 | /u/MrBahr12 | 1.25 | 

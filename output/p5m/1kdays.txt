@@ -2,11 +2,11 @@
 |---|---|---|---|
 | 1 | /u/Chalupa_Dad | 25 | 20/01/2018 | 
 | 2 | /u/Chalupa_Dad | 25 | 18/02/2018 | 
-| 3 | /u/ItzTaken | 19 | 03/11/2018 | 
-| 4 | /u/Chalupa_Dad | 18 | 10/05/2018 | 
-| 5 | /u/Lonadont | 18 | 23/09/2018 | 
-| 6 | /u/NobodyL0vesMe | 16 | 12/10/2018 | 
-| 7 | /u/NobodyL0vesMe | 16 | 03/11/2018 | 
+| 3 | /u/ItzTaken | 24 | 08/11/2018 | 
+| 4 | /u/NobodyL0vesMe | 21 | 07/11/2018 | 
+| 5 | /u/Chalupa_Dad | 18 | 10/05/2018 | 
+| 6 | /u/Lonadont | 18 | 23/09/2018 | 
+| 7 | /u/NobodyL0vesMe | 16 | 12/10/2018 | 
 | 8 | /u/Lonadont | 14 | 31/08/2018 | 
 | 9 | /u/MaybeNotWrong | 13 | 06/10/2018 | 
 | 10 | /u/NobodyL0vesMe | 12 | 27/07/2018 | 

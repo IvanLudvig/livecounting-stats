@@ -249,7 +249,7 @@ public class Main {
 	}
 	
 	public void update() {
-
+		/*
 		main.favourite.update();
 		main.pairs.update();
 		main.hoe.update();
@@ -259,8 +259,8 @@ public class Main {
 		main.twentyk.update();
 		main.daystreak.update();
 		main.firstcounts.update();
+		*/
 
-		/*
 		main.onekstreak.update();
 		main.topstreaks.update();
 		//main.notp5m.update();
@@ -269,7 +269,7 @@ public class Main {
 		main.kparts.update();
 		main.countpercent.update();
 		main.bars.update();             //bars are last
-		*/
+
 
 
 		
@@ -285,6 +285,7 @@ public class Main {
 	public void write() {
 		System.out.println("number of users: "+users.size());
 
+		/*
 		main.favourite.write();
 		main.hoe.write();
 		main.pairs.write();
@@ -294,8 +295,8 @@ public class Main {
 		main.twentyk.write();
 		main.daystreak.write();
 		main.firstcounts.write();
-
-		/*
+		*/
+		
 		main.onekstreak.write();
 		main.topstreaks.write();
 		//main.notp5m.write();
@@ -304,7 +305,6 @@ public class Main {
 		main.kparts.write();
 		main.countpercent.write();
 		main.bars.write();
-		*/
 		
 		//main.averagecounts.write();
 		//main.tentohun.write();
