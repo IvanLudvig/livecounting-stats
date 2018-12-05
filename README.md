@@ -1,6 +1,6 @@
 # Liveconting stats
 
-The favourite counter, pairs, Hall of 3k, Hall of 5k(HoE), Hall of 10k (HoS), first counts, bars, day streak, 1k streak, pincus, odd even ration, 20k days, pee, P5M 1k streak and Hours of the day stats. The stats used to be made with C++ and Javascript earlier but I rewrote them in Java. 
+The favourite counter, pairs, Hall of 3k, Hall of 5k(HoE), Hall of 10k (HoS), first counts, bars, day streak, 1k streak, pincus, odd even ration, 20k days, pee, P5M 1k streak, average counts, 10 to 100k, k's participation and Hours of the day stats. The stats used to be made with C++ and Javascript earlier but I rewrote them in Java. 
 
 Message me if you notice any bugs.
 
