@@ -12,7 +12,7 @@ import java.util.Comparator;
 import ivanludvig.livecounting.Main;
 import ivanludvig.livecounting.Message;
 
-public class Pincus {
+public class Pincus extends Stat {
 	
 	int counts[][];
 	ArrayList<Line> lines = new ArrayList<Line>();

@@ -14,7 +14,7 @@ import java.util.Date;
 import ivanludvig.livecounting.Main;
 import ivanludvig.livecounting.Message;
 
-public class Bars {
+public class Bars extends Stat{
 	
 	int counts[];
 	ArrayList<Line> lines = new ArrayList<Line>();
@@ -59,7 +59,7 @@ public class Bars {
 	    try {
 			writeLastHour();
 	    	BufferedWriter writer = new BufferedWriter(new FileWriter("output/bars.txt"));
-	    	writer.write("| # |Username|Bars");
+	    	writer.write("| # |Username |Bars");
 			writer.newLine();
 	    	writer.write("|---|------|---------------");
 			writer.newLine();

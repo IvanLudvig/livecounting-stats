@@ -1,6 +1,6 @@
 | # |Username |Words per message 
 |---|---|---
-| 1 | /u/TOP_20 | 2.6 | 
+| 1 | /u/TOP_20 | 2.61 | 
 | 2 | /u/Tranquilsunrise | 2.15 | 
 | 3 | /u/artbn | 1.84 | 
 | 4 | /u/rschaosid | 1.78 | 
@@ -12,23 +12,23 @@
 | 10 | /u/piyushsharma301 | 1.4 | 
 | 11 | /u/parker_cube | 1.39 | 
 | 12 | /u/KingCaspianX | 1.39 | 
-| 13 | /u/smarvin6689 | 1.38 | 
-| 14 | /u/VitaminB16 | 1.32 | 
-| 15 | /u/Lonadont | 1.32 | 
+| 13 | /u/smarvin6689 | 1.39 | 
+| 14 | /u/Lonadont | 1.32 | 
+| 15 | /u/VitaminB16 | 1.32 | 
 | 16 | /u/rideride | 1.31 | 
 | 17 | /u/Smartstocks | 1.28 | 
 | 18 | /u/LeinadSpoon | 1.28 | 
-| 19 | /u/NobodyL0vesMe | 1.26 | 
-| 20 | /u/MrBahr12 | 1.25 | 
+| 19 | /u/MrBahr12 | 1.25 | 
+| 20 | /u/NobodyL0vesMe | 1.23 | 
 | 21 | /u/dominodan123 | 1.23 | 
 | 22 | /u/TOP_6689 | 1.21 | 
 | 23 | /u/amazingpikachu_38 | 1.19 | 
-| 24 | /u/abplows | 1.17 | 
+| 24 | /u/abplows | 1.18 | 
 | 25 | /u/DemonBurritoCat | 1.15 | 
-| 26 | /u/treje | 1.14 | 
-| 27 | /u/gordonpt8 | 1.14 | 
+| 26 | /u/gordonpt8 | 1.14 | 
+| 27 | /u/treje | 1.14 | 
 | 28 | /u/QuestoGuy | 1.11 | 
 | 29 | /u/MaybeNotWrong | 1.11 | 
 | 30 | /u/davidjl123 | 1.11 | 
 | 31 | /u/ItzTaken | 1.11 | 
-| 32 | /u/noduorg | 1.08 | 
+| 32 | /u/noduorg | 1.07 | 

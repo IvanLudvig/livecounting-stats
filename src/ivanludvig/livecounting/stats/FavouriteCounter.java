@@ -12,7 +12,7 @@ import java.util.Comparator;
 
 import ivanludvig.livecounting.Main;
 
-public class FavouriteCounter {
+public class FavouriteCounter extends Stat{
 	int counts[][];
 	ArrayList<Line> lines = new ArrayList<Line>();
 	Main main;

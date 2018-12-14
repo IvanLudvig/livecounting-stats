@@ -1,25 +1,25 @@
 | # |Username |Words per message 
 |---|---|---
-| 1 | /u/noduorg | 1.08 | 
+| 1 | /u/noduorg | 1.07 | 
 | 2 | /u/ItzTaken | 1.11 | 
 | 3 | /u/davidjl123 | 1.11 | 
 | 4 | /u/MaybeNotWrong | 1.11 | 
 | 5 | /u/QuestoGuy | 1.11 | 
-| 6 | /u/gordonpt8 | 1.14 | 
-| 7 | /u/treje | 1.14 | 
+| 6 | /u/treje | 1.14 | 
+| 7 | /u/gordonpt8 | 1.14 | 
 | 8 | /u/DemonBurritoCat | 1.15 | 
-| 9 | /u/abplows | 1.17 | 
+| 9 | /u/abplows | 1.18 | 
 | 10 | /u/amazingpikachu_38 | 1.19 | 
 | 11 | /u/TOP_6689 | 1.21 | 
 | 12 | /u/dominodan123 | 1.23 | 
-| 13 | /u/MrBahr12 | 1.25 | 
-| 14 | /u/NobodyL0vesMe | 1.26 | 
+| 13 | /u/NobodyL0vesMe | 1.23 | 
+| 14 | /u/MrBahr12 | 1.25 | 
 | 15 | /u/LeinadSpoon | 1.28 | 
 | 16 | /u/Smartstocks | 1.28 | 
 | 17 | /u/rideride | 1.31 | 
-| 18 | /u/Lonadont | 1.32 | 
-| 19 | /u/VitaminB16 | 1.32 | 
-| 20 | /u/smarvin6689 | 1.38 | 
+| 18 | /u/VitaminB16 | 1.32 | 
+| 19 | /u/Lonadont | 1.32 | 
+| 20 | /u/smarvin6689 | 1.39 | 
 | 21 | /u/KingCaspianX | 1.39 | 
 | 22 | /u/parker_cube | 1.39 | 
 | 23 | /u/piyushsharma301 | 1.4 | 
@@ -31,4 +31,4 @@
 | 29 | /u/rschaosid | 1.78 | 
 | 30 | /u/artbn | 1.84 | 
 | 31 | /u/Tranquilsunrise | 2.15 | 
-| 32 | /u/TOP_20 | 2.6 | 
+| 32 | /u/TOP_20 | 2.61 | 

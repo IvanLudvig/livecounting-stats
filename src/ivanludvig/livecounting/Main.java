@@ -5,7 +5,9 @@ import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonParser;
@@ -24,69 +26,97 @@ import ivanludvig.livecounting.stats.OneKStreak;
 import ivanludvig.livecounting.stats.Pairs;
 import ivanludvig.livecounting.stats.Pee;
 import ivanludvig.livecounting.stats.Pincus;
+import ivanludvig.livecounting.stats.Stat;
 import ivanludvig.livecounting.stats.TenToHundredK;
 import ivanludvig.livecounting.stats.TopStreaks;
 import ivanludvig.livecounting.stats.TwentyK;
-import ivanludvig.livecounting.stats.p5m.OneKDays;
 
 
-public class Main {
+public class Main implements Runnable {
 	
 	static Main main;
 	public ArrayList<Message> messages = new ArrayList<Message>();
 	public ArrayList<String> users = new ArrayList<String>();
-	Pairs pairs;
-	FavouriteCounter favourite;
-	HoE hoe;
-	Hours hours;
-	Bars bars;
-	OddEven oddeven;
-	Pincus pincus;
-	TwentyK twentyk;
-	DayStreak daystreak;
-	FirstCounts firstcounts;
-	OneKStreak onekstreak;
-	TopStreaks topstreaks;
-	OneKDays onekdays;
-	Pee pee;
-	KParts kparts;
-	TenToHundredK tentohun;
-	CountPercent countpercent;
-	AverageCounts averagecounts;	
-	//NotP5M notp5m;
+	ArrayList<Stat> stats = new ArrayList<Stat>();
 	int latestcount = 0;
 	String lastdate = "0";
 	String ld = "0";
 	public int n = 4600;
+	GUI gui;
 	
 	public static void main(String args[]) throws IOException {
 		main = new Main();
-		main.pairs = new Pairs(main);
-		main.favourite = new FavouriteCounter(main);
-		main.hoe = new HoE(main);
-		main.hours = new Hours(main);
-		main.bars = new Bars(main);
-		main.oddeven = new OddEven(main);
-		main.pincus = new Pincus(main);
-		main.twentyk = new TwentyK(main);
-		main.daystreak = new DayStreak(main);
-		main.firstcounts = new FirstCounts(main);
-		main.onekstreak = new OneKStreak(main);
-		main.topstreaks=new TopStreaks(main);
-		//main.notp5m=new NotP5M(main);
-		main.onekdays=new OneKDays(main);
-		main.pee = new Pee(main);
-		main.kparts=new KParts(main);
-		main.countpercent=new CountPercent(main);
-		main.tentohun=new TenToHundredK(main);
-		main.averagecounts = new AverageCounts(main);
-		//main.read();
+		main.gui = new GUI(main);
+		//main.gui.start();
+	}
+	
+	int rev = 0;
+	public void start(int a[]) throws IOException {
+		if(a[0]==1) {
+			stats.add(new Pairs(this));
+		}
+		if(a[1]==1) {
+			stats.add(new FavouriteCounter(this));
+		}
+		if(a[2]==1) {
+			stats.add(new HoE(this));
+		}
+		if(a[3]==1) {
+			stats.add(new Hours(this));
+		}
+		if(a[4]==1) {
+			stats.add(new Bars(this));
+		}
+		if(a[5]==1) {
+			stats.add(new OddEven(this));
+		}
+		if(a[6]==1) {
+			stats.add(new Pincus(this));
+		}
+		if(a[7]==1) {
+			stats.add(new TwentyK(this));
+		}
+		if(a[8]==1) {
+			stats.add(new DayStreak(this));
+		}
+		if(a[9]==1) {
+			stats.add(new FirstCounts(this));
+		}
+		if(a[10]==1) {
+			stats.add(new OneKStreak(this));
+		}
+		if(a[11]==1) {
+			stats.add(new TopStreaks(this));
+		}
+		if(a[12]==1) {
+			stats.add(new Pee(this));
+		}
+		if(a[13]==1) {
+			stats.add(new KParts(this));
+		}
+		if(a[14]==1) {
+			stats.add(new CountPercent(this));
+		}
+		if(a[15]==1) {
+			stats.add(new TenToHundredK(this));
+			rev = 1;
+		}
+		if(a[16]==1) {
+			stats.add(new AverageCounts(this));
+			rev = 1;
+		}
 		main.reset();
-		main.getJson();
-		//main.reversedGetJson();
+		if(rev == 0) {
+			main.getJson();
+		}else {
+			main.reversedGetJson();
+		}
+		gui.updateProgress("Saving...");
 		System.out.println("Saving...");
 		main.write();
+		gui.updateProgress("Done!");
 		System.out.println("Done!");
+		gui.updateProgress("  Updated up to "+main.latestcount);
 		System.out.print("  Updated up to "+main.latestcount);
 	}
 	
@@ -103,41 +133,26 @@ public class Main {
 			for(int i = 0; i <= last; i++) {
 				if((last-i)!=82 && (last-i)!=83 && (last-i)!=84) {
 					br = new BufferedReader(new FileReader("res/chat"+Integer.toString(last-i)+".json"));
+					gui.updateProgress("reading res/chat"+(last-i)+".json...");
 					System.out.println("reading res/chat"+(last-i)+".json...");
 					JsonArray array = (JsonArray) parser.parse(br).getAsJsonArray();
+					gui.updateProgress("messages in file: "+array.size());
 					System.out.println("messages in file: "+array.size());
 					for(int j = 0; j < array.size(); j++) {
 						main.messages.add(new Message(main, array.get(j).getAsJsonObject()));
 					}
 					int n=0;
 					Message check = new Message(main, array.get(n).getAsJsonObject());
-					while(check.ok==1) {
-						n++;
-						check = new Message(main, array.get(n).getAsJsonObject());
-					}
-					if(check.ok==0) {
-						if(check.count<=lastcount+1 
-								&& (!lastdate.equals(main.hoe.dateof(check)))) {
-							break;
+					if(i==0) {
+						while(check.ok==1) {
+							n++;
+							check = new Message(main, array.get(n).getAsJsonObject());
 						}
-						else if(lastdate.equals(main.hoe.dateof(check))){
-							if(i!=0) {
-								//br = new BufferedReader(new FileReader("res/chat"+Integer.toString(last-i)+".json"));
-								//JsonArray lastarray = (JsonArray) parser.parse(br).getAsJsonArray();
-								//for(int j = 0; j < lastarray.size(); j++) {
-								//	main.messages.add(new Message(main, lastarray.get(j).getAsJsonObject()));
-								//}
-								main.hoe.lastupdate();
-								main.twentyk.lastupdate();
-								break;
-							}else if(i==0) {
-								break;
-							}
-						}
-						if(i==0) {
-					    	System.out.println("latest count: "+check.count);
-					    	main.latestcount = check.count;
-					    	ld = main.hoe.dateof(check);
+						if(check.ok==0) {
+							gui.updateProgress("latest count: "+check.count);
+						    System.out.println("latest count: "+check.count);
+						   	main.latestcount = check.count;
+						   	ld = main.dateof(check);
 						}
 					}
 					update();
@@ -165,23 +180,26 @@ public class Main {
 			for(int i = 0; i <= last; i++) {
 				if(i!=82 && i!=83 && i!=84) {
 					br = new BufferedReader(new FileReader("res/chat"+Integer.toString(i)+".json"));
+					gui.updateProgress("reading res/chat"+i+".json...");
 					System.out.println("reading res/chat"+i+".json...");
 					JsonArray array = (JsonArray) parser.parse(br).getAsJsonArray();
+					gui.updateProgress("messages in file: "+array.size());
 					System.out.println("messages in file: "+array.size());
 					for(int j = array.size()-1; j >= 0 ; j--) {
 						main.messages.add(new Message(main, array.get(j).getAsJsonObject()));
 					}
 					int n=0;
 					Message check = new Message(main, array.get(n).getAsJsonObject());
-					while(check.ok==1) {
-						n++;
-						check = new Message(main, array.get(n).getAsJsonObject());
-					}
-					if(check.ok==0) {
-						if(i==last) {
-					    	System.out.println("latest count: "+check.count);
-					    	main.latestcount = check.count;
-					    	//ld = main.hoe.dateof(check);
+					if(i==last) {
+						while(check.ok==1) {
+							n++;
+							check = new Message(main, array.get(n).getAsJsonObject());
+						}
+						if(check.ok==0) {
+							gui.updateProgress("latest count: "+check.count);
+						   	System.out.println("latest count: "+check.count);
+						   	main.latestcount = check.count;
+						    ld = main.dateof(check);
 						}
 					}
 					reversedUpdate();
@@ -202,6 +220,13 @@ public class Main {
 		String lastDate = br.readLine();
 		br.close();
 		return lastDate;
+	}
+	
+	SimpleDateFormat sdf;
+	public String dateof(Message message) {
+		Date date = new Date((Long.valueOf(message.date)-3600)*1000);
+		sdf =  new SimpleDateFormat("dd/MM/yyyy");
+		return sdf.format(date);
 	}
 	
 	public int readLastChatFile(BufferedReader br) throws NumberFormatException, IOException {
@@ -233,79 +258,37 @@ public class Main {
     	writer.close();
 	}
 	
-	public void read() {
-		main.pairs.read();
-		main.favourite.read();           //other stats should be run using the full data
-		main.hoe.read();
-		main.hours.read();
-		main.bars.read();
-		main.oddeven.read();
-		main.pincus.read();
-		main.twentyk.read();
-		main.firstcounts.read();
-		main.firstcounts.read();
-		main.onekstreak.read();
-		main.topstreaks.read();
-	}
 	
 	public void update() {
-
-		main.favourite.update();
-		main.pairs.update();
-		main.hoe.update();
-		main.hours.update();
-		main.oddeven.update();
-		main.pincus.update();
-		main.twentyk.update();
-		main.daystreak.update();
-		main.firstcounts.update();
-
-		/*
-		main.onekstreak.update();
-		main.topstreaks.update();
-		//main.notp5m.update();
-		main.onekdays.update();
-		main.pee.update();
-		main.kparts.update();
-		main.countpercent.update();
-		main.bars.update();             //bars are last
-		*/
-
+		for (Stat stat : stats) {
+			stat.update();
+		}
 		messages = new ArrayList<Message>();
 	}
 	
 	public void reversedUpdate(){
-		main.tentohun.update();
-		main.averagecounts.update();
+		for (Stat stat : stats) {
+			stat.update();
+		}
 		messages = new ArrayList<Message>();
 	}
 	
 	public void write() {
+		for (Stat stat : stats) {
+			stat.write();
+		}
+		gui.updateProgress("number of users: "+users.size());
 		System.out.println("number of users: "+users.size());
+	}
 
-		main.favourite.write();
-		main.hoe.write();
-		main.pairs.write();
-		main.hours.write();
-		main.oddeven.write();
-		main.pincus.write();
-		main.twentyk.write();
-		main.daystreak.write();
-		main.firstcounts.write();
-
-		/*
-		main.onekstreak.write();
-		main.topstreaks.write();
-		//main.notp5m.write();
-		main.onekdays.write();
-		main.pee.write();
-		main.kparts.write();
-		main.countpercent.write();
-		main.bars.write();
-		*/
-		main.averagecounts.write();
-		main.tentohun.write();
-
+	@Override
+	public void run() {
+		try {
+			start(main.gui.a);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 

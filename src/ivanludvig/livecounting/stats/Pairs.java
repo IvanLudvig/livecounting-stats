@@ -11,7 +11,7 @@ import java.util.Comparator;
 
 import ivanludvig.livecounting.Main;
 
-public class Pairs {
+public class Pairs extends Stat {
 	
 	int counts[][];
 	ArrayList<Line> lines = new ArrayList<Line>();

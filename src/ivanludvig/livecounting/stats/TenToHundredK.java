@@ -10,7 +10,7 @@ import java.util.Comparator;
 import ivanludvig.livecounting.Main;
 import ivanludvig.livecounting.Message;
 
-public class TenToHundredK {
+public class TenToHundredK extends Stat {
 	
 	int counts[];
 	int tenk[];

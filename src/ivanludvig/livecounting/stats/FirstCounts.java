@@ -14,7 +14,7 @@ import java.util.Date;
 import ivanludvig.livecounting.Main;
 import ivanludvig.livecounting.Message;
 
-public class FirstCounts {
+public class FirstCounts extends Stat {
 
 	int counts[];
 	String messages[];

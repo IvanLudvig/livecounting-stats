@@ -15,7 +15,7 @@ import java.util.Date;
 import ivanludvig.livecounting.Main;
 import ivanludvig.livecounting.Message;
 
-public class DayStreak {
+public class DayStreak extends Stat{
 	int counts[];
 	ArrayList<Line> lines = new ArrayList<Line>();
 	ArrayList<Streak> streaks = new ArrayList<Streak>();
@@ -31,6 +31,7 @@ public class DayStreak {
 		sdf =  new SimpleDateFormat("dd/MM/yyyy");
 	}
 	
+	@Override
 	public void update() {
 		for(int i=0; i<main.users.size(); i++) {
 			if(streaks.size()<=i) {
@@ -81,6 +82,7 @@ public class DayStreak {
 		}
 	}
 	
+	@Override
 	public void write() {
 		for(Streak streak : streaks) {
 			addLine(streak.getBest());

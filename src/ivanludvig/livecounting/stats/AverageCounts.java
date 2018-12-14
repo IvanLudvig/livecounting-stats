@@ -10,7 +10,7 @@ import java.util.Comparator;
 import ivanludvig.livecounting.Main;
 import ivanludvig.livecounting.Message;
 
-public class AverageCounts {
+public class AverageCounts extends Stat{
 	int counts[];
 	int first[];
 	int onek[];

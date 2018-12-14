@@ -1,5 +1,8 @@
 package ivanludvig.livecounting.stats;
 
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
+
 public class Line {
 	
 	public String user;
@@ -9,6 +12,10 @@ public class Line {
 	public int count;
 	public int odd;
 	public int even;
+	int assists; 
+	int gets; 
+	int kparts; 
+	int dayparts;
 	public double percentage;
 	int counts[] = new int[26];
 	
@@ -65,6 +72,11 @@ public class Line {
 	public Line(String user1, int count[]) {
 		this.user = user1;
 		this.counts = count;
+	}
+	
+	public Line(String user, int count, int assists, int gets, int kparts, int dayparts) {
+		this.user = user;
+		this.count = count;
 	}
 	
 	public Line(String line) {
@@ -186,6 +198,18 @@ public class Line {
 	
 	public String getTTString(int order) {
 		return "| "+order+" | "+"/u/"+user+" | "+date+" | ";
+	}
+	
+	public String getHopString(int order) {
+		int score = (2*count)+((gets+assists)*500)+(kparts*250)+(dayparts*250);
+		DecimalFormat df = new DecimalFormat("#.####");
+		df.setRoundingMode(RoundingMode.CEILING);
+		double getsratio = (gets/(double)count);
+		double assistsratio = (assists/(double)count);
+		double combinedratio = ((getsratio+assistsratio)/(double)2);
+		return "| "+order+" | "+"/u/"+user+" | "+score+" | "+ counts+" | "+ gets +" | "+ assists +" | "+
+				(gets+assists)+" | "+kparts+" | "+dayparts+" | "+df.format(getsratio)+" | "+df.format(assistsratio)+" | "+
+				df.format(combinedratio)+" | ";
 	}
 	
 }

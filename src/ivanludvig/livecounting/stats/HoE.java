@@ -14,7 +14,7 @@ import java.util.Date;
 import ivanludvig.livecounting.Main;
 import ivanludvig.livecounting.Message;
 
-public class HoE {
+public class HoE extends Stat {
 	
 	int counts[];
 	ArrayList<Line> lines3 = new ArrayList<Line>();
@@ -80,7 +80,7 @@ public class HoE {
 							}
 						}
 					}
-					counts = new int[1800];
+					counts = new int[main.n];
 					date = dateof(message);
 					counts[main.users.indexOf(message.author)]+=1;
 					break;

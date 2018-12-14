@@ -9,7 +9,7 @@ import java.util.Comparator;
 import ivanludvig.livecounting.Main;
 import ivanludvig.livecounting.Message;
 
-public class CountPercent {
+public class CountPercent extends Stat{
 	
 	int counts[];
 	int words[];

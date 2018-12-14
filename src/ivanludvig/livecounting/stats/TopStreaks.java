@@ -14,7 +14,7 @@ import java.util.Date;
 import ivanludvig.livecounting.Main;
 import ivanludvig.livecounting.Message;
 
-public class TopStreaks {
+public class TopStreaks extends Stat {
 	int counts[];
 	ArrayList<Line> lines = new ArrayList<Line>();
 	ArrayList<StreakAdv> streaks = new ArrayList<StreakAdv>();

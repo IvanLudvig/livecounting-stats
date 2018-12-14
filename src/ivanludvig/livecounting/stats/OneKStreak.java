@@ -15,7 +15,7 @@ import java.util.Date;
 import ivanludvig.livecounting.Main;
 import ivanludvig.livecounting.Message;
 
-public class OneKStreak {
+public class OneKStreak extends Stat {
 	int counts[];
 	ArrayList<Line> lines = new ArrayList<Line>();
 	ArrayList<Streak> streaks = new ArrayList<Streak>();

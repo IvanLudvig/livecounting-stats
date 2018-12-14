@@ -1,6 +1,6 @@
 | # |Username |Chars per message 
 |---|---|---
-| 1 | /u/TOP_20 | 9.6 | 
+| 1 | /u/TOP_20 | 9.66 | 
 | 2 | /u/Tranquilsunrise | 9.27 | 
 | 3 | /u/artbn | 6.46 | 
 | 4 | /u/rschaosid | 5.88 | 
@@ -11,24 +11,24 @@
 | 9 | /u/rideride | 2.8 | 
 | 10 | /u/qwertylool | 2.78 | 
 | 11 | /u/KingCaspianX | 2.75 | 
-| 12 | /u/Majestic_Bear | 2.56 | 
-| 13 | /u/smarvin6689 | 2.55 | 
+| 12 | /u/smarvin6689 | 2.57 | 
+| 13 | /u/Majestic_Bear | 2.56 | 
 | 14 | /u/parker_cube | 2.49 | 
 | 15 | /u/Smartstocks | 2.32 | 
-| 16 | /u/VitaminB16 | 2.28 | 
-| 17 | /u/Lonadont | 2.26 | 
-| 18 | /u/LeinadSpoon | 2.12 | 
-| 19 | /u/NobodyL0vesMe | 1.9 | 
+| 16 | /u/Lonadont | 2.29 | 
+| 17 | /u/VitaminB16 | 2.27 | 
+| 18 | /u/LeinadSpoon | 2.1 | 
+| 19 | /u/NobodyL0vesMe | 1.66 | 
 | 20 | /u/MrBahr12 | 1.61 | 
 | 21 | /u/dominodan123 | 1.55 | 
-| 22 | /u/amazingpikachu_38 | 1.44 | 
-| 23 | /u/TOP_6689 | 1.43 | 
-| 24 | /u/gordonpt8 | 1.23 | 
-| 25 | /u/abplows | 1.22 | 
+| 22 | /u/TOP_6689 | 1.42 | 
+| 23 | /u/amazingpikachu_38 | 1.39 | 
+| 24 | /u/abplows | 1.23 | 
+| 25 | /u/gordonpt8 | 1.23 | 
 | 26 | /u/QuestoGuy | 1.19 | 
 | 27 | /u/treje | 1.18 | 
 | 28 | /u/DemonBurritoCat | 1.04 | 
-| 29 | /u/ItzTaken | 0.96 | 
-| 30 | /u/MaybeNotWrong | 0.81 | 
-| 31 | /u/davidjl123 | 0.8 | 
-| 32 | /u/noduorg | 0.62 | 
+| 29 | /u/ItzTaken | 0.93 | 
+| 30 | /u/davidjl123 | 0.8 | 
+| 31 | /u/MaybeNotWrong | 0.78 | 
+| 32 | /u/noduorg | 0.51 | 

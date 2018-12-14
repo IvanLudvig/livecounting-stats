@@ -14,7 +14,7 @@ import java.util.Date;
 import ivanludvig.livecounting.Main;
 import ivanludvig.livecounting.Message;
 
-public class Hours {
+public class Hours extends Stat {
 
 	
 	int counts[][];

@@ -10,7 +10,7 @@ import java.util.Comparator;
 import ivanludvig.livecounting.Main;
 import ivanludvig.livecounting.Message;
 
-public class Counts {
+public class Counts extends Stat{
 	
 	int counts[];
 	ArrayList<Line> lines = new ArrayList<Line>();
@@ -39,6 +39,10 @@ public class Counts {
 		Collections.reverse(lines);
 	    try {
 	    	BufferedWriter writer = new BufferedWriter(new FileWriter("output/count.txt"));
+	    	writer.write("| # |Username |Counts");
+			writer.newLine();
+	    	writer.write("|---|------|---------------");
+			writer.newLine();
 			for(Line line : lines) {
 				writer.write(line.getTableString(lines.indexOf(line)));
 				writer.newLine();

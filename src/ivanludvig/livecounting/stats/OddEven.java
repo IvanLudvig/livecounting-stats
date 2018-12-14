@@ -13,7 +13,7 @@ import java.util.Comparator;
 import ivanludvig.livecounting.Main;
 import ivanludvig.livecounting.Message;
 
-public class OddEven {
+public class OddEven extends Stat {
 	
 	int odd[];
 	int even[];

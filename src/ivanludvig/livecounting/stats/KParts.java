@@ -10,7 +10,7 @@ import java.util.Comparator;
 import ivanludvig.livecounting.Main;
 import ivanludvig.livecounting.Message;
 
-public class KParts {
+public class KParts extends Stat {
 	
 	int counts[][];
 	//int all[];
@@ -22,7 +22,7 @@ public class KParts {
 
 	public KParts(Main main) {
 		this.main = main;
-		counts = new int[main.n][12000];  //12000 - 12M 
+		counts = new int[main.n][13000];  //13000 - 13M 
 		//all = new int[2800];
 		//part = new int[2800];
 		//percentage = new double[2800];
