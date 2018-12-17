@@ -12,6 +12,7 @@ public class Line {
 	public int count;
 	public int odd;
 	public int even;
+	public int score;
 	int assists; 
 	int gets; 
 	int kparts; 
@@ -77,6 +78,11 @@ public class Line {
 	public Line(String user, int count, int assists, int gets, int kparts, int dayparts) {
 		this.user = user;
 		this.count = count;
+		this.assists = assists;
+		this.gets = gets;
+		this.kparts = kparts;
+		this.dayparts = dayparts;
+		score = (2*count)+((gets+assists)*500)+(kparts*250)+(dayparts*250);
 	}
 	
 	public Line(String line) {
@@ -201,13 +207,12 @@ public class Line {
 	}
 	
 	public String getHopString(int order) {
-		int score = (2*count)+((gets+assists)*500)+(kparts*250)+(dayparts*250);
 		DecimalFormat df = new DecimalFormat("#.####");
 		df.setRoundingMode(RoundingMode.CEILING);
-		double getsratio = (gets/(double)count);
-		double assistsratio = (assists/(double)count);
+		double getsratio = (gets*1000/(double)count);
+		double assistsratio = (assists*1000/(double)count);
 		double combinedratio = ((getsratio+assistsratio)/(double)2);
-		return "| "+order+" | "+"/u/"+user+" | "+score+" | "+ counts+" | "+ gets +" | "+ assists +" | "+
+		return "| "+order+" | "+"/u/"+user+" | "+score+" | "+ count+" | "+ gets +" | "+ assists +" | "+
 				(gets+assists)+" | "+kparts+" | "+dayparts+" | "+df.format(getsratio)+" | "+df.format(assistsratio)+" | "+
 				df.format(combinedratio)+" | ";
 	}

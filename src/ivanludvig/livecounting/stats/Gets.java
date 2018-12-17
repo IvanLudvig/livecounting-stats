@@ -12,8 +12,6 @@ import ivanludvig.livecounting.Message;
 
 public class Gets extends Stat {
 	
-	int counts[];
-	ArrayList<Line> lines = new ArrayList<Line>();
 	Main main;
 
 	public Gets(Main main) {
@@ -49,7 +47,7 @@ public class Gets extends Stat {
 	    	writer.write("|---|------|---------------");
 			writer.newLine();
 			for(Line line : lines) {
-				writer.write(line.getTableString(lines.indexOf(line)));
+				writer.write(line.getTableString(lines.indexOf(line)+1));
 				writer.newLine();
 			}
 			writer.close();

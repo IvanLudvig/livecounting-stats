@@ -12,54 +12,44 @@ import ivanludvig.livecounting.Message;
 
 public class KParts extends Stat {
 	
-	int counts[][];
+	int last[];
 	//int all[];
 	//int part[];
 	//double percentage[];
 	int top = 0;
-	ArrayList<Line> lines = new ArrayList<Line>();
 	Main main;
 
 	public KParts(Main main) {
 		this.main = main;
-		counts = new int[main.n][13000];  //13000 - 13M 
+		counts = new int[main.n];  //13000 - 13M 
+		last = new int[main.n];
 		//all = new int[2800];
 		//part = new int[2800];
 		//percentage = new double[2800];
 	}
 	
+	@Override
 	public void update() {
 		for(Message message : main.messages) {
 			if(message.ok == 0) {
 				if(top==0) {
 					top=(message.count/1000)+1;
 				}
-				if((message.count/1000)+1<=top) {
-					counts[main.users.indexOf(message.author)][(message.count/1000)+1]+=1;
+				if(((message.count/1000)+1)<=top) {
+					if(last[main.users.indexOf(message.author)]!=(message.count/1000)+1) {
+						counts[main.users.indexOf(message.author)]+=1;
+						last[main.users.indexOf(message.author)]=message.count/1000+1;
+					}
 				}
 			}
 		}
 	}
 	
+	@Override
 	public void write() {
-		for(String str : main.users) {
-			for(int i = 1; i<=top; i++) {
-				//System.out.println(i);
-				if(counts[main.users.indexOf(str)][i]>0) {
-					int all = 0;
-					int part = 0;
-					for(int j = i; j<=top; j++) {
-						all+=1;
-						if(counts[main.users.indexOf(str)][j]>0) {
-							part+=1;
-						}
-					}
-					//percentage[main.users.indexOf(str)]=Math.round((double)part/all*100);
-					lines.add(new Line(str, Math.round(((double)part/all*100)*100.0)/100.0));
-					break;
-					//lines.add(new Line(str, counts[main.users.indexOf(str)]));
-				}
-			}
+		for(String user : main.users) {
+			int all = top - last[main.users.indexOf(user)] +1;
+			lines.add(new Line(user, Math.round(((double)counts[main.users.indexOf(user)]/all*100)*100.0)/100.0));
 		}
 		Collections.sort(lines, Comparator.comparingInt(Line -> Line.count));
 		Collections.reverse(lines);

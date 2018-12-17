@@ -12,13 +12,18 @@ import java.util.Date;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonParser;
 
+import ivanludvig.livecounting.stats.Assists;
 import ivanludvig.livecounting.stats.AverageCounts;
 import ivanludvig.livecounting.stats.Bars;
 import ivanludvig.livecounting.stats.CountPercent;
+import ivanludvig.livecounting.stats.Counts;
+import ivanludvig.livecounting.stats.DayParts;
 import ivanludvig.livecounting.stats.DayStreak;
 import ivanludvig.livecounting.stats.FavouriteCounter;
 import ivanludvig.livecounting.stats.FirstCounts;
+import ivanludvig.livecounting.stats.Gets;
 import ivanludvig.livecounting.stats.HoE;
+import ivanludvig.livecounting.stats.HoP;
 import ivanludvig.livecounting.stats.Hours;
 import ivanludvig.livecounting.stats.KParts;
 import ivanludvig.livecounting.stats.OddEven;
@@ -37,7 +42,7 @@ public class Main implements Runnable {
 	static Main main;
 	public ArrayList<Message> messages = new ArrayList<Message>();
 	public ArrayList<String> users = new ArrayList<String>();
-	ArrayList<Stat> stats = new ArrayList<Stat>();
+	public ArrayList<Stat> stats = new ArrayList<Stat>();
 	int latestcount = 0;
 	String lastdate = "0";
 	String ld = "0";
@@ -51,7 +56,9 @@ public class Main implements Runnable {
 	}
 	
 	int rev = 0;
+	int hop = 0;
 	public void start(int a[]) throws IOException {
+		int assists = 0, gets = 0, counts = 0, kparts = 0, days = 0;
 		if(a[0]==1) {
 			stats.add(new Pairs(this));
 		}
@@ -92,16 +99,38 @@ public class Main implements Runnable {
 			stats.add(new Pee(this));
 		}
 		if(a[13]==1) {
-			stats.add(new KParts(this));
-		}
-		if(a[14]==1) {
 			stats.add(new CountPercent(this));
 		}
+		if(a[14]==1) {
+			stats.add(new KParts(this));
+			kparts = stats.size()-1;
+		}
 		if(a[15]==1) {
+			stats.add(new Counts(this));
+			counts = stats.size()-1;
+		}
+		if(a[16]==1) {
+			stats.add(new Gets(this));
+			gets = stats.size()-1;
+		}
+		if(a[17]==1) {
+			stats.add(new Assists(this));
+			assists = stats.size()-1;
+		}
+		if(a[18]==1) {
+			stats.add(new DayParts(this));
+			days = stats.size()-1;
+		}
+		if(a[19]==1) {
+			System.out.println(assists+" "+ gets+" "+ counts+" "+ kparts+" "+ days);
+			stats.add(new HoP(this, assists, gets, counts, kparts, days));
+			hop = 1;
+		}
+		if(a[20]==1) {
 			stats.add(new TenToHundredK(this));
 			rev = 1;
 		}
-		if(a[16]==1) {
+		if(a[21]==1) {
 			stats.add(new AverageCounts(this));
 			rev = 1;
 		}
@@ -114,6 +143,7 @@ public class Main implements Runnable {
 		gui.updateProgress("Saving...");
 		System.out.println("Saving...");
 		main.write();
+		gui.setGreenColour();
 		gui.updateProgress("Done!");
 		System.out.println("Done!");
 		gui.updateProgress("  Updated up to "+main.latestcount);

@@ -6,10 +6,14 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
+import java.util.TimeZone;
 
 import ivanludvig.livecounting.Main;
 import ivanludvig.livecounting.Message;
@@ -23,7 +27,6 @@ public class HoE extends Stat {
 	int three[];
 	int five[];
 	int ten[];
-	SimpleDateFormat sdf;
 	Main main;
 	String date = "0";
 	
@@ -34,7 +37,8 @@ public class HoE extends Stat {
 		three = new int[main.n];
 		five = new int[main.n];
 		ten = new int[main.n];
-		sdf =  new SimpleDateFormat("dd/MM/yyyy");
+		dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		//sdf =  new SimpleDateFormat("dd/MM/yyyy");
 	}
 	
 	public void update() {
@@ -93,12 +97,11 @@ public class HoE extends Stat {
 
 		for(String str : main.users) {
 			if(three[main.users.indexOf(str)]!=0) {
-				addLine(new Line(str, three[main.users.indexOf(str)]), 3);
+				lines3.add((new Line(str, three[main.users.indexOf(str)])));
 				if(five[main.users.indexOf(str)]!=0) {
-					addLine(new Line(str, five[main.users.indexOf(str)]), 5);
+					lines5.add((new Line(str, five[main.users.indexOf(str)])));
 					if(ten[main.users.indexOf(str)]!=0) {
-						System.out.println(main.users.indexOf(str)+" "+ ten[main.users.indexOf(str)]);
-						addLine(new Line(str, ten[main.users.indexOf(str)]), 10);
+						lines10.add((new Line(str, ten[main.users.indexOf(str)])));
 					}
 				}
 			}
@@ -208,9 +211,11 @@ public class HoE extends Stat {
 		
 	}
 
+	DateTimeFormatter dtf;
 	public String dateof(Message message) {
-		Date date = new Date((Long.valueOf(message.date)-3600)*1000);
-		return sdf.format(date);
+		Date date = new Date((Long.valueOf(message.date))*1000);
+		ZonedDateTime time = date.toInstant().atZone(ZoneId.of("America/New_York"));
+		return dtf.format(time);
 	}
 	
 }

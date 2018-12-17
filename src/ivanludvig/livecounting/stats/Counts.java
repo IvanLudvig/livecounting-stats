@@ -12,15 +12,13 @@ import ivanludvig.livecounting.Message;
 
 public class Counts extends Stat{
 	
-	int counts[];
-	ArrayList<Line> lines = new ArrayList<Line>();
 	Main main;
 
 	public Counts(Main main) {
 		this.main = main;
 		counts = new int[main.n];
 	}
-	
+	@Override
 	public void update() {
 		for(Message message : main.messages) {
 			if(message.ok == 0) {
@@ -29,22 +27,24 @@ public class Counts extends Stat{
 		}
 	}
 	
+	@Override
 	public void write() {
+		System.out.println("write counts");
 		for(String str : main.users) {
-			if(counts[main.users.indexOf(str)]!=0) {
+			if(counts[main.users.indexOf(str)]>=100) {
 				lines.add(new Line(str, counts[main.users.indexOf(str)]));
 			}
 		}
 		Collections.sort(lines, Comparator.comparingInt(Line -> Line.count));
 		Collections.reverse(lines);
 	    try {
-	    	BufferedWriter writer = new BufferedWriter(new FileWriter("output/count.txt"));
+	    	BufferedWriter writer = new BufferedWriter(new FileWriter("output/counts.txt"));
 	    	writer.write("| # |Username |Counts");
 			writer.newLine();
 	    	writer.write("|---|------|---------------");
 			writer.newLine();
 			for(Line line : lines) {
-				writer.write(line.getTableString(lines.indexOf(line)));
+				writer.write(line.getTableString(lines.indexOf(line)+1));
 				writer.newLine();
 			}
 			writer.close();

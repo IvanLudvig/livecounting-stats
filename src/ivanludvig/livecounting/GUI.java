@@ -1,5 +1,7 @@
 package ivanludvig.livecounting;
 
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
@@ -16,6 +18,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
+import javax.swing.text.DefaultCaret;
 
 class GUI extends JFrame {
 
@@ -23,9 +26,10 @@ class GUI extends JFrame {
 	JLabel progress;
 	ArrayList<JCheckBox> checkboxes = new ArrayList<JCheckBox>(21);
 	String stats[] = {"Pairs", "Favourite counter", "HoE(+HoS, Ho3k)", "Hours", "Bars", "Odd/even", "Pincus", 
-			"20k Days", "Day streak","First counts", "1k Streaks", "Top streaks", "Pee", 
-			"K's part", "Count percentage", "10kto100k",  "Average Counts", ""};
-	int n = 17;
+			"20k Days", "Day streak","First counts", "1k Streaks", "Top streaks", "Pee", "Count percentage", 
+			"K's participation", "Counts", "Gets", "Assists", "Days", "HoP", 
+			"10kto100k",  "Average Counts", ""};
+	int n = 22;
 	Main main;
     public int a[]=new int[n];
 	public GUI(Main m){
@@ -76,8 +80,8 @@ class GUI extends JFrame {
 		
         for(int i = 0; i<n; i++) {
         	checkboxes.add(new JCheckBox(stats[i]));
-    		gbcPanel2.gridx = i/9;
-    		gbcPanel2.gridy = i%9;
+    		gbcPanel2.gridx = i/8;
+    		gbcPanel2.gridy = i%8;
     		gbcPanel2.gridwidth = 1;
     		gbcPanel2.gridheight = 1;
     		gbcPanel2.fill = GridBagConstraints.BOTH;
@@ -145,6 +149,7 @@ class GUI extends JFrame {
 		gbcPanel0.insets = new Insets( 0,10,30,10 );
 		gbPanel0.setConstraints( scpPanel5, gbcPanel0 );
 		progress.setText("<html></html>");
+		progress.setFont(new Font("Consolas",Font.PLAIN, 12));
 		pnPanel5.add(progress);
 		pnPanel0.add( scpPanel5 );
 		
@@ -158,9 +163,51 @@ class GUI extends JFrame {
 		//System.out.println("label "+progress.getText());
 	}
 	
+	public void setGreenColour() {
+		progress.setForeground(Color.GREEN);
+	}
+	
 	private void listen() {
+		for(int i = 14; i<19; i++) {
+	        checkboxes.get(i).addItemListener(new ItemListener() {
+	            @Override
+	            public void itemStateChanged(ItemEvent e) {
+	                if(e.getStateChange() == ItemEvent.DESELECTED) {
+            			checkboxes.get(19).setSelected(false);
+	                }
+	            }
+	        });
+		}
+        checkboxes.get(19).addItemListener(new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent e) {
+                if(e.getStateChange() == ItemEvent.SELECTED) {
+                	for(int m = 14; m<19; m++) {
+            			checkboxes.get(m).setSelected(true);
+                	}
+                }
+            }
+        });
         checkboxes.get(n-2).addItemListener(new ItemListener() {
-
+            @Override
+            public void itemStateChanged(ItemEvent e) {
+                if(e.getStateChange() == ItemEvent.SELECTED) {
+                	for(int i = 0; i<n; i++) {
+                		if((i!=(n-1))&&(i!=(n-2))) {
+                			checkboxes.get(i).setSelected(false);
+                			checkboxes.get(i).setEnabled(false);
+                		}
+                	}
+                }else {
+                	for(int i = 0; i<n; i++) {
+                		if((i!=(n-1))&&(i!=(n-2))) {
+                			checkboxes.get(i).setEnabled(true);
+                		}
+                	}
+                }
+            }
+        });
+        checkboxes.get(n-2).addItemListener(new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e) {
                 if(e.getStateChange() == ItemEvent.SELECTED) {
