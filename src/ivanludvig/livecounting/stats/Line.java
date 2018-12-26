@@ -82,7 +82,7 @@ public class Line {
 		this.gets = gets;
 		this.kparts = kparts;
 		this.dayparts = dayparts;
-		score = (2*count)+((gets+assists)*500)+(kparts*250)+(dayparts*250);
+		score = (2*count)+((gets+assists)*500)+(kparts*200)+(dayparts*200);
 	}
 	
 	public Line(String line) {
