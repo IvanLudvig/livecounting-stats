@@ -51,7 +51,7 @@ public class Pincus extends Stat {
 		Collections.reverse(lines);
 	    try {
 	    	BufferedWriter writer = new BufferedWriter(new FileWriter("output/pincus.txt"));
-	    	writer.write("| # |Username |Total |{ '-D  |{:} |{:'( ");
+	    	writer.write("| # |Username |Total |{:'-D  |{:} |{:'( ");
 			writer.newLine();
 	    	writer.write("|---|---|---|---|---|---|");
 			writer.newLine();
