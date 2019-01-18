@@ -69,5 +69,28 @@ public class KParts extends Stat {
 	    } catch (IOException e) {
 	        System.err.println(e);
 	    }
+	    lines.clear();
+		for(String user : main.users) {
+			int all = top - last[main.users.indexOf(user)] +1;
+			lines.add(new Line(user,counts[main.users.indexOf(user)]));
+		}
+		Collections.sort(lines, Comparator.comparingInt(Line -> Line.count));
+		Collections.reverse(lines);
+	    try {
+	    	BufferedWriter writer = new BufferedWriter(new FileWriter("output/kpartstotal.txt"));
+	    	writer.write("| # |Username |K's Participated ");
+			writer.newLine();
+	    	writer.write("|---|---|---");
+			writer.newLine();
+			for(Line line : lines) {
+				if(line.count>=5) {
+					writer.write(line.getTableString(lines.indexOf(line)+1));
+					writer.newLine();
+				}
+			}
+			writer.close();
+	    } catch (IOException e) {
+	        System.err.println(e);
+	    }
 	}
 }

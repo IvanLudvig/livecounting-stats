@@ -32,6 +32,7 @@ public class FirstCounts extends Stat {
 		sdf =  new SimpleDateFormat("dd/MM/yyyy");
 	}
 	
+	@Override
 	public void update() {
 		for(Message message : main.messages) {
 			if(message.ok == 0) {
@@ -45,10 +46,11 @@ public class FirstCounts extends Stat {
 	}
 	
 	
+	@Override
 	public void write() {
 		for(int i = 0; i<main.users.size(); i++) {
 			if(messages[i]!=null && date[i]!=null) {
-				addLine(new Line(main.users.get(i), messages[i], date[i], counts[i]));
+				addLine(new Line(main.users.get(i), messages[i].replaceAll("\n", " "), date[i], counts[i]));
 			}
 		}
 		Collections.sort(lines, Comparator.comparingInt(Line -> Line.count));

@@ -1,10 +1,10 @@
 |# |User |Streak |Last Day  
 |---|---|---|---|
 | 1 | /u/ItzTaken | 74 | 27/12/2018 | 
-| 2 | /u/noduorg | 60 | 31/12/2018 | 
+| 2 | /u/noduorg | 72 | 12/01/2019 | 
 | 3 | /u/amazingpikachu_38 | 42 | 18/06/2017 | 
 | 4 | /u/Chalupa_Dad | 25 | 18/02/2018 | 
-| 5 | /u/NobodyL0vesMe | 22 | 08/12/2018 | 
+| 5 | /u/NobodyL0vesMe | 25 | 08/01/2019 | 
 | 6 | /u/piyushsharma301 | 21 | 11/12/2016 | 
 | 7 | /u/qwertylool | 18 | 04/01/2017 | 
 | 8 | /u/Lonadont | 18 | 23/09/2018 | 
@@ -13,10 +13,10 @@
 | 11 | /u/Smartstocks | 15 | 02/09/2017 | 
 | 12 | /u/rideride | 15 | 20/06/2017 | 
 | 13 | /u/dominodan123 | 15 | 10/06/2017 | 
-| 14 | /u/co3_carbonate | 13 | 08/01/2017 | 
-| 15 | /u/MaybeNotWrong | 13 | 06/10/2018 | 
+| 14 | /u/MaybeNotWrong | 14 | 12/01/2019 | 
+| 15 | /u/co3_carbonate | 13 | 08/01/2017 | 
 | 16 | /u/smarvin6689 | 13 | 03/08/2017 | 
-| 17 | /u/treje | 12 | 27/12/2018 | 
-| 18 | /u/davidjl123 | 12 | 17/04/2017 | 
+| 17 | /u/davidjl123 | 12 | 17/04/2017 | 
+| 18 | /u/treje | 12 | 27/12/2018 | 
 | 19 | /u/LeinadSpoon | 10 | 05/05/2018 | 
 | 20 | /u/gordonpt8 | 10 | 13/01/2017 | 

@@ -114,13 +114,22 @@ public class HoE extends Stat {
 		Collections.reverse(lines10);
 	    try {
 	    	BufferedWriter writer = new BufferedWriter(new FileWriter("output/ho3k.txt"));
+	    	writer.write("| # |Username |Count");
+			writer.newLine();
+	    	writer.write("|---|------|---------------");
+			writer.newLine();
 			for(Line line : lines3) {
 				writer.write(line.getTableString(lines3.indexOf(line)+1));
 				writer.newLine();
 			}
 			writer.close();
 	    	writer = new BufferedWriter(new FileWriter("output/hoe.txt"));
+	    	writer.write("| # |Username |Count");
+			writer.newLine();
+	    	writer.write("|---|------|---------------");
+			writer.newLine();
 			for(Line line : lines5) {
+				
 				writer.write(line.getTableString(lines5.indexOf(line)+1));
 				writer.newLine();
 			}

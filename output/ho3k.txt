@@ -1,16 +1,18 @@
-| 1 | /u/amazingpikachu_38 | 254 | 
+| # |Username |Count
+|---|------|---------------
+| 1 | /u/amazingpikachu_38 | 256 | 
 | 2 | /u/dominodan123 | 135 | 
 | 3 | /u/TOP_20 | 94 | 
-| 4 | /u/NobodyL0vesMe | 73 | 
-| 5 | /u/ItzTaken | 71 | 
-| 6 | /u/noduorg | 62 | 
+| 4 | /u/NobodyL0vesMe | 76 | 
+| 5 | /u/ItzTaken | 74 | 
+| 6 | /u/noduorg | 65 | 
 | 7 | /u/LeinadSpoon | 61 | 
-| 8 | /u/MaybeNotWrong | 53 | 
+| 8 | /u/MaybeNotWrong | 61 | 
 | 9 | /u/davidjl123 | 53 | 
 | 10 | /u/smarvin6689 | 46 | 
 | 11 | /u/Lonadont | 44 | 
 | 12 | /u/Chalupa_Dad | 41 | 
-| 13 | /u/treje | 35 | 
+| 13 | /u/treje | 37 | 
 | 14 | /u/Smartstocks | 30 | 
 | 15 | /u/piyushsharma301 | 24 | 
 | 16 | /u/rideride | 24 | 
@@ -23,10 +25,10 @@
 | 23 | /u/artbn | 5 | 
 | 24 | /u/VitaminB16 | 5 | 
 | 25 | /u/Flat-Mars-Society | 4 | 
-| 26 | /u/Majestic_Bear | 3 | 
-| 27 | /u/Chalupa_Dude | 3 | 
-| 28 | /u/Tranquilsunrise | 3 | 
-| 29 | /u/rschaosid | 3 | 
+| 26 | /u/rschaosid | 4 | 
+| 27 | /u/Majestic_Bear | 3 | 
+| 28 | /u/Chalupa_Dude | 3 | 
+| 29 | /u/Tranquilsunrise | 3 | 
 | 30 | /u/Kris18 | 2 | 
 | 31 | /u/Iamspeedy36 | 2 | 
 | 32 | /u/yesduorg | 2 | 
@@ -36,5 +38,6 @@
 | 36 | /u/Capitanbublo | 1 | 
 | 37 | /u/PrisonBull | 1 | 
 | 38 | /u/PrinceCrinkle | 1 | 
-| 39 | /u/Rajalaxo | 1 | 
+| 39 | /u/Shady_live_counter | 1 | 
 | 40 | /u/TOP_6689 | 1 | 
+| 41 | /u/Rajalaxo | 1 | 

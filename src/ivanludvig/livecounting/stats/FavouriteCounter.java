@@ -47,6 +47,10 @@ public class FavouriteCounter extends Stat{
 		Collections.reverse(lines);
 	    try {
 	    	BufferedWriter writer = new BufferedWriter(new FileWriter("output/favourite.txt"));
+	    	writer.write("|Counter |Favourite Counter |Counts ");
+			writer.newLine();
+	    	writer.write("|---|---|---");
+			writer.newLine();
 			for(Line line : lines) {
 				writer.write(line.getStringFav());
 				writer.newLine();
