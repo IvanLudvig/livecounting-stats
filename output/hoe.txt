@@ -4,8 +4,8 @@
 | 2 | /u/dominodan123 | 75 | 
 | 3 | /u/ItzTaken | 69 | 
 | 4 | /u/noduorg | 63 | 
-| 5 | /u/NobodyL0vesMe | 56 | 
-| 6 | /u/MaybeNotWrong | 40 | 
+| 5 | /u/NobodyL0vesMe | 59 | 
+| 6 | /u/MaybeNotWrong | 43 | 
 | 7 | /u/davidjl123 | 36 | 
 | 8 | /u/LeinadSpoon | 33 | 
 | 9 | /u/Lonadont | 33 | 
@@ -14,8 +14,8 @@
 | 12 | /u/TOP_20 | 16 | 
 | 13 | /u/treje | 12 | 
 | 14 | /u/Smartstocks | 9 | 
-| 15 | /u/gordonpt8 | 8 | 
-| 16 | /u/rideride | 8 | 
+| 15 | /u/rideride | 8 | 
+| 16 | /u/gordonpt8 | 8 | 
 | 17 | /u/qwertylool | 7 | 
 | 18 | /u/piyushsharma301 | 5 | 
 | 19 | /u/DemonBurritoCat | 4 | 
@@ -27,8 +27,8 @@
 | 25 | /u/Majestic_Bear | 1 | 
 | 26 | /u/Chalupa_Dude | 1 | 
 | 27 | /u/Shady_live_counter | 1 | 
-| 28 | /u/Tranquilsunrise | 1 | 
-| 29 | /u/rschaosid | 1 | 
-| 30 | /u/TOP_6689 | 1 | 
-| 31 | /u/VitaminB16 | 1 | 
-| 32 | /u/Rajalaxo | 1 | 
+| 28 | /u/rschaosid | 1 | 
+| 29 | /u/Tranquilsunrise | 1 | 
+| 30 | /u/Rajalaxo | 1 | 
+| 31 | /u/TOP_6689 | 1 | 
+| 32 | /u/VitaminB16 | 1 | 

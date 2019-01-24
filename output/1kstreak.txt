@@ -1,7 +1,7 @@
 |# |User |Streak |Last Day  
 |---|---|---|---|
-| 1 | /u/ItzTaken | 74 | 27/12/2018 | 
-| 2 | /u/noduorg | 72 | 12/01/2019 | 
+| 1 | /u/noduorg | 78 | 18/01/2019 | 
+| 2 | /u/ItzTaken | 74 | 27/12/2018 | 
 | 3 | /u/amazingpikachu_38 | 42 | 18/06/2017 | 
 | 4 | /u/Chalupa_Dad | 25 | 18/02/2018 | 
 | 5 | /u/NobodyL0vesMe | 25 | 08/01/2019 | 
@@ -10,10 +10,10 @@
 | 8 | /u/Lonadont | 18 | 23/09/2018 | 
 | 9 | /u/TOP_20 | 17 | 11/12/2016 | 
 | 10 | /u/DemonBurritoCat | 16 | 31/08/2017 | 
-| 11 | /u/Smartstocks | 15 | 02/09/2017 | 
-| 12 | /u/rideride | 15 | 20/06/2017 | 
-| 13 | /u/dominodan123 | 15 | 10/06/2017 | 
-| 14 | /u/MaybeNotWrong | 14 | 12/01/2019 | 
+| 11 | /u/MaybeNotWrong | 16 | 14/01/2019 | 
+| 12 | /u/Smartstocks | 15 | 02/09/2017 | 
+| 13 | /u/rideride | 15 | 20/06/2017 | 
+| 14 | /u/dominodan123 | 15 | 10/06/2017 | 
 | 15 | /u/co3_carbonate | 13 | 08/01/2017 | 
 | 16 | /u/smarvin6689 | 13 | 03/08/2017 | 
 | 17 | /u/davidjl123 | 12 | 17/04/2017 | 

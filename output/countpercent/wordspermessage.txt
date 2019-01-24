@@ -1,6 +1,6 @@
 | # |Username |Words per message 
 |---|---|---
-| 1 | /u/TOP_20 | 2.66 | 
+| 1 | /u/TOP_20 | 2.67 | 
 | 2 | /u/Tranquilsunrise | 2.16 | 
 | 3 | /u/artbn | 1.84 | 
 | 4 | /u/rschaosid | 1.72 | 
@@ -27,8 +27,9 @@
 | 25 | /u/DemonBurritoCat | 1.15 | 
 | 26 | /u/treje | 1.15 | 
 | 27 | /u/gordonpt8 | 1.14 | 
-| 28 | /u/ItzTaken | 1.13 | 
-| 29 | /u/QuestoGuy | 1.11 | 
-| 30 | /u/davidjl123 | 1.11 | 
-| 31 | /u/MaybeNotWrong | 1.11 | 
-| 32 | /u/noduorg | 1.06 | 
+| 28 | /u/Rajalaxo | 1.12 | 
+| 29 | /u/ItzTaken | 1.13 | 
+| 30 | /u/QuestoGuy | 1.11 | 
+| 31 | /u/davidjl123 | 1.11 | 
+| 32 | /u/MaybeNotWrong | 1.11 | 
+| 33 | /u/noduorg | 1.06 | 
