@@ -31,6 +31,7 @@ import ivanludvig.livecounting.stats.OneKStreak;
 import ivanludvig.livecounting.stats.Pairs;
 import ivanludvig.livecounting.stats.Pee;
 import ivanludvig.livecounting.stats.Pincus;
+import ivanludvig.livecounting.stats.Speed;
 import ivanludvig.livecounting.stats.Stat;
 import ivanludvig.livecounting.stats.TenToHundredK;
 import ivanludvig.livecounting.stats.TopStreaks;
@@ -134,6 +135,12 @@ public class Main implements Runnable {
 			stats.add(new AverageCounts(this));
 			rev = 1;
 		}
+		/*
+		if(a[22]==1) {
+			stats.add(new Speed(this));
+			rev = 1;
+		}
+		*/
 		main.reset();
 		if(rev == 0) {
 			main.getJson();

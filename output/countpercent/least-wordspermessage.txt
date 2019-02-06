@@ -1,11 +1,11 @@
 | # |Username |Words per message 
 |---|---|---
 | 1 | /u/noduorg | 1.06 | 
-| 2 | /u/MaybeNotWrong | 1.11 | 
-| 3 | /u/davidjl123 | 1.11 | 
+| 2 | /u/davidjl123 | 1.11 | 
+| 3 | /u/Rajalaxo | 1.11 | 
 | 4 | /u/QuestoGuy | 1.11 | 
 | 5 | /u/ItzTaken | 1.13 | 
-| 6 | /u/Rajalaxo | 1.12 | 
+| 6 | /u/MaybeNotWrong | 1.12 | 
 | 7 | /u/gordonpt8 | 1.14 | 
 | 8 | /u/treje | 1.15 | 
 | 9 | /u/DemonBurritoCat | 1.15 | 

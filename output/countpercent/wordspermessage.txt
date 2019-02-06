@@ -27,9 +27,9 @@
 | 25 | /u/DemonBurritoCat | 1.15 | 
 | 26 | /u/treje | 1.15 | 
 | 27 | /u/gordonpt8 | 1.14 | 
-| 28 | /u/Rajalaxo | 1.12 | 
+| 28 | /u/MaybeNotWrong | 1.12 | 
 | 29 | /u/ItzTaken | 1.13 | 
 | 30 | /u/QuestoGuy | 1.11 | 
-| 31 | /u/davidjl123 | 1.11 | 
-| 32 | /u/MaybeNotWrong | 1.11 | 
+| 31 | /u/Rajalaxo | 1.11 | 
+| 32 | /u/davidjl123 | 1.11 | 
 | 33 | /u/noduorg | 1.06 | 

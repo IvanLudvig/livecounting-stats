@@ -25,6 +25,10 @@ public class Line {
 		this.count = count;
 	}
 	
+	public Line(int count) {
+		this.count = count;
+	}
+	
 	public Line(String user, double percentage) {
 		this.user = user;
 		this.percentage = percentage;
@@ -188,6 +192,10 @@ public class Line {
 	
 	public String getStringFav() {
 		return "| "+"/u/"+user+" | "+"/u/"+user2+" | " + count+" | ";
+	}
+	
+	public String getStringSpeed(int order) {
+		return order +" "+ count;
 	}
 	
 	public String getDayString() {

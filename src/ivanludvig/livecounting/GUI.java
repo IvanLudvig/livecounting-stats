@@ -28,7 +28,7 @@ class GUI extends JFrame {
 	String stats[] = {"Pairs", "Favourite counter", "HoE(+HoS, Ho3k)", "Hours", "Bars", "Odd/even", "Pincus", 
 			"20k Days", "Day streak","First counts", "1k Streaks", "Top streaks", "Pee", "Count percentage", 
 			"K's participation", "Counts", "Gets", "Assists", "Days", "HoP", 
-			"10kto100k",  "Average Counts", ""};
+			"10kto100k",  "Average Counts", "Speed", ""};
 	int n = 22;
 	Main main;
     public int a[]=new int[n];
