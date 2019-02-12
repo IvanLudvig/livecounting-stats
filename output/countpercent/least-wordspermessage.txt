@@ -1,11 +1,11 @@
 | # |Username |Words per message 
 |---|---|---
 | 1 | /u/noduorg | 1.06 | 
-| 2 | /u/davidjl123 | 1.11 | 
-| 3 | /u/Rajalaxo | 1.11 | 
-| 4 | /u/QuestoGuy | 1.11 | 
-| 5 | /u/ItzTaken | 1.13 | 
-| 6 | /u/MaybeNotWrong | 1.12 | 
+| 2 | /u/Rajalaxo | 1.1 | 
+| 3 | /u/MaybeNotWrong | 1.11 | 
+| 4 | /u/davidjl123 | 1.11 | 
+| 5 | /u/QuestoGuy | 1.11 | 
+| 6 | /u/ItzTaken | 1.13 | 
 | 7 | /u/gordonpt8 | 1.14 | 
 | 8 | /u/treje | 1.15 | 
 | 9 | /u/DemonBurritoCat | 1.15 | 
@@ -20,9 +20,9 @@
 | 18 | /u/Lonadont | 1.32 | 
 | 19 | /u/VitaminB16 | 1.33 | 
 | 20 | /u/rideride | 1.34 | 
-| 21 | /u/parker_cube | 1.39 | 
-| 22 | /u/KingCaspianX | 1.39 | 
-| 23 | /u/smarvin6689 | 1.4 | 
+| 21 | /u/KingCaspianX | 1.39 | 
+| 22 | /u/smarvin6689 | 1.4 | 
+| 23 | /u/parker_cube | 1.4 | 
 | 24 | /u/piyushsharma301 | 1.4 | 
 | 25 | /u/Chalupa_Dad | 1.4 | 
 | 26 | /u/qwertylool | 1.4 | 

@@ -10,9 +10,9 @@
 | 8 | /u/qwertylool | 1.4 | 
 | 9 | /u/Chalupa_Dad | 1.4 | 
 | 10 | /u/piyushsharma301 | 1.4 | 
-| 11 | /u/smarvin6689 | 1.4 | 
-| 12 | /u/KingCaspianX | 1.39 | 
-| 13 | /u/parker_cube | 1.39 | 
+| 11 | /u/parker_cube | 1.4 | 
+| 12 | /u/smarvin6689 | 1.4 | 
+| 13 | /u/KingCaspianX | 1.39 | 
 | 14 | /u/rideride | 1.34 | 
 | 15 | /u/VitaminB16 | 1.33 | 
 | 16 | /u/Lonadont | 1.32 | 
@@ -27,9 +27,9 @@
 | 25 | /u/DemonBurritoCat | 1.15 | 
 | 26 | /u/treje | 1.15 | 
 | 27 | /u/gordonpt8 | 1.14 | 
-| 28 | /u/MaybeNotWrong | 1.12 | 
-| 29 | /u/ItzTaken | 1.13 | 
-| 30 | /u/QuestoGuy | 1.11 | 
-| 31 | /u/Rajalaxo | 1.11 | 
-| 32 | /u/davidjl123 | 1.11 | 
+| 28 | /u/ItzTaken | 1.13 | 
+| 29 | /u/QuestoGuy | 1.11 | 
+| 30 | /u/davidjl123 | 1.11 | 
+| 31 | /u/MaybeNotWrong | 1.11 | 
+| 32 | /u/Rajalaxo | 1.1 | 
 | 33 | /u/noduorg | 1.06 | 
