@@ -1,11 +1,11 @@
 | # |Username |Count
 |---|------|---------------
 | 1 | /u/amazingpikachu_38 | 119 | 
-| 2 | /u/ItzTaken | 79 | 
+| 2 | /u/ItzTaken | 84 | 
 | 3 | /u/dominodan123 | 76 | 
-| 4 | /u/NobodyL0vesMe | 65 | 
-| 5 | /u/noduorg | 64 | 
-| 6 | /u/MaybeNotWrong | 47 | 
+| 4 | /u/NobodyL0vesMe | 70 | 
+| 5 | /u/noduorg | 68 | 
+| 6 | /u/MaybeNotWrong | 48 | 
 | 7 | /u/davidjl123 | 36 | 
 | 8 | /u/LeinadSpoon | 34 | 
 | 9 | /u/Lonadont | 33 | 
@@ -23,12 +23,12 @@
 | 21 | /u/co3_carbonate | 3 | 
 | 22 | /u/Kris18 | 2 | 
 | 23 | /u/yesduorg | 2 | 
-| 24 | /u/Flat-Mars-Society | 1 | 
-| 25 | /u/Majestic_Bear | 1 | 
-| 26 | /u/Chalupa_Dude | 1 | 
-| 27 | /u/Shady_live_counter | 1 | 
-| 28 | /u/rschaosid | 1 | 
-| 29 | /u/Tranquilsunrise | 1 | 
-| 30 | /u/VitaminB16 | 1 | 
+| 24 | /u/Rajalaxo | 2 | 
+| 25 | /u/Flat-Mars-Society | 1 | 
+| 26 | /u/Majestic_Bear | 1 | 
+| 27 | /u/Chalupa_Dude | 1 | 
+| 28 | /u/Shady_live_counter | 1 | 
+| 29 | /u/rschaosid | 1 | 
+| 30 | /u/Tranquilsunrise | 1 | 
 | 31 | /u/TOP_6689 | 1 | 
-| 32 | /u/Rajalaxo | 1 | 
+| 32 | /u/VitaminB16 | 1 | 
