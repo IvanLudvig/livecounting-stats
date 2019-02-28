@@ -1,9 +1,9 @@
 | # |Username |Chars per message 
 |---|---|---
-| 1 | /u/TOP_20 | 10.09 | 
+| 1 | /u/TOP_20 | 10.12 | 
 | 2 | /u/Tranquilsunrise | 9.36 | 
 | 3 | /u/artbn | 6.46 | 
-| 4 | /u/rschaosid | 5.44 | 
+| 4 | /u/rschaosid | 5.45 | 
 | 5 | /u/co3_carbonate | 5.14 | 
 | 6 | /u/Iamspeedy36 | 3.6 | 
 | 7 | /u/piyushsharma301 | 3.35 | 
@@ -14,13 +14,13 @@
 | 12 | /u/smarvin6689 | 2.68 | 
 | 13 | /u/Majestic_Bear | 2.56 | 
 | 14 | /u/parker_cube | 2.54 | 
-| 15 | /u/VitaminB16 | 2.39 | 
-| 16 | /u/Smartstocks | 2.32 | 
-| 17 | /u/Lonadont | 2.32 | 
+| 15 | /u/VitaminB16 | 2.41 | 
+| 16 | /u/Lonadont | 2.33 | 
+| 17 | /u/Smartstocks | 2.32 | 
 | 18 | /u/LeinadSpoon | 2.07 | 
 | 19 | /u/MrBahr12 | 1.63 | 
 | 20 | /u/dominodan123 | 1.6 | 
-| 21 | /u/NobodyL0vesMe | 1.53 | 
+| 21 | /u/NobodyL0vesMe | 1.52 | 
 | 22 | /u/TOP_6689 | 1.51 | 
 | 23 | /u/amazingpikachu_38 | 1.39 | 
 | 24 | /u/abplows | 1.29 | 
@@ -29,7 +29,7 @@
 | 27 | /u/QuestoGuy | 1.19 | 
 | 28 | /u/ItzTaken | 1.1 | 
 | 29 | /u/DemonBurritoCat | 1.05 | 
-| 30 | /u/MaybeNotWrong | 0.84 | 
+| 30 | /u/MaybeNotWrong | 0.85 | 
 | 31 | /u/davidjl123 | 0.8 | 
-| 32 | /u/Rajalaxo | 0.64 | 
+| 32 | /u/Rajalaxo | 0.63 | 
 | 33 | /u/noduorg | 0.44 | 

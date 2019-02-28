@@ -1,11 +1,11 @@
 | # |Username |Count
 |---|------|---------------
 | 1 | /u/amazingpikachu_38 | 119 | 
-| 2 | /u/ItzTaken | 84 | 
+| 2 | /u/ItzTaken | 87 | 
 | 3 | /u/dominodan123 | 76 | 
-| 4 | /u/NobodyL0vesMe | 70 | 
+| 4 | /u/NobodyL0vesMe | 72 | 
 | 5 | /u/noduorg | 68 | 
-| 6 | /u/MaybeNotWrong | 48 | 
+| 6 | /u/MaybeNotWrong | 49 | 
 | 7 | /u/davidjl123 | 36 | 
 | 8 | /u/LeinadSpoon | 34 | 
 | 9 | /u/Lonadont | 33 | 
@@ -18,8 +18,8 @@
 | 16 | /u/gordonpt8 | 8 | 
 | 17 | /u/qwertylool | 7 | 
 | 18 | /u/piyushsharma301 | 5 | 
-| 19 | /u/DemonBurritoCat | 4 | 
-| 20 | /u/MrBahr12 | 4 | 
+| 19 | /u/MrBahr12 | 4 | 
+| 20 | /u/DemonBurritoCat | 4 | 
 | 21 | /u/co3_carbonate | 3 | 
 | 22 | /u/Kris18 | 2 | 
 | 23 | /u/yesduorg | 2 | 

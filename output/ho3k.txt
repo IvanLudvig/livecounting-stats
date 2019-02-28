@@ -2,10 +2,10 @@
 |---|------|---------------
 | 1 | /u/amazingpikachu_38 | 256 | 
 | 2 | /u/dominodan123 | 136 | 
-| 3 | /u/NobodyL0vesMe | 96 | 
-| 4 | /u/TOP_20 | 94 | 
-| 5 | /u/ItzTaken | 93 | 
-| 6 | /u/MaybeNotWrong | 74 | 
+| 3 | /u/NobodyL0vesMe | 99 | 
+| 4 | /u/ItzTaken | 97 | 
+| 5 | /u/TOP_20 | 94 | 
+| 6 | /u/MaybeNotWrong | 77 | 
 | 7 | /u/noduorg | 71 | 
 | 8 | /u/LeinadSpoon | 63 | 
 | 9 | /u/davidjl123 | 53 | 
@@ -14,16 +14,16 @@
 | 12 | /u/Chalupa_Dad | 41 | 
 | 13 | /u/treje | 37 | 
 | 14 | /u/Smartstocks | 30 | 
-| 15 | /u/rideride | 24 | 
-| 16 | /u/piyushsharma301 | 24 | 
+| 15 | /u/piyushsharma301 | 24 | 
+| 16 | /u/rideride | 24 | 
 | 17 | /u/qwertylool | 22 | 
-| 18 | /u/DemonBurritoCat | 12 | 
-| 19 | /u/gordonpt8 | 12 | 
+| 18 | /u/gordonpt8 | 12 | 
+| 19 | /u/DemonBurritoCat | 12 | 
 | 20 | /u/co3_carbonate | 9 | 
 | 21 | /u/QuestoGuy | 8 | 
 | 22 | /u/MrBahr12 | 6 | 
-| 23 | /u/artbn | 5 | 
-| 24 | /u/VitaminB16 | 5 | 
+| 23 | /u/VitaminB16 | 5 | 
+| 24 | /u/artbn | 5 | 
 | 25 | /u/Flat-Mars-Society | 4 | 
 | 26 | /u/rschaosid | 4 | 
 | 27 | /u/Rajalaxo | 4 | 
