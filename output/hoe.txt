@@ -3,12 +3,12 @@
 | 1 | /u/amazingpikachu_38 | 119 | 
 | 2 | /u/ItzTaken | 87 | 
 | 3 | /u/dominodan123 | 76 | 
-| 4 | /u/NobodyL0vesMe | 72 | 
-| 5 | /u/noduorg | 68 | 
+| 4 | /u/NobodyL0vesMe | 74 | 
+| 5 | /u/noduorg | 69 | 
 | 6 | /u/MaybeNotWrong | 49 | 
 | 7 | /u/davidjl123 | 36 | 
 | 8 | /u/LeinadSpoon | 34 | 
-| 9 | /u/Lonadont | 33 | 
+| 9 | /u/Lonadont | 34 | 
 | 10 | /u/smarvin6689 | 28 | 
 | 11 | /u/Chalupa_Dad | 18 | 
 | 12 | /u/TOP_20 | 16 | 
@@ -29,6 +29,6 @@
 | 27 | /u/Chalupa_Dude | 1 | 
 | 28 | /u/Shady_live_counter | 1 | 
 | 29 | /u/rschaosid | 1 | 
-| 30 | /u/Tranquilsunrise | 1 | 
-| 31 | /u/TOP_6689 | 1 | 
-| 32 | /u/VitaminB16 | 1 | 
+| 30 | /u/VitaminB16 | 1 | 
+| 31 | /u/Tranquilsunrise | 1 | 
+| 32 | /u/TOP_6689 | 1 | 

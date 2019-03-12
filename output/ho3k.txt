@@ -1,16 +1,16 @@
 | # |Username |Count
 |---|------|---------------
-| 1 | /u/amazingpikachu_38 | 256 | 
+| 1 | /u/amazingpikachu_38 | 257 | 
 | 2 | /u/dominodan123 | 136 | 
-| 3 | /u/NobodyL0vesMe | 99 | 
-| 4 | /u/ItzTaken | 97 | 
+| 3 | /u/NobodyL0vesMe | 106 | 
+| 4 | /u/ItzTaken | 100 | 
 | 5 | /u/TOP_20 | 94 | 
-| 6 | /u/MaybeNotWrong | 77 | 
-| 7 | /u/noduorg | 71 | 
+| 6 | /u/MaybeNotWrong | 78 | 
+| 7 | /u/noduorg | 73 | 
 | 8 | /u/LeinadSpoon | 63 | 
 | 9 | /u/davidjl123 | 53 | 
 | 10 | /u/smarvin6689 | 46 | 
-| 11 | /u/Lonadont | 44 | 
+| 11 | /u/Lonadont | 45 | 
 | 12 | /u/Chalupa_Dad | 41 | 
 | 13 | /u/treje | 37 | 
 | 14 | /u/Smartstocks | 30 | 
@@ -22,16 +22,16 @@
 | 20 | /u/co3_carbonate | 9 | 
 | 21 | /u/QuestoGuy | 8 | 
 | 22 | /u/MrBahr12 | 6 | 
-| 23 | /u/VitaminB16 | 5 | 
-| 24 | /u/artbn | 5 | 
+| 23 | /u/artbn | 5 | 
+| 24 | /u/VitaminB16 | 5 | 
 | 25 | /u/Flat-Mars-Society | 4 | 
 | 26 | /u/rschaosid | 4 | 
 | 27 | /u/Rajalaxo | 4 | 
 | 28 | /u/Majestic_Bear | 3 | 
 | 29 | /u/Chalupa_Dude | 3 | 
 | 30 | /u/Tranquilsunrise | 3 | 
-| 31 | /u/Iamspeedy36 | 2 | 
-| 32 | /u/Kris18 | 2 | 
+| 31 | /u/Kris18 | 2 | 
+| 32 | /u/Iamspeedy36 | 2 | 
 | 33 | /u/yesduorg | 2 | 
 | 34 | /u/supersammy00 | 1 | 
 | 35 | /u/albert471 | 1 | 
@@ -41,3 +41,4 @@
 | 39 | /u/Shady_live_counter | 1 | 
 | 40 | /u/darthvader1521 | 1 | 
 | 41 | /u/TOP_6689 | 1 | 
+| 42 | /u/NikinCZ | 1 | 
