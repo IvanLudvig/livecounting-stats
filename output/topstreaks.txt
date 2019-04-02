@@ -1,8 +1,8 @@
 |# |User |Streak |Last Day  
 |---|---|---|---|
-| 1 | /u/noduorg | 126 | 08/03/2019 | 
+| 1 | /u/noduorg | 141 | 23/03/2019 | 
 | 2 | /u/ItzTaken | 74 | 27/12/2018 | 
-| 3 | /u/NobodyL0vesMe | 58 | 08/03/2019 | 
+| 3 | /u/NobodyL0vesMe | 70 | 19/03/2019 | 
 | 4 | /u/amazingpikachu_38 | 42 | 18/06/2017 | 
 | 5 | /u/amazingpikachu_38 | 37 | 07/01/2019 | 
 | 6 | /u/ItzTaken | 30 | 23/02/2019 | 
@@ -17,16 +17,16 @@
 | 15 | /u/NobodyL0vesMe | 21 | 07/11/2018 | 
 | 16 | /u/amazingpikachu_38 | 20 | 05/08/2018 | 
 | 17 | /u/amazingpikachu_38 | 19 | 10/11/2017 | 
-| 18 | /u/qwertylool | 18 | 04/01/2017 | 
-| 19 | /u/Chalupa_Dad | 18 | 10/05/2018 | 
-| 20 | /u/amazingpikachu_38 | 18 | 23/08/2018 | 
-| 21 | /u/Lonadont | 18 | 23/09/2018 | 
-| 22 | /u/TOP_20 | 17 | 11/12/2016 | 
+| 18 | /u/ItzTaken | 19 | 20/03/2019 | 
+| 19 | /u/qwertylool | 18 | 04/01/2017 | 
+| 20 | /u/Chalupa_Dad | 18 | 10/05/2018 | 
+| 21 | /u/amazingpikachu_38 | 18 | 23/08/2018 | 
+| 22 | /u/Lonadont | 18 | 23/09/2018 | 
 | 23 | /u/amazingpikachu_38 | 17 | 18/02/2017 | 
-| 24 | /u/DemonBurritoCat | 16 | 31/08/2017 | 
-| 25 | /u/TOP_20 | 16 | 09/01/2017 | 
+| 24 | /u/TOP_20 | 17 | 11/12/2016 | 
+| 25 | /u/DemonBurritoCat | 16 | 31/08/2017 | 
 | 26 | /u/amazingpikachu_38 | 16 | 06/03/2017 | 
 | 27 | /u/MaybeNotWrong | 16 | 14/01/2019 | 
 | 28 | /u/NobodyL0vesMe | 16 | 12/10/2018 | 
-| 29 | /u/Smartstocks | 15 | 02/09/2017 | 
-| 30 | /u/rideride | 15 | 20/06/2017 | 
+| 29 | /u/TOP_20 | 16 | 09/01/2017 | 
+| 30 | /u/Smartstocks | 15 | 02/09/2017 | 
