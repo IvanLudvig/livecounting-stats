@@ -1,10 +1,10 @@
 | 1 | /u/amazingpikachu_38 | 23 | 
 | 2 | /u/ItzTaken | 21 | 
 | 3 | /u/NobodyL0vesMe | 18 | 
-| 4 | /u/MaybeNotWrong | 16 | 
-| 5 | /u/smarvin6689 | 12 | 
-| 6 | /u/dominodan123 | 9 | 
-| 7 | /u/noduorg | 9 | 
+| 4 | /u/MaybeNotWrong | 17 | 
+| 5 | /u/noduorg | 13 | 
+| 6 | /u/smarvin6689 | 12 | 
+| 7 | /u/dominodan123 | 9 | 
 | 8 | /u/davidjl123 | 6 | 
 | 9 | /u/gordonpt8 | 5 | 
 | 10 | /u/LeinadSpoon | 4 | 
@@ -14,5 +14,6 @@
 | 14 | /u/Smartstocks | 1 | 
 | 15 | /u/Majestic_Bear | 1 | 
 | 16 | /u/Shady_live_counter | 1 | 
-| 17 | /u/Kris18 | 1 | 
-| 18 | /u/rschaosid | 1 | 
+| 17 | /u/rideride | 1 | 
+| 18 | /u/Kris18 | 1 | 
+| 19 | /u/rschaosid | 1 | 
