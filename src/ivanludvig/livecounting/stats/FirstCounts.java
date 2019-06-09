@@ -2,6 +2,7 @@ package ivanludvig.livecounting.stats;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -22,7 +23,7 @@ public class FirstCounts extends Stat {
 	ArrayList<Line> lines = new ArrayList<Line>();
 	Main main;
 	SimpleDateFormat sdf;
-	
+	String dpusers = "";
 
 	public FirstCounts(Main main) {
 		this.main = main;
@@ -30,6 +31,7 @@ public class FirstCounts extends Stat {
 		messages = new String[main.n];
 		date = new String[main.n];
 		sdf =  new SimpleDateFormat("dd/MM/yyyy");
+		dpusers = readDpUsers();
 	}
 	
 	@Override
@@ -49,8 +51,39 @@ public class FirstCounts extends Stat {
 	@Override
 	public void write() {
 		for(int i = 0; i<main.users.size(); i++) {
-			if(messages[i]!=null && date[i]!=null) {
-				addLine(new Line(main.users.get(i), messages[i].replaceAll("\n", " "), date[i], counts[i]));
+			if((messages[i]!=null) && (date[i]!=null)) {
+				addLine(new Line(main.users.get(i), messages[i].replaceAll("\\\\n", "  "), date[i], counts[i]));
+			}
+		}
+		Collections.sort(lines, Comparator.comparingInt(Line -> Line.count));
+		Collections.reverse(lines);
+	    try {
+	    	BufferedWriter writer = new BufferedWriter(new FileWriter("output/firstcounts_full.txt"));
+	    	writer.write("|User |First Count | Date");
+			writer.newLine();
+	    	writer.write("|---|---|---");
+			writer.newLine();
+			for(Line line : lines) {
+				writer.write(line.getFirstString());
+				writer.newLine();
+			}
+			writer.close();
+	    } catch (IOException e) {
+	        System.err.println(e);
+	    } 
+	    
+	    
+	    
+	    lines = new ArrayList<Line>();
+		for(int i = 0; i<main.users.size(); i++) {
+			if((messages[i]!=null) && (date[i]!=null)) {
+				if((counts[i]<9800000)||(counts[i]>10300000)) {
+					addLine(new Line(main.users.get(i), messages[i].replaceAll("\\\\n", "  "), date[i], counts[i]));
+				}else {
+					if(dpusers.contains(main.users.get(i))){
+						addLine(new Line(main.users.get(i), messages[i].replaceAll("\\\\n", "  "), date[i], counts[i]));
+					}
+				}
 			}
 		}
 		Collections.sort(lines, Comparator.comparingInt(Line -> Line.count));
@@ -104,6 +137,21 @@ public class FirstCounts extends Stat {
 		    }
 		}
 		
+	}
+	
+	public String readDpUsers() {
+		String str = "";
+		BufferedReader br;
+		try {
+			br = new BufferedReader(new FileReader("res/lastChatFile.txt"));
+			str = br.readLine();
+			br.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return str;
 	}
 	
 	public String dateof(Message message) {
