@@ -13,6 +13,8 @@ import ivanludvig.livecounting.Message;
 public class Gets extends Stat {
 	
 	Main main;
+	ArrayList<Message> dm = new ArrayList<Message>();
+	//int count = 0;
 
 	public Gets(Main main) {
 		this.main = main;
@@ -23,21 +25,31 @@ public class Gets extends Stat {
 	public void update() {
 		for(Message message : main.messages) {
 			String str = Integer.toString(message.count);
-<<<<<<< HEAD
+			
 			if((message.ok == 0) && (str.length()>2)) { 
 				if( str.substring(str.length()-3, str.length()).equals("000")) {
 					counts[main.users.indexOf(message.author)]+=1;
 					
+					/* CODE TO FIND DOUBLES
+					for(Message m : dm) {
+						if((message.body.equals(m.body))&&(message.date.equals(m.date))) {
+							System.out.println("DOUBLE "+message.count);
+							break;
+						}
+					}
+					dm.add(message);
+					count +=1;
+					if(count == 300) {
+						for(int i = 0; i<200; i++) {
+							dm.remove(0);
+						}
+						count = 100;
+					}
+					*/
 				}
+
 			}
 			
-=======
-			if(message.ok == 0 && str.length()>2) { 
-				if( str.substring(str.length()-3, str.length()).equals("000")) {
-					counts[main.users.indexOf(message.author)]+=1;
-				}
-			}
->>>>>>> 2aa91cd0b8c54b85852367d0626fbfbe8e1bb94d
 		}
 	}
 	
