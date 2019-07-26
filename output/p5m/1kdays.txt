@@ -1,0 +1,22 @@
+|# |User |Streak |Last Day  
+|---|---|---|---|
+| 1 | /u/ItzTaken | 42 | 26/11/2018 | 
+| 2 | /u/Chalupa_Dad | 25 | 20/01/2018 | 
+| 3 | /u/Chalupa_Dad | 25 | 18/02/2018 | 
+| 4 | /u/noduorg | 24 | 26/11/2018 | 
+| 5 | /u/NobodyL0vesMe | 21 | 07/11/2018 | 
+| 6 | /u/Chalupa_Dad | 18 | 10/05/2018 | 
+| 7 | /u/Lonadont | 18 | 23/09/2018 | 
+| 8 | /u/NobodyL0vesMe | 16 | 12/10/2018 | 
+| 9 | /u/Lonadont | 14 | 31/08/2018 | 
+| 10 | /u/MaybeNotWrong | 13 | 06/10/2018 | 
+| 11 | /u/NobodyL0vesMe | 12 | 27/07/2018 | 
+| 12 | /u/treje | 11 | 15/10/2018 | 
+| 13 | /u/treje | 11 | 31/10/2018 | 
+| 14 | /u/Chalupa_Dad | 10 | 26/12/2017 | 
+| 15 | /u/Chalupa_Dad | 10 | 20/05/2018 | 
+| 16 | /u/LeinadSpoon | 10 | 05/05/2018 | 
+| 17 | /u/Lonadont | 10 | 26/11/2018 | 
+| 18 | /u/Chalupa_Dad | 9 | 10/04/2018 | 
+| 19 | /u/Lonadont | 9 | 14/08/2018 | 
+| 20 | /u/Lonadont | 9 | 04/10/2018 | 
