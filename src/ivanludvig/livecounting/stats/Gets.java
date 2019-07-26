@@ -23,6 +23,7 @@ public class Gets extends Stat {
 	public void update() {
 		for(Message message : main.messages) {
 			String str = Integer.toString(message.count);
+<<<<<<< HEAD
 			if((message.ok == 0) && (str.length()>2)) { 
 				if( str.substring(str.length()-3, str.length()).equals("000")) {
 					counts[main.users.indexOf(message.author)]+=1;
@@ -30,6 +31,13 @@ public class Gets extends Stat {
 				}
 			}
 			
+=======
+			if(message.ok == 0 && str.length()>2) { 
+				if( str.substring(str.length()-3, str.length()).equals("000")) {
+					counts[main.users.indexOf(message.author)]+=1;
+				}
+			}
+>>>>>>> 2aa91cd0b8c54b85852367d0626fbfbe8e1bb94d
 		}
 	}
 	
