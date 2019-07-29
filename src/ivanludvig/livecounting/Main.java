@@ -60,7 +60,7 @@ public class Main implements Runnable {
 		main.gui = new GUI(main);
 		TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
 		main.sdfUTC =  new SimpleDateFormat("dd/MM/yyyy");
-		TimeZone.setDefault(TimeZone.getTimeZone("EST"));
+		TimeZone.setDefault(TimeZone.getTimeZone("America/New_York"));
 		main.sdfEST =  new SimpleDateFormat("dd/MM/yyyy");
 		main.sdfESThour =  new SimpleDateFormat("HH");
 		TimeZone.setDefault(TimeZone.getTimeZone("UTC"));

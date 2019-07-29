@@ -1,9 +1,9 @@
 | # |Username |Bars
 |---|------|---------------
-| 1 | /u/dominodan123 | 2958 | 
+| 1 | /u/dominodan123 | 2957 | 
 | 2 | /u/TOP_20 | 1958 | 
 | 3 | /u/artbn | 1858 | 
-| 4 | /u/smarvin6689 | 1634 | 
+| 4 | /u/smarvin6689 | 1633 | 
 | 5 | /u/noduorg | 1612 | 
 | 6 | /u/amazingpikachu_38 | 1072 | 
 | 7 | /u/Smartstocks | 926 | 
@@ -13,7 +13,7 @@
 | 11 | /u/Removedpixel | 724 | 
 | 12 | /u/QuestoGuy | 684 | 
 | 13 | /u/piyushsharma301 | 575 | 
-| 14 | /u/gordonpt8 | 553 | 
+| 14 | /u/gordonpt8 | 552 | 
 | 15 | /u/Tranquilsunrise | 530 | 
 | 16 | /u/Lonadont | 514 | 
 | 17 | /u/VitaminB16 | 512 | 
@@ -79,8 +79,8 @@
 | 77 | /u/MewDP | 20 | 
 | 78 | /u/the_researcher | 19 | 
 | 79 | /u/anothershittyalt | 19 | 
-| 80 | /u/zotc | 18 | 
-| 81 | /u/candcshow | 18 | 
+| 80 | /u/candcshow | 19 | 
+| 81 | /u/zotc | 18 | 
 | 82 | /u/1_Count_Per_HoC | 18 | 
 | 83 | /u/cro4_chromate | 18 | 
 | 84 | /u/animatedtwig | 17 | 
