@@ -8,9 +8,14 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.TimeZone;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import com.google.gson.stream.JsonReader;
 
 import ivanludvig.livecounting.stats.Assists;
 import ivanludvig.livecounting.stats.AverageCounts;
@@ -31,7 +36,6 @@ import ivanludvig.livecounting.stats.OneKStreak;
 import ivanludvig.livecounting.stats.Pairs;
 import ivanludvig.livecounting.stats.Pee;
 import ivanludvig.livecounting.stats.Pincus;
-import ivanludvig.livecounting.stats.Speed;
 import ivanludvig.livecounting.stats.Stat;
 import ivanludvig.livecounting.stats.TenToHundredK;
 import ivanludvig.livecounting.stats.TopStreaks;
@@ -47,12 +51,19 @@ public class Main implements Runnable {
 	int latestcount = 0;
 	String lastdate = "0";
 	String ld = "0";
-	public int n = 4600;
+	public final int n = 5200;
 	GUI gui;
+	SimpleDateFormat sdfUTC, sdfEST, sdfESThour;
 	
 	public static void main(String args[]) throws IOException {
 		main = new Main();
 		main.gui = new GUI(main);
+		TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
+		main.sdfUTC =  new SimpleDateFormat("dd/MM/yyyy");
+		TimeZone.setDefault(TimeZone.getTimeZone("EST"));
+		main.sdfEST =  new SimpleDateFormat("dd/MM/yyyy");
+		main.sdfESThour =  new SimpleDateFormat("HH");
+		TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
 		//main.gui.start();
 	}
 	
@@ -123,7 +134,7 @@ public class Main implements Runnable {
 			days = stats.size()-1;
 		}
 		if(a[19]==1) {
-			System.out.println(assists+" "+ gets+" "+ counts+" "+ kparts+" "+ days);
+			//System.out.println(assists+" "+ gets+" "+ counts+" "+ kparts+" "+ days);
 			stats.add(new HoP(this, assists, gets, counts, kparts, days));
 			hop = 1;
 		}
@@ -153,12 +164,16 @@ public class Main implements Runnable {
 		gui.setGreenColour();
 		gui.updateProgress("Done!");
 		System.out.println("Done!");
-		gui.updateProgress("  Updated up to "+main.latestcount);
-		System.out.print("  Updated up to "+main.latestcount);
+		//gui.updateProgress("  Updated up to "+main.latestcount);
+		//System.out.print("  Updated up to "+main.latestcount);
 	}
 	
+	//int all = 0;
+	//int delta = 0;
+	//int first, end = 0;
 	public void getJson() throws IOException {
 		BufferedReader br = null;
+		int messagesnum = 0;
 		try {
 			int last = readLastChatFile(br);
 			int lastcount = readLastCount(br);
@@ -166,24 +181,70 @@ public class Main implements Runnable {
 			main.latestcount = lastcount;
 			
 			JsonParser parser = new JsonParser();
+			JsonReader reader;
+			Gson gson = new GsonBuilder().create();
 			
 			for(int i = 0; i <= last; i++) {
 				if((last-i)!=82 && (last-i)!=83 && (last-i)!=84) {
 					br = new BufferedReader(new FileReader("res/chat"+Integer.toString(last-i)+".json"));
+					reader = new JsonReader(br);
 					gui.updateProgress("reading res/chat"+(last-i)+".json...");
 					System.out.println("reading res/chat"+(last-i)+".json...");
-					JsonArray array = (JsonArray) parser.parse(br).getAsJsonArray();
-					gui.updateProgress("messages in file: "+array.size());
-					System.out.println("messages in file: "+array.size());
+					//JsonArray array = (JsonArray) parser.parse(br).getAsJsonArray();
+					//gui.updateProgress("messages in file: "+array.size());
+					//System.out.println("messages in file: "+array.size());
+					/*
 					for(int j = 0; j < array.size(); j++) {
-						main.messages.add(new Message(main, array.get(j).getAsJsonObject()));
+						/*
+						Message m = new Message(main, array.get(j).getAsJsonObject());
+						main.messages.add(m);
+						if(m.ok==0) {
+							all+=1;
+						}
+						*/
+						//main.messages.add(new Message(main, array.get(j).getAsJsonObject()));
+					//}
+				
+					//reader.setLenient(true);
+					reader.beginArray();
+					
+			        while (reader.hasNext()) {
+			        	main.messages.add(new Message(main, gson.fromJson(reader, JsonObject.class)));
+			        	update();
+			        	messagesnum+=1;
+			        	//System.out.println(n);
+			        	messages.clear();
+			        }
+			        System.out.println("messages in file: "+messagesnum);
+			        gui.updateProgress("messages in file: "+messagesnum);		
+			        messagesnum=0;
+					/*
+					Message m = messages.get(0);
+					int p = 0;
+					while(m.ok!=0) {
+						p+=1;
+						m = messages.get(p);
 					}
+					first = m.count;
+					
+					m = messages.get(messages.size()-1);
+					p = messages.size()-1;
+					while(m.ok!=0) {
+						p-=1;
+						m = messages.get(p);
+					}
+					end = m.count;
+					delta = all-Math.abs(end - first);
+					*/
+					//System.out.println("DELTA "+delta+" "+all+" | "+first+" "+end);
+					//all=0;
+			        /*
 					int n=0;
-					Message check = new Message(main, array.get(n).getAsJsonObject());
+					Message check = messages.get(n);
 					if(i==0) {
 						while(check.ok==1) {
 							n++;
-							check = new Message(main, array.get(n).getAsJsonObject());
+							check = messages.get(n);
 						}
 						if(check.ok==0) {
 							gui.updateProgress("latest count: "+check.count);
@@ -192,13 +253,15 @@ public class Main implements Runnable {
 						   	ld = main.dateof(check);
 						}
 					}
-					update();
+					update();*/
 				}
 			}
+			/*
 	    	BufferedWriter writer = new BufferedWriter(new FileWriter("res/lastcount.txt"));
 	    	writer.write(Integer.toString(main.latestcount));
 	    	writer.close();
 	    	main.saveLastDate(writer);
+	    	*/
 
 		} finally {
 			br.close();
@@ -236,7 +299,7 @@ public class Main implements Runnable {
 							gui.updateProgress("latest count: "+check.count);
 						   	System.out.println("latest count: "+check.count);
 						   	main.latestcount = check.count;
-						    ld = main.dateof(check);
+						    ld = main.getUTCDate(check);
 						}
 					}
 					reversedUpdate();
@@ -259,12 +322,6 @@ public class Main implements Runnable {
 		return lastDate;
 	}
 	
-	SimpleDateFormat sdf;
-	public String dateof(Message message) {
-		Date date = new Date((Long.valueOf(message.date)-3600)*1000);
-		sdf =  new SimpleDateFormat("dd/MM/yyyy");
-		return sdf.format(date);
-	}
 	
 	public int readLastChatFile(BufferedReader br) throws NumberFormatException, IOException {
 		br = new BufferedReader(new FileReader("res/lastChatFile.txt"));
@@ -293,6 +350,37 @@ public class Main implements Runnable {
     	writer = new BufferedWriter(new FileWriter("res/lastDate.txt"));
     	writer.write("0000000");
     	writer.close();
+	}
+	
+	/*
+	public String getESTDate(Message message, int sdf) {
+		//TimeZone.setDefault(TimeZone.getTimeZone("EST"));
+		Date date = new Date((Long.valueOf(message.date)*1000));
+		System.out.println(sdf.format(date)+" "+message.date);
+		//TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
+		return sdf.format(date);
+	}	
+	
+	public String getUTCDate(Message message, int sdf) {
+		//TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
+		Date date = new Date((Long.valueOf(message.date))*1000);
+		return sdf.format(date);
+	}
+	*/
+	
+	public String getESTDate(Message message) {
+		Date date = new Date((Long.valueOf(message.date))*1000);
+		return sdfEST.format(date);
+	}
+	
+	public String getESThour(Message message) {
+		Date date = new Date((Long.valueOf(message.date))*1000);
+		return sdfESThour.format(date);
+	}
+	
+	public String getUTCDate(Message message) {
+		Date date = new Date((Long.valueOf(message.date))*1000);
+		return sdfUTC.format(date);
 	}
 	
 	

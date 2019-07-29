@@ -7,6 +7,7 @@ import java.text.SimpleDateFormat;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
+import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
 
 import ivanludvig.livecounting.Main;
@@ -61,16 +62,11 @@ public class Speed extends Stat {
 	        System.err.println(e);
 	    }
 	}
-	
-	SimpleDateFormat sdf;
-	public String dateof(Message message) {
-		Date date = new Date((Long.valueOf(message.date)-3600)*1000);
-		sdf =  new SimpleDateFormat("dd/MM/yyyy");
-		return sdf.format(date);
-	}
+
 	
 	public Date date(Message message) {
-		Date date = new Date((Long.valueOf(message.date)-3600)*1000);
+		TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
+		Date date = new Date((Long.valueOf(message.date))*1000);
 		return date;
 	}
 	

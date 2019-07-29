@@ -18,7 +18,6 @@ public class TopStreaks extends Stat {
 	int counts[];
 	ArrayList<Line> lines = new ArrayList<Line>();
 	ArrayList<StreakAdv> streaks = new ArrayList<StreakAdv>();
-	SimpleDateFormat sdf;
 	Main main;
 	String date = "0";
 	int n = 0;
@@ -27,7 +26,6 @@ public class TopStreaks extends Stat {
 	public TopStreaks(Main main) {
 		this.main = main;
 		counts = new int[main.n];
-		sdf =  new SimpleDateFormat("dd/MM/yyyy");
 	}
 	
 	public void update() {
@@ -40,7 +38,7 @@ public class TopStreaks extends Stat {
 		}
 		for(Message message : main.messages) {
 			if(message.ok == 0) {
-				if(dateof(message).equals(date)) {
+				if(main.getESTDate(message).equals(date)) {
 					counts[main.users.indexOf(message.author)]+=1;
 				}else {
 					//System.out.println(date+" e "+dateof(message)+" diff");
@@ -51,7 +49,7 @@ public class TopStreaks extends Stat {
 							e.printStackTrace();
 						}
 					}
-					date = dateof(message);
+					date = main.getESTDate(message);
 					counts = new int[main.n];
 					counts[main.users.indexOf(message.author)]+=1;
 				}
@@ -62,7 +60,7 @@ public class TopStreaks extends Stat {
 	public void lastupdate() {
 		for(Message message : main.messages) {
 			if(message.ok == 0) {
-				if(dateof(message).equals(date)) {
+				if(main.getESTDate(message).equals(date)) {
 					counts[n]+=1;
 				}else {
 					for(StreakAdv streak : streaks) {
@@ -73,7 +71,7 @@ public class TopStreaks extends Stat {
 							e.printStackTrace();
 						}
 					}
-					date = dateof(message);
+					date = main.getESTDate(message);
 					break;
 				}
 			}
@@ -155,10 +153,6 @@ public class TopStreaks extends Stat {
 		
 	}
 
-	public String dateof(Message message) {
-		Date date = new Date((Long.valueOf(message.date)-21600)*1000);
-		return sdf.format(date);
-	}
 	
 }
 

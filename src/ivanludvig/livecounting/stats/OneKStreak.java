@@ -19,7 +19,6 @@ public class OneKStreak extends Stat {
 	int counts[];
 	ArrayList<Line> lines = new ArrayList<Line>();
 	ArrayList<Streak> streaks = new ArrayList<Streak>();
-	SimpleDateFormat sdf;
 	Main main;
 	String date = "0";
 	int n = 0;
@@ -28,7 +27,6 @@ public class OneKStreak extends Stat {
 	public OneKStreak(Main main) {
 		this.main = main;
 		counts = new int[main.n];
-		sdf =  new SimpleDateFormat("dd/MM/yyyy");
 	}
 	
 	public void update() {
@@ -41,7 +39,7 @@ public class OneKStreak extends Stat {
 		}
 		for(Message message : main.messages) {
 			if(message.ok == 0) {
-				if(dateof(message).equals(date)) {
+				if(main.getESTDate(message).equals(date)) {
 					counts[main.users.indexOf(message.author)]+=1;
 				}else {
 					//System.out.println(date+" e "+dateof(message)+" diff");
@@ -52,7 +50,7 @@ public class OneKStreak extends Stat {
 							e.printStackTrace();
 						}
 					}
-					date = dateof(message);
+					date = main.getESTDate(message);
 					counts = new int[main.n];
 					counts[main.users.indexOf(message.author)]+=1;
 				}
@@ -63,7 +61,7 @@ public class OneKStreak extends Stat {
 	public void lastupdate() {
 		for(Message message : main.messages) {
 			if(message.ok == 0) {
-				if(dateof(message).equals(date)) {
+				if(main.getESTDate(message).equals(date)) {
 					counts[n]+=1;
 				}else {
 					for(Streak streak : streaks) {
@@ -74,7 +72,7 @@ public class OneKStreak extends Stat {
 							e.printStackTrace();
 						}
 					}
-					date = dateof(message);
+					date = main.getESTDate(message);
 					break;
 				}
 			}
@@ -152,9 +150,5 @@ public class OneKStreak extends Stat {
 		
 	}
 
-	public String dateof(Message message) {
-		Date date = new Date((Long.valueOf(message.date)-21600)*1000);
-		return sdf.format(date);
-	}
 	
 }

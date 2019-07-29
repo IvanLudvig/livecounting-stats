@@ -3,9 +3,9 @@ package ivanludvig.livecounting.stats;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
@@ -22,22 +22,22 @@ public class DayParts extends Stat {
 		this.main = main;
 		counts = new int[main.n];
 		current = new byte[main.n];
-		dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 	}
+	
+	String currentdate="";
 	
 	@Override
 	public void update() {
-		String currentdate="";
 		for(Message message : main.messages) {
 			if(message.ok == 0) {
-				if(!dateof(message).equals(currentdate)) {
+				if(!main.getUTCDate(message).equals(currentdate)) {
 					for(String user : main.users) {
 						if(current[main.users.indexOf(user)]>0) {
 							counts[main.users.indexOf(user)]+=1;
 						}
 					}
 					current = new byte[main.n];
-					currentdate=dateof(message);
+					currentdate=main.getUTCDate(message);
 				}
 				current[main.users.indexOf(message.author)]=1;
 			}
@@ -69,11 +69,5 @@ public class DayParts extends Stat {
 	    } 
 	}
 	
-	DateTimeFormatter dtf;
-	public String dateof(Message message) {
-		Date date = new Date((Long.valueOf(message.date))*1000);
-		ZonedDateTime time = date.toInstant().atZone(ZoneId.of("America/New_York"));
-		return dtf.format(time);
-	}
 
 }

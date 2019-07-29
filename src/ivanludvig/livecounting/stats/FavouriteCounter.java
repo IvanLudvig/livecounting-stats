@@ -11,6 +11,7 @@ import java.util.Collections;
 import java.util.Comparator;
 
 import ivanludvig.livecounting.Main;
+import ivanludvig.livecounting.Message;
 
 public class FavouriteCounter extends Stat{
 	int counts[][];
@@ -22,13 +23,24 @@ public class FavouriteCounter extends Stat{
 		counts = new int[main.n][main.n];
 	}
 
+	Message previous = null;
 	public void update() {
+		if(previous==null) {
+			previous = main.messages.get(0);
+		}else {
+			if((previous.ok == 0) && (main.messages.get(0).ok==0)) { 
+				counts[main.users.indexOf(previous.author)][main.users.indexOf(main.messages.get(0).author)]+=1;
+				previous = main.messages.get(0);
+			}
+		}
+		/*
 		for(int i = 0; i<main.messages.size()-1; i++) {
 			String str = Integer.toString(main.messages.get(i).count);
 			if(main.messages.get(i).ok == 0 && main.messages.get(i+1).ok==0) { 
 				counts[main.users.indexOf(main.messages.get(i).author)][main.users.indexOf(main.messages.get(i+1).author)]+=1;
 			}
 		}
+		*/
 	}
 	
 	public void write() {

@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
+import java.util.TimeZone;
 
 import ivanludvig.livecounting.Main;
 import ivanludvig.livecounting.Message;
@@ -20,7 +21,6 @@ public class TwentyK extends Stat {
 	int counts[];
 	String dates[];
 	ArrayList<Line> lines = new ArrayList<Line>();
-	SimpleDateFormat sdf;
 	Main main;
 	String date = "0";
 	int n = 0;
@@ -30,16 +30,15 @@ public class TwentyK extends Stat {
 		this.main = main;
 		counts = new int[main.n];
 		dates = new String[main.n];
-		sdf =  new SimpleDateFormat("dd/MM/yyyy");
 	}
 	
 	public void update() {
 		for(Message message : main.messages) {
 			if(message.ok == 0) {
-				if(dateof(message).equals(date)) {
+				if(main.getESTDate(message).equals(date)) {
 					counts[n]+=1;
 				}else {
-					date = dateof(message);
+					date = main.getESTDate(message);
 					dates[n]=date;
 					n+=1;
 					counts[n]+=1;
@@ -51,10 +50,10 @@ public class TwentyK extends Stat {
 	public void lastupdate() {
 		for(Message message : main.messages) {
 			if(message.ok == 0) {
-				if(dateof(message).equals(date)) {
+				if(main.getESTDate(message).equals(date)) {
 					counts[n]+=1;
 				}else {
-					date = dateof(message);
+					date = main.getESTDate(message);
 					break;
 				}
 			}
@@ -127,9 +126,5 @@ public class TwentyK extends Stat {
 		
 	}
 
-	public String dateof(Message message) {
-		Date date = new Date((Long.valueOf(message.date)-21600)*1000);
-		return sdf.format(date);
-	}
 	
 }

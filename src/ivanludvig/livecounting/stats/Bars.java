@@ -18,16 +18,15 @@ public class Bars extends Stat{
 	
 	int counts[];
 	ArrayList<Line> lines = new ArrayList<Line>();
-	SimpleDateFormat sdf;
 	Main main;
 	String date = "0";
+	String lastauthor = "";
 	int lasthour = 1000;
 	
 
 	public Bars(Main main) {
 		this.main = main;
 		counts = new int[main.n];
-		sdf =  new SimpleDateFormat("HH");
 		try {
 			lasthour = readLastHour();
 		} catch (IOException e) {
@@ -36,17 +35,17 @@ public class Bars extends Stat{
 		}
 	}
 	
+	
 	public void update() {
-		Collections.reverse(main.messages);
 		for(Message message : main.messages) {
 			if(message.ok == 0) {
-				if(hourof(message)!=lasthour) {
-					counts[main.users.indexOf(message.author)]+=1;
-					lasthour = hourof(message);
+				if((Integer.parseInt(main.getESThour(message))!=lasthour)&&(!lastauthor.equals(""))) {
+					counts[main.users.indexOf(lastauthor)]+=1;
+					lasthour = Integer.parseInt(main.getESThour(message));
 				}
+				lastauthor=message.author;
 			}
 		}
-		Collections.reverse(main.messages);
 	}
 	
 	
@@ -132,9 +131,11 @@ public class Bars extends Stat{
 		writer.close();
 	}
 	
+	/*
 	public int hourof(Message message) {
 		Date date = new Date((Long.valueOf(message.date)-21600)*1000);
 		return Integer.parseInt(sdf.format(date));
 	}
+	*/
 
 }

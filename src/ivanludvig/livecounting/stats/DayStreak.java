@@ -19,7 +19,6 @@ public class DayStreak extends Stat{
 	int counts[];
 	ArrayList<Line> lines = new ArrayList<Line>();
 	ArrayList<Streak> streaks = new ArrayList<Streak>();
-	SimpleDateFormat sdf;
 	Main main;
 	String date = "0";
 	int n = 0;
@@ -28,7 +27,6 @@ public class DayStreak extends Stat{
 	public DayStreak(Main main) {
 		this.main = main;
 		counts = new int[main.n];
-		sdf =  new SimpleDateFormat("dd/MM/yyyy");
 	}
 	
 	@Override
@@ -42,7 +40,7 @@ public class DayStreak extends Stat{
 		}
 		for(Message message : main.messages) {
 			if(message.ok == 0) {
-				if(dateof(message).equals(date)) {
+				if(main.getUTCDate(message).equals(date)) {
 					counts[main.users.indexOf(message.author)]+=1;
 				}else {
 					//System.out.println(date+" e "+dateof(message)+" diff");
@@ -53,7 +51,7 @@ public class DayStreak extends Stat{
 							e.printStackTrace();
 						}
 					}
-					date = dateof(message);
+					date = main.getUTCDate(message);
 					counts = new int[main.n];
 					counts[main.users.indexOf(message.author)]+=1;
 				}
@@ -64,7 +62,7 @@ public class DayStreak extends Stat{
 	public void lastupdate() {
 		for(Message message : main.messages) {
 			if(message.ok == 0) {
-				if(dateof(message).equals(date)) {
+				if(main.getUTCDate(message).equals(date)) {
 					counts[n]+=1;
 				}else {
 					for(Streak streak : streaks) {
@@ -75,7 +73,7 @@ public class DayStreak extends Stat{
 							e.printStackTrace();
 						}
 					}
-					date = dateof(message);
+					date = main.getUTCDate(message);
 					break;
 				}
 			}
@@ -150,9 +148,5 @@ public class DayStreak extends Stat{
 		
 	}
 
-	public String dateof(Message message) {
-		Date date = new Date((Long.valueOf(message.date)-3600)*1000);
-		return sdf.format(date);
-	}
 	
 }

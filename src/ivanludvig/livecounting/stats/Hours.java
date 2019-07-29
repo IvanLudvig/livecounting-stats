@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
+import java.util.TimeZone;
 
 import ivanludvig.livecounting.Main;
 import ivanludvig.livecounting.Message;
@@ -19,7 +20,6 @@ public class Hours extends Stat {
 	
 	int counts[][];
 	ArrayList<Line> lines = new ArrayList<Line>();
-	SimpleDateFormat sdf;
 	Main main;
 	String date = "0";
 	
@@ -27,14 +27,13 @@ public class Hours extends Stat {
 	public Hours(Main main) {
 		this.main = main;
 		counts = new int[main.n][26];
-		sdf =  new SimpleDateFormat("HH");
 	}
 	
 	public void update() {
 		for(Message message : main.messages) {
 			if(message.ok == 0) {
 				counts[main.users.indexOf(message.author)][0]+=1;
-				counts[main.users.indexOf(message.author)][hourof(message)+1]+=1;
+				counts[main.users.indexOf(message.author)][Integer.parseInt(main.getESThour(message))+1]+=1;
 			}
 		}
 	}
@@ -125,10 +124,6 @@ public class Hours extends Stat {
 		
 	}
 
-	public int hourof(Message message) {
-		Date date = new Date((Long.valueOf(message.date)-21600)*1000);
-		return Integer.parseInt(sdf.format(date));
-	}
 	
 }
 

@@ -15,6 +15,7 @@ public class Gets extends Stat {
 	Main main;
 	ArrayList<Message> dm = new ArrayList<Message>();
 	//int count = 0;
+	int current = 0;
 
 	public Gets(Main main) {
 		this.main = main;
@@ -24,8 +25,23 @@ public class Gets extends Stat {
 	@Override
 	public void update() {
 		for(Message message : main.messages) {
+			//if(message.ok==0) {
+				//if(message.count<10) {
+					//System.out.println("THIS "+message.count+" "+message.date);
+				//}
+			//}
 			String str = Integer.toString(message.count);
-			
+			/*
+			if(message.ok==0) {
+				if(message.count>10) {
+					if(Math.abs(message.count - current)>2) {
+						System.out.println((current-message.count)+": "+current+" "+message.count+" |"+message.date);
+						
+					}
+					current = message.count;
+				}
+			}
+			*/
 			if((message.ok == 0) && (str.length()>2)) { 
 				if( str.substring(str.length()-3, str.length()).equals("000")) {
 					counts[main.users.indexOf(message.author)]+=1;

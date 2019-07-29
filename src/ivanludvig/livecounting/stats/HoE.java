@@ -37,14 +37,12 @@ public class HoE extends Stat {
 		three = new int[main.n];
 		five = new int[main.n];
 		ten = new int[main.n];
-		dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-		//sdf =  new SimpleDateFormat("dd/MM/yyyy");
 	}
 	
 	public void update() {
 		for(Message message : main.messages) {
 			if(message.ok == 0) {
-				if(dateof(message).equals(date)) {
+				if(main.getESTDate(message).equals(date)) {
 					counts[main.users.indexOf(message.author)]+=1;
 				}else {
 					for(int i = 0; i<counts.length; i++) {
@@ -59,7 +57,7 @@ public class HoE extends Stat {
 						}
 					}
 					counts = new int[main.n];
-					date = dateof(message);
+					date = main.getESTDate(message);
 					counts[main.users.indexOf(message.author)]+=1;
 				}
 			}
@@ -70,7 +68,7 @@ public class HoE extends Stat {
 		int[] lastcounts = new int[main.n];
 		for(Message message : main.messages) {
 			if(message.ok == 0) {
-				if(dateof(message).equals(date)) {
+				if(main.getESTDate(message).equals(date)) {
 					lastcounts[main.users.indexOf(message.author)]+=1;
 				}else {
 					for(int i = 0; i<counts.length; i++) {
@@ -85,7 +83,7 @@ public class HoE extends Stat {
 						}
 					}
 					counts = new int[main.n];
-					date = dateof(message);
+					date = main.getESTDate(message);
 					counts[main.users.indexOf(message.author)]+=1;
 					break;
 				}
@@ -220,11 +218,5 @@ public class HoE extends Stat {
 		
 	}
 
-	DateTimeFormatter dtf;
-	public String dateof(Message message) {
-		Date date = new Date((Long.valueOf(message.date))*1000);
-		ZonedDateTime time = date.toInstant().atZone(ZoneId.of("America/New_York"));
-		return dtf.format(time);
-	}
 	
 }

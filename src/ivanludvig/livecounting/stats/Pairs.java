@@ -10,6 +10,7 @@ import java.util.Collections;
 import java.util.Comparator;
 
 import ivanludvig.livecounting.Main;
+import ivanludvig.livecounting.Message;
 
 public class Pairs extends Stat {
 	
@@ -21,20 +22,33 @@ public class Pairs extends Stat {
 		this.main = main;
 		counts = new int[main.n][main.n];
 	}
-
+	
+	Message previous = null;
 	public void update() {
+		if(previous==null) {
+			previous = main.messages.get(0);
+		}else {
+			if((previous.ok == 0) && (main.messages.get(0).ok==0)) { 
+				counts[main.users.indexOf(previous.author)][main.users.indexOf(main.messages.get(0).author)]+=1;
+				previous = main.messages.get(0);
+			}
+		}
+		/*
 		for(int i = 0; i<main.messages.size()-1; i++) {
 			String str = Integer.toString(main.messages.get(i).count);
-			if(main.messages.get(i).ok == 0 && main.messages.get(i+1).ok==0) { 
+			if((main.messages.get(i).ok == 0) && (main.messages.get(i+1).ok==0)) { 
 				counts[main.users.indexOf(main.messages.get(i).author)][main.users.indexOf(main.messages.get(i+1).author)]+=1;
 			}
 		}
+		*/
 	}
 	
 	public void write() {
 		for(int i = 0; i<main.users.size(); i++) {
 			for(int j = 0; j<main.users.size(); j++) {
-				addLine(new Line(main.users.get(i),main.users.get(j), counts[i][j]));
+				if(counts[i][j]>=100) {
+					addLine(new Line(main.users.get(i),main.users.get(j), counts[i][j]));
+				}
 			}
 		}
 		Collections.sort(lines, Comparator.comparingInt(Line -> Line.count));
