@@ -36,10 +36,6 @@ public class Message {
 		if(body==null || author==null || date==null) {
 			ok=1;
 		}
-		if(body.contains("Ivan"))
-		{
-			System.out.println(author+":  "+body);
-		}
 		if(ok == 0) {
 			if(date.contains(".")) {
 				date = date.substring(0, date.length()-2);
