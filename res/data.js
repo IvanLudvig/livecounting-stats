@@ -10,10 +10,14 @@ var chat = [];
 var prevPercent = 0;
 var totalPercent = 0;
 var currentPercent = 0;
+console.log('start');
 function loadJSON(path, success, error) {
+	console.log('load');
+	var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 	var xhr = new XMLHttpRequest();
 	xhr.onreadystatechange = function() {
 		if (xhr.readyState === XMLHttpRequest.DONE) {
+			console.log('xml_done');
 			if (xhr.status === 200) {
 				if (typeof success === "function") {
 					success(JSON.parse(xhr.responseText));
@@ -44,14 +48,15 @@ function loadJSON(path, success, error) {
 			loadingProgress(totalPercent);
 		}
 	};
+	console.log('xml_open');
 	xhr.open("GET", path, true);
 	xhr.send();
 }
 var lastChatFile;
-
 // Load the value of lastChatFile first
-loadJSON("data/lastChatFile.txt?v=" + Date.now(), function(data) {
+loadJSON("lastChatFile.txt", function(data) {
 	lastChatFile = data;
+	console.log('loadJSON');
 	loadChatData(lastChatFile);
 });
 
@@ -65,10 +70,11 @@ function loadChatData(i) {
 
 	// Special case for first (newest) JSON file to prevent caching
 	var suffix = '';
+	console.log('loadChatData');
 	if(i == lastChatFile) suffix = '?v=' + Date.now();
 
 	// Load this chat data file
-	loadJSON("data/chat" +i+ ".json" +suffix, function(data) {
+	loadJSON("chat" +i+ ".json" +suffix, function(data) {
 		chat.push.apply(chat, data);
 
 		// Recurse to load next chat data file
@@ -80,4 +86,3 @@ function loadChatData(i) {
 
 
 })(); // THE END
-
