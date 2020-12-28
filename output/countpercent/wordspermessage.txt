@@ -1,6 +1,6 @@
 | # |Username |Words per message 
 |---|---|---
-| 1 | /u/TOP_20 | 2.9 | 
+| 1 | /u/TOP_20 | 2.94 | 
 | 2 | /u/Tranquilsunrise | 2.16 | 
 | 3 | /u/artbn | 1.84 | 
 | 4 | /u/rschaosid | 1.73 | 
@@ -20,20 +20,20 @@
 | 18 | /u/PaleRepresentative | 1.33 | 
 | 19 | /u/Lonadont | 1.29 | 
 | 20 | /u/Smartstocks | 1.28 | 
-| 21 | /u/TOP_6689 | 1.27 | 
+| 21 | /u/TOP_6689 | 1.28 | 
 | 22 | /u/LeinadSpoon | 1.27 | 
-| 23 | /u/MrBahr12 | 1.25 | 
-| 24 | /u/dominodan123 | 1.25 | 
-| 25 | /u/NeonL1vesMatter | 1.22 | 
+| 23 | /u/dominodan123 | 1.26 | 
+| 24 | /u/Trial-Name | 1.26 | 
+| 25 | /u/MrBahr12 | 1.25 | 
 | 26 | /u/NobodyL0vesMe | 1.21 | 
 | 27 | /u/abplows | 1.21 | 
 | 28 | /u/amazingpikachu_38 | 1.2 | 
-| 29 | /u/treje | 1.19 | 
-| 30 | /u/Trial-Name | 1.19 | 
+| 29 | /u/NeonL1vesMatter | 1.19 | 
+| 30 | /u/treje | 1.19 | 
 | 31 | /u/DemonBurritoCat | 1.16 | 
 | 32 | /u/MaybeNotWrong | 1.16 | 
-| 33 | /u/ItzTaken | 1.14 | 
-| 34 | /u/gordonpt8 | 1.14 | 
+| 33 | /u/gordonpt8 | 1.14 | 
+| 34 | /u/ItzTaken | 1.14 | 
 | 35 | /u/QuestoGuy | 1.11 | 
 | 36 | /u/davidjl123 | 1.11 | 
 | 37 | /u/Rajalaxo | 1.09 | 
