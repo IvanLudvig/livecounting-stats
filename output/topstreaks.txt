@@ -1,19 +1,19 @@
 |# |User |Streak |Last Day  
 |---|---|---|---|
 | 1 | /u/noduorg | 183 | 03/05/2019 | 
-| 2 | /u/NobodyL0vesMe | 95 | 19/03/2019 | 
-| 3 | /u/ItzTaken | 86 | 08/01/2019 | 
-| 4 | /u/ItzTaken | 62 | 28/04/2021 | 
-| 5 | /u/amazingpikachu_38 | 51 | 28/04/2021 | 
-| 6 | /u/MaybeNotWrong | 48 | 28/04/2021 | 
+| 2 | /u/ItzTaken | 98 | 03/06/2021 | 
+| 3 | /u/NobodyL0vesMe | 95 | 19/03/2019 | 
+| 4 | /u/amazingpikachu_38 | 87 | 03/06/2021 | 
+| 5 | /u/ItzTaken | 86 | 08/01/2019 | 
+| 6 | /u/MaybeNotWrong | 78 | 27/05/2021 | 
 | 7 | /u/amazingpikachu_38 | 35 | 05/01/2019 | 
 | 8 | /u/MaybeNotWrong | 34 | 04/03/2021 | 
 | 9 | /u/MaybeNotWrong | 33 | 14/01/2019 | 
 | 10 | /u/amazingpikachu_38 | 32 | 18/10/2018 | 
 | 11 | /u/Chalupa_Dad | 30 | 22/05/2018 | 
 | 12 | /u/ItzTaken | 30 | 23/02/2019 | 
-| 13 | /u/amazingpikachu_38 | 26 | 31/05/2017 | 
-| 14 | /u/ItzTaken | 26 | 24/02/2021 | 
+| 13 | /u/ItzTaken | 26 | 24/02/2021 | 
+| 14 | /u/amazingpikachu_38 | 26 | 31/05/2017 | 
 | 15 | /u/amazingpikachu_38 | 23 | 10/11/2018 | 
 | 16 | /u/piyushsharma301 | 22 | 13/12/2016 | 
 | 17 | /u/TOP_20 | 21 | 30/08/2017 | 
@@ -23,8 +23,8 @@
 | 21 | /u/TOP_20 | 20 | 25/04/2017 | 
 | 22 | /u/amazingpikachu_38 | 20 | 05/08/2018 | 
 | 23 | /u/NobodyL0vesMe | 19 | 10/03/2021 | 
-| 24 | /u/amazingpikachu_38 | 19 | 21/04/2017 | 
-| 25 | /u/ItzTaken | 19 | 20/03/2019 | 
+| 24 | /u/ItzTaken | 19 | 20/03/2019 | 
+| 25 | /u/amazingpikachu_38 | 19 | 21/04/2017 | 
 | 26 | /u/Chalupa_Dad | 18 | 20/01/2018 | 
 | 27 | /u/NikinCZ | 18 | 19/04/2019 | 
 | 28 | /u/Chalupa_Dad | 17 | 18/02/2018 | 
