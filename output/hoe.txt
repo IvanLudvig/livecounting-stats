@@ -1,8 +1,8 @@
 | # |Username |Count
 |---|------|---------------
-| 1 | /u/ItzTaken | 260 | 
-| 2 | /u/amazingpikachu_38 | 260 | 
-| 3 | /u/MaybeNotWrong | 148 | 
+| 1 | /u/amazingpikachu_38 | 272 | 
+| 2 | /u/ItzTaken | 268 | 
+| 3 | /u/MaybeNotWrong | 155 | 
 | 4 | /u/noduorg | 107 | 
 | 5 | /u/NobodyL0vesMe | 99 | 
 | 6 | /u/dominodan123 | 78 | 
@@ -13,10 +13,10 @@
 | 11 | /u/treje | 21 | 
 | 12 | /u/rideride | 20 | 
 | 13 | /u/Chalupa_Dad | 18 | 
-| 14 | /u/TOP_20 | 15 | 
-| 15 | /u/Countletics | 13 | 
-| 16 | /u/Trial-Name | 12 | 
-| 17 | /u/TheMatsValk | 12 | 
+| 14 | /u/TheMatsValk | 18 | 
+| 15 | /u/TOP_20 | 15 | 
+| 16 | /u/Countletics | 13 | 
+| 17 | /u/Trial-Name | 12 | 
 | 18 | /u/Smartstocks | 9 | 
 | 19 | /u/Rajalaxo | 9 | 
 | 20 | /u/gordonpt8 | 8 | 
@@ -24,16 +24,16 @@
 | 22 | /u/basskro | 7 | 
 | 23 | /u/NikinCZ | 6 | 
 | 24 | /u/piyushsharma301 | 5 | 
-| 25 | /u/DemonBurritoCat | 4 | 
-| 26 | /u/MrBahr12 | 4 | 
-| 27 | /u/MrUnderdawg | 4 | 
-| 28 | /u/NeonL1vesMatter | 3 | 
-| 29 | /u/co3_carbonate | 3 | 
-| 30 | /u/Kris18 | 2 | 
-| 31 | /u/yesduorg | 2 | 
-| 32 | /u/TOP_6689 | 2 | 
-| 33 | /u/parker_cube | 2 | 
-| 34 | /u/MrGally75 | 2 | 
+| 25 | /u/MrUnderdawg | 5 | 
+| 26 | /u/MrGally75 | 5 | 
+| 27 | /u/DemonBurritoCat | 4 | 
+| 28 | /u/MrBahr12 | 4 | 
+| 29 | /u/NeonL1vesMatter | 3 | 
+| 30 | /u/co3_carbonate | 3 | 
+| 31 | /u/Kris18 | 2 | 
+| 32 | /u/yesduorg | 2 | 
+| 33 | /u/TOP_6689 | 2 | 
+| 34 | /u/parker_cube | 2 | 
 | 35 | /u/Flat-Mars-Society | 1 | 
 | 36 | /u/Chalupa_Dude | 1 | 
 | 37 | /u/Shady_live_counter | 1 | 
@@ -41,8 +41,8 @@
 | 39 | /u/Majestic_Bear | 1 | 
 | 40 | /u/Kazoeru | 1 | 
 | 41 | /u/Whit4You | 1 | 
-| 42 | /u/rschaosid | 1 | 
-| 43 | /u/PaleRepresentative | 1 | 
+| 42 | /u/PaleRepresentative | 1 | 
+| 43 | /u/rschaosid | 1 | 
 | 44 | /u/abplows | 1 | 
-| 45 | /u/VitaminB16 | 1 | 
-| 46 | /u/Tranquilsunrise | 1 | 
+| 45 | /u/Tranquilsunrise | 1 | 
+| 46 | /u/VitaminB16 | 1 | 
