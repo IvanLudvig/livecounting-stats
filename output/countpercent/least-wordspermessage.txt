@@ -1,7 +1,7 @@
 | # |Username |Words per message 
 |---|---|---
 | 1 | /u/Countletics | 1.01 | 
-| 2 | /u/MrGally75 | 1.03 | 
+| 2 | /u/MrGally75 | 1.02 | 
 | 3 | /u/noduorg | 1.05 | 
 | 4 | /u/Rajalaxo | 1.05 | 
 | 5 | /u/basskro | 1.05 | 
@@ -9,14 +9,14 @@
 | 7 | /u/MaybeNotWrong | 1.11 | 
 | 8 | /u/davidjl123 | 1.11 | 
 | 9 | /u/QuestoGuy | 1.11 | 
-| 10 | /u/amazingpikachu_38 | 1.15 | 
+| 10 | /u/amazingpikachu_38 | 1.14 | 
 | 11 | /u/gordonpt8 | 1.15 | 
 | 12 | /u/DemonBurritoCat | 1.16 | 
 | 13 | /u/NeonL1vesMatter | 1.18 | 
-| 14 | /u/TheMatsValk | 1.19 | 
-| 15 | /u/NobodyL0vesMe | 1.19 | 
+| 14 | /u/NobodyL0vesMe | 1.19 | 
+| 15 | /u/TheMatsValk | 1.2 | 
 | 16 | /u/treje | 1.2 | 
-| 17 | /u/Trial-Name | 1.21 | 
+| 17 | /u/Trial-Name | 1.22 | 
 | 18 | /u/abplows | 1.23 | 
 | 19 | /u/MrBahr12 | 1.25 | 
 | 20 | /u/dominodan123 | 1.26 | 
@@ -24,8 +24,8 @@
 | 22 | /u/TOP_6689 | 1.28 | 
 | 23 | /u/Lonadont | 1.29 | 
 | 24 | /u/LeinadSpoon | 1.29 | 
-| 25 | /u/PaleRepresentative | 1.33 | 
-| 26 | /u/rideride | 1.34 | 
+| 25 | /u/rideride | 1.34 | 
+| 26 | /u/PaleRepresentative | 1.35 | 
 | 27 | /u/parker_cube | 1.35 | 
 | 28 | /u/NikinCZ | 1.38 | 
 | 29 | /u/VitaminB16 | 1.39 | 
@@ -34,13 +34,14 @@
 | 32 | /u/Chalupa_Dad | 1.4 | 
 | 33 | /u/qwertylool | 1.4 | 
 | 34 | /u/Majestic_Bear | 1.42 | 
-| 35 | /u/MrUnderdawg | 1.46 | 
+| 35 | /u/MrUnderdawg | 1.43 | 
 | 36 | /u/smarvin6689 | 1.46 | 
 | 37 | /u/Iamspeedy36 | 1.5 | 
-| 38 | /u/ddodd69 | 1.66 | 
-| 39 | /u/co3_carbonate | 1.67 | 
-| 40 | /u/rschaosid | 1.74 | 
-| 41 | /u/artbn | 1.84 | 
-| 42 | /u/Tranquilsunrise | 2.17 | 
-| 43 | /u/TOP_20 | 3.04 | 
-| 44 | /u/andrewtheredditor | 4.99 | 
+| 38 | /u/Fortnite_Skin_Leaker | 1.66 | 
+| 39 | /u/ddodd69 | 1.67 | 
+| 40 | /u/co3_carbonate | 1.67 | 
+| 41 | /u/rschaosid | 1.74 | 
+| 42 | /u/artbn | 1.84 | 
+| 43 | /u/Tranquilsunrise | 2.17 | 
+| 44 | /u/TOP_20 | 3.04 | 
+| 45 | /u/andrewtheredditor | 4.96 | 

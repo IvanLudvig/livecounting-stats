@@ -1,8 +1,8 @@
 |# |User |Streak |Last Day  
 |---|---|---|---|
 | 1 | /u/noduorg | 183 | 03/05/2019 | 
-| 2 | /u/ItzTaken | 135 | 10/07/2021 | 
-| 3 | /u/amazingpikachu_38 | 124 | 10/07/2021 | 
+| 2 | /u/ItzTaken | 145 | 19/07/2021 | 
+| 3 | /u/amazingpikachu_38 | 144 | 29/07/2021 | 
 | 4 | /u/NobodyL0vesMe | 95 | 19/03/2019 | 
 | 5 | /u/ItzTaken | 86 | 08/01/2019 | 
 | 6 | /u/MaybeNotWrong | 78 | 27/05/2021 | 
@@ -18,15 +18,15 @@
 | 16 | /u/piyushsharma301 | 22 | 13/12/2016 | 
 | 17 | /u/TOP_20 | 21 | 30/08/2017 | 
 | 18 | /u/NobodyL0vesMe | 21 | 14/12/2018 | 
-| 19 | /u/amazingpikachu_38 | 21 | 15/03/2017 | 
-| 20 | /u/amazingpikachu_38 | 21 | 01/12/2018 | 
-| 21 | /u/TOP_20 | 20 | 25/04/2017 | 
-| 22 | /u/amazingpikachu_38 | 20 | 05/08/2018 | 
-| 23 | /u/NobodyL0vesMe | 19 | 10/03/2021 | 
-| 24 | /u/MaybeNotWrong | 19 | 15/06/2021 | 
-| 25 | /u/ItzTaken | 19 | 20/03/2019 | 
-| 26 | /u/amazingpikachu_38 | 19 | 21/04/2017 | 
-| 27 | /u/Chalupa_Dad | 18 | 20/01/2018 | 
-| 28 | /u/NikinCZ | 18 | 19/04/2019 | 
-| 29 | /u/Chalupa_Dad | 17 | 18/02/2018 | 
-| 30 | /u/TOP_20 | 17 | 11/12/2016 | 
+| 19 | /u/MaybeNotWrong | 21 | 15/07/2021 | 
+| 20 | /u/amazingpikachu_38 | 21 | 15/03/2017 | 
+| 21 | /u/amazingpikachu_38 | 21 | 01/12/2018 | 
+| 22 | /u/TOP_20 | 20 | 25/04/2017 | 
+| 23 | /u/amazingpikachu_38 | 20 | 05/08/2018 | 
+| 24 | /u/ItzTaken | 19 | 20/03/2019 | 
+| 25 | /u/NobodyL0vesMe | 19 | 10/03/2021 | 
+| 26 | /u/MaybeNotWrong | 19 | 15/06/2021 | 
+| 27 | /u/amazingpikachu_38 | 19 | 21/04/2017 | 
+| 28 | /u/Chalupa_Dad | 18 | 20/01/2018 | 
+| 29 | /u/NikinCZ | 18 | 19/04/2019 | 
+| 30 | /u/Chalupa_Dad | 17 | 18/02/2018 | 
